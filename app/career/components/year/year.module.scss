@@ -1,0 +1,13 @@
+.yearContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+
+  .yearContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,54 @@
+.body {
+  all: unset;
+}
+
+.header,
+.titleSection {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: #000;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 24px;
+}
+
+.svg {
+  width: 100px;
+}
+
+.titleSection {
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  position: sticky;
+  top: 20vh;
+  color: white;
+}
+
+.h1 {
+  font-size: 24px;
+}
+
+.img {
+  object-fit: contain;
+  width: 30vw;
+}
+
+.contentSection {
+  min-height: 400px;
+  width: 100%;
+  display: grid;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: white;
+}

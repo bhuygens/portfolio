@@ -1,0 +1,20 @@
+@import "font.module";
+
+
+// COLORS
+$secondary_color: #ADADAD;
+// FONTS
+$font-main: 'saol', sans-serif;
+
+// TEXT
+.text_hoverable {
+  &:hover {
+    text-decoration: 1px solid white underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.text_selected {
+  text-decoration: 1px solid white underline;
+  text-underline-offset: 2px;
+}
