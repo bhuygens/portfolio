@@ -2,13 +2,10 @@
 
 import "./globals.css"
 import styles from "./layout.module.scss"
-import {Inter} from "next/font/google"
 import Image from "next/image";
 import Link from "next/link";
 import {usePathname, useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
-
-const inter = Inter({subsets: ["latin"]})
 
 
 export default function RootLayout({
@@ -29,7 +26,7 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-    <body className={inter.className}>
+    <body>
     <div className={styles.navbar_container}>
       <a href={"/"}>
         <Image

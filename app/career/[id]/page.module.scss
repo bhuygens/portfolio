@@ -40,12 +40,10 @@
   .image_presentation {
     margin-bottom: 125px;
     grid-area: imagePresentation;
-
   }
 
   .sidebar {
     grid-area: sidebar;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +65,27 @@
   .content {
     grid-area: contentArea;
 
-    .contentItemTitle {
+  }
+}
+
+
+@media screen and (max-width: 1020px) {
+  .careerDetailContainer {
+    padding: 12px;
+    grid-template-areas:
+    "headerArea headerArea headerArea"
+    "imagePresentation imagePresentation imagePresentation"
+    "sidebar contentArea contentArea";
+
+    .header {
+      .tags {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .image_presentation {
+      width: calc(100vw - 24px) !important;
     }
   }
 }

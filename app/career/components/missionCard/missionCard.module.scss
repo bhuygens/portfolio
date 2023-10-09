@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 968px){
   .missionCard {
     gap: 8px;
     flex-direction: column !important;
@@ -58,4 +58,9 @@
   .missionCard_image {
     width: 200px;
   }
+
+  .missionCard_content {
+    padding: 0 !important;
+  }
+
 }

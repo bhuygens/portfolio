@@ -18,7 +18,7 @@ export default async function getAllMissionsByYear() {
         media: JSON.parse(item.properties.media.rich_text[0].plain_text),
         tags: item.properties.Tags.multi_select.map(tag => tag.name),
         title: item.properties.title.title[0].plain_text,
-        url: item.properties.url.rich_text[0].plain_text,
+        url: item.properties.url.rich_text[0]?.plain_text ?? "",
         year: new Date(item.properties.year.date.start),
         reverse: (!!(id % 2)),
         id: item.properties.ID.unique_id.number,

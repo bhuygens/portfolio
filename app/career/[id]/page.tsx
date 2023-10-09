@@ -42,7 +42,7 @@ export default async function CareerDetailPage({params: {id}}: Params) {
       <ol>
         {Object.entries(mission.content).map(([key, value]) => (
           <li key={key} style={{marginBottom: "80px"}}>
-            <h2 style={{marginBottom: "24px"}}>{key}</h2>
+            <h2 id={key} style={{marginBottom: "24px"}}>{key}</h2>
             <p dangerouslySetInnerHTML={{__html: value}}></p>
           </li>
         ))}
@@ -56,7 +56,8 @@ export default async function CareerDetailPage({params: {id}}: Params) {
         <p><strong>SUMMARY</strong></p>
         <ol>
           {Object.entries(mission.content).map(([key, value]) => (
-            <li key={key} style={{marginBottom: "12px"}}>{key}
+            <li key={key} style={{marginBottom: "12px"}}>
+              <a href={`#${key}`}>{key}</a>
             </li>
           ))}
         </ol>
@@ -90,17 +91,20 @@ export default async function CareerDetailPage({params: {id}}: Params) {
         <h1>{mission.title}</h1>
       </div>
 
-      <Image alt={mission.title}
-             src={mission.url}
-             width={100}
-             height={100}
-             sizes="100vw"
-             style={{
-               width: "100vw",
-               height: "auto",
-             }}
-             className={styles.image_presentation}
-      />
+      {
+        mission.url &&
+        <Image alt={mission.title}
+               src={mission.url}
+               width={100}
+               height={100}
+               sizes="100vw"
+               style={{
+                 width: "100vw",
+                 height: "auto",
+               }}
+               className={styles.image_presentation}
+        />
+      }
 
       <div className={styles.sidebar}>
         {displaySidebar()}

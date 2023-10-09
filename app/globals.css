@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /*display: unset;*/
 }
 
 html,
@@ -11,6 +10,8 @@ body {
     overflow-x: hidden;
     all: unset;
     color: white;
+    font-family: "montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
