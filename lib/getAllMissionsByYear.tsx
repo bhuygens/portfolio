@@ -1,7 +1,7 @@
 import {notionClient} from "./notion"
 
 
-export default async function getAllMissions() {
+export default async function getAllMissionsByYear() {
   const response = await notionClient.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
   });
@@ -10,6 +10,9 @@ export default async function getAllMissions() {
   const missions = notionResults
     .sort((a, b) => sortByDate(a.properties.year.date.start, b.properties.year.date.start))
     .map((item: NotionMissionItem, id: number): MissionType => {
+      let contentFormatted = "";
+      item.properties.content.rich_text.map((text) => {contentFormatted += text.plain_text})
+
       return {
         detailText: item.properties.detailText.rich_text[0].plain_text,
         media: JSON.parse(item.properties.media.rich_text[0].plain_text),
@@ -19,6 +22,7 @@ export default async function getAllMissions() {
         year: new Date(item.properties.year.date.start),
         reverse: (!!(id % 2)),
         id: item.properties.ID.unique_id.number,
+        content: JSON.parse(contentFormatted),
       }
     });
 

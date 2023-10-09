@@ -1,4 +1,5 @@
 type MissionType = {
+  id: number | string
   year: Date;
   title: string;
   detailText: string;
@@ -6,6 +7,7 @@ type MissionType = {
   tags: string[];
   url: string;
   reverse: boolean;
+  content: Object
 }
 
 type NotionMissionItem = {
@@ -26,7 +28,38 @@ type NotionMissionItem = {
   parent: any,
   archived: boolean,
   properties: {
+    ID: {
+      id: string,
+      type: string,
+      unique_id: {
+        prefix: string,
+        number: number
+      }
+    },
     detailText: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
+    content: {
       id: string,
       type: string,
       rich_text: [

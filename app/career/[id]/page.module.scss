@@ -1,0 +1,73 @@
+@import "style/common.module";
+
+.careerDetailContainer {
+  display: grid;
+  grid-template-columns: [leftColumn] 30vw [centerColumn] auto [rightColumn] 20vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". headerArea ."
+    "imagePresentation imagePresentation imagePresentation"
+    "sidebar contentArea .";
+  row-gap: 40px;
+
+  .header {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    grid-area: headerArea;
+
+    > :not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .tags {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+      align-items: baseline;
+      font-size: 16px;
+      color: $font-secondary-color;
+
+      :first-child {
+        border-radius: 12px;
+        background: $secondary_color;
+        color: $font-alternative-color;
+        padding: 8px;
+      }
+    }
+  }
+
+  .image_presentation {
+    margin-bottom: 125px;
+    grid-area: imagePresentation;
+
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sidebarContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      padding-top: 32px;
+
+      > :not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .content {
+    grid-area: contentArea;
+
+    .contentItemTitle {
+    }
+  }
+}

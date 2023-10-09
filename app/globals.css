@@ -2,13 +2,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /*display: unset;*/
 }
 
 html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
-    all:unset;
+    all: unset;
     color: white;
 }
 
@@ -19,6 +20,10 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: "saol", sans-serif
 }
 
 @media (prefers-color-scheme: dark) {

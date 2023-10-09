@@ -2,19 +2,25 @@
 
 
 // COLORS
-$secondary_color: #ADADAD;
+$primary-color: #000;
+$secondary_color: #EEEEEF;
 // FONTS
 $font-main: 'saol', sans-serif;
+
+$font-primary-color: white;
+$font-secondary-color: #ADADAD;
+$font-alternative-color: black;
+
 
 // TEXT
 .text_hoverable {
   &:hover {
-    text-decoration: 1px solid white underline;
+    text-decoration: 1px solid $secondary_color underline;
     text-underline-offset: 2px;
   }
 }
 
 .text_selected {
-  text-decoration: 1px solid white underline;
+  text-decoration: 1px solid $secondary_color underline;
   text-underline-offset: 2px;
 }
