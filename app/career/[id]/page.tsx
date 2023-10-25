@@ -43,7 +43,7 @@ export default async function CareerDetailPage({params: {id}}: Params) {
         {Object.entries(mission.content).map(([key, value]) => (
           <li key={key} style={{marginBottom: "80px"}}>
             <h2 id={key} style={{marginBottom: "24px"}}>{key}</h2>
-            <p dangerouslySetInnerHTML={{__html: value}}></p>
+            <div dangerouslySetInnerHTML={{__html: value}}></div>
           </li>
         ))}
       </ol>
@@ -66,16 +66,16 @@ export default async function CareerDetailPage({params: {id}}: Params) {
         </svg>
         <div>
           <svg height="26" width="26">
-            <circle cx="13" cy="13" r="12" stroke="white" stroke-width="1"></circle>
+            <circle cx="13" cy="13" r="12" stroke="white" strokeWidth={1}></circle>
           </svg>
           <svg height="26" width="26">
-            <circle cx="13" cy="13" r="12" stroke="white" stroke-width="1"></circle>
+            <circle cx="13" cy="13" r="12" stroke="white" strokeWidth={1}></circle>
           </svg>
           <svg height="26" width="26">
-            <circle cx="13" cy="13" r="12" stroke="white" stroke-width="1"></circle>
+            <circle cx="13" cy="13" r="12" stroke="white" strokeWidth={1}></circle>
           </svg>
           <svg height="26" width="26">
-            <circle cx="13" cy="13" r="12" stroke="white" stroke-width="1"></circle>
+            <circle cx="13" cy="13" r="12" stroke="white" strokeWidth={1}></circle>
           </svg>
         </div>
       </div>
@@ -103,6 +103,7 @@ export default async function CareerDetailPage({params: {id}}: Params) {
                  height: "auto",
                }}
                className={styles.image_presentation}
+               priority
         />
       }
 

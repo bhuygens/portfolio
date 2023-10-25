@@ -29,7 +29,7 @@ export default function MissionCard({year, title, detailText, media, tags, rever
         </div>
         <div>
           <p className={styles.title}>{title}</p>
-          <p className={styles.detailText} dangerouslySetInnerHTML={{__html: detailText}}></p>
+          <div className={styles.detailText} dangerouslySetInnerHTML={{__html: detailText}}></div>
         </div>
       </div>
     </div>

@@ -1,18 +1,12 @@
 
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-®
-~node_modules/.pnpm/next@13.5.4_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/shared/lib/image-external.d.ts,d/9/d91fd4908afc2b65c264ba02acde7043eaf82402
 >
 app/layout.tsx,e/e/ee80c90a95b380fdaa8bc6ba2190fbb3fdc30bb0
 F
 app/layout.module.scss,8/8/8829a7b0c1c8e60c458bef084ecc29fb0457f04b
 H
 style/common.module.scss,f/d/fd20c136218a3db2b0217cfa4461db64a193e278
-´
-ƒnode_modules/.pnpm/next@13.5.4_react-dom@18.2.0_react@18.2.0_sass@1.68.0/node_modules/next/dist/compiled/@next/font/dist/types.d.ts,4/e/4e824e87102792b853f015897caac60082d5522b
-|
-Lnode_modules/.pnpm/@types+react@18.2.25/node_modules/@types/react/index.d.ts,c/e/ceb21ecc36a163d7b6ef1256021be7a972f1f617
 <
 app/page.tsx,6/f/6f76c4f4dad83442e836edc16c9735cb7bb32a73
 D
@@ -29,9 +23,6 @@ C
 app/career/page.tsx,f/c/fc674b902482ebca56d941fa79d627184c361d1c
 =
 lib/notion.ts,f/1/f1c598417e1a660d42f4f40c08f1cfa2269caf17
-:
-
-.env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
 [
 +app/career/components/year/year.module.scss,7/d/7d19da181d0f700b569920f288c92afe7884a8a6
 S
@@ -51,3 +42,10 @@ F
 lib/getAllMissions.tsx,a/8/a8b7ef0edc674b6aa67145e8da43db6f598d7928
 H
 app/career/[id]/page.tsx,c/b/cb7c9a2bdbe1e0dc6412fa08431e4be5db21ff74
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+F
+lib/getMissionById.tsx,2/f/2f414714540f98a30f05f8e05839f1d455cff279
+:
+
+.env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108

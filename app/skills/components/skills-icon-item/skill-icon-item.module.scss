@@ -1,0 +1,46 @@
+.skill_item {
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate_container 10s normal linear infinite;
+
+  .skill_icon {
+    position: absolute;
+    animation: rotate_icon 10s normal linear infinite;
+  }
+}
+
+@keyframes rotate_container {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes rotate_icon {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, -90deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, -180deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, -270deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, -360deg);
+  }
+}
