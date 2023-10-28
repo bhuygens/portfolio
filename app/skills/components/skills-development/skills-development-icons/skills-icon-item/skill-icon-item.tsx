@@ -7,10 +7,11 @@ type SkillIconItemProps = {
   parentHeight: number,
   parentBorder: string,
   parentTop?: number,
-  parentLeft?: number
+  parentRight?: number
   icons: string[],
   iconTop: number,
-  iconLeft?: number
+  iconLeft?: number,
+  onIconClicked: (icon: string) => void
 }
 
 export default function SkillIconItem({
@@ -20,15 +21,16 @@ export default function SkillIconItem({
                                         icons,
                                         iconTop,
                                         iconLeft = 0,
-                                        parentLeft = 0,
-                                        parentTop = 0
+                                        parentRight = 24,
+                                        parentTop = 0,
+                                        onIconClicked
                                       }: SkillIconItemProps) {
 
-  const calculTop = (index: number) => {
+  const calculateTop = (index: number) => {
     return index === 0 ? iconTop : iconTop / (1 + index);
   }
 
-  const calculLeft = (index: number) => {
+  const calculateLeft = (index: number) => {
     return index === 0 ? 0 : parentWidth - 32;
   }
   return <div className={styles.skill_item}
@@ -37,13 +39,13 @@ export default function SkillIconItem({
                 height: parentHeight,
                 border: parentBorder,
                 top: parentTop,
-                left: parentLeft
+                right: parentRight
               }}>
     {icons.map((icon: string, index: number) => <Image src={`/icons/${icon}.svg`} alt={icon} width={32}
                                                        height={32}
                                                        className={styles.skill_icon}
-                                                       style={{top: calculTop(index), left: calculLeft(index)}}
-                                                       key={index}/>)}
+                                                       style={{top: calculateTop(index), left: calculateLeft(index)}}
+                                                       key={index} onClick={() => onIconClicked(icon)}/>)}
 
   </div>;
 }

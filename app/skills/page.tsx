@@ -1,17 +1,14 @@
-import React from "react";
-import SkillsIcons from "@/app/skills/components/skills-icon/skillsIcons";
+import SkillsDevelopment from "@/app/skills/components/skills-development/skills-development";
+import styles from "./page.module.scss";
+import getSkillsContent from "@/lib/getSkillContent";
 
-interface PropsType {
-}
-
-function Page(props: PropsType) {
+async function SkillsPage() {
+  let developmentData: DevelopmentSkill[] = await getSkillsContent();
   return (
-    <div style={{position: "relative"}}>
-      <p>Career</p>
-
-      <SkillsIcons/>
+    <div className={styles.skills_page}>
+      <SkillsDevelopment skillsContent={developmentData}/>
     </div>
   );
 }
 
-export default Page;
+export default SkillsPage;

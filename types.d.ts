@@ -85,33 +85,7 @@ type NotionMissionItem = {
     Tags: {
       id: string,
       type: string,
-      multi_select: [
-        {
-          id: string,
-          name: string,
-          color: string
-        },
-        {
-          id: string,
-          name: string,
-          color: string
-        },
-        {
-          id: string,
-          name: string,
-          color: string
-        },
-        {
-          id: string,
-          name: string,
-          color: string
-        },
-        {
-          id: string,
-          name: string,
-          color: string
-        }
-      ]
+      multi_select: NotionMultiSelect[]
     },
     url: {
       id: string,
@@ -194,4 +168,80 @@ type NotionMissionItem = {
   },
   url: string,
   public_url: string
+}
+
+type NotionDevelopmentSkillItem = {
+  object: string,
+  id: string,
+  created_time: Date,
+  last_edited_time: Date,
+  created_by: {
+    object: string,
+    id: string
+  },
+  last_edited_by: {
+    object: string,
+    id: string
+  },
+  cover: string,
+  icon: string,
+  parent: {
+    type: string,
+    database_id: string
+  },
+  archived: false,
+  properties: {
+    Librairies: {
+      id: string,
+      type: string,
+      multi_select: NotionMultiSelect[]
+    },
+    Projects: {
+      id: string,
+      type: string,
+      relation: [
+        {
+          id: string
+        }
+      ],
+      has_more: boolean
+    },
+    Name: {
+      id: string,
+      type: string,
+      title: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    }
+  },
+  url: string,
+  public_url: string
+}
+
+type NotionMultiSelect = {
+  id: string,
+  name: string,
+  color: string
+}
+
+type DevelopmentSkill = {
+  name: string,
+  linkedProjects: string[],
+  libraries: string[]
 }

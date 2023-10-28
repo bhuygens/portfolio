@@ -1,0 +1,14 @@
+.skillIconCircle {
+  position: sticky;
+  margin: 24px 24px 0 0;
+}
+
+.skillIconLine {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  .p {
+    cursor: pointer;
+  }
+}

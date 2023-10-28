@@ -1,0 +1,19 @@
+@import "@/style/common.module";
+
+.container {
+  position: relative;
+  margin-left: 24px;
+
+  > :not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .contentRow {
+    margin-bottom: 32px;
+
+    .contentRowTitle {
+      text-decoration: underline $font-primary-color;
+      margin-bottom: 12px;
+    }
+  }
+}
