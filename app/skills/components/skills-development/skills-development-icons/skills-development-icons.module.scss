@@ -1,14 +1,31 @@
-.skillIconCircle {
-  position: sticky;
-  margin: 24px 24px 0 0;
+.skill_icon_circle {
+  position: relative;
 }
 
-.skillIconLine {
+.skill_icon_line {
   display: flex;
+  width: auto;
   flex-direction: row;
-  gap: 12px;
+  justify-content: space-evenly;
 
-  .p {
+  .skill {
     cursor: pointer;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 2px 6px;
+    background: none;
+    transition: background-color 500ms;
+
+    &:active {
+      background-color: white;
+      transition: background-color 500ms;
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill_icon_line {
+    order: -1;
   }
 }

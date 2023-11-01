@@ -26,8 +26,8 @@ function SkillsDevelopment({skillsContent}: SkillsDevelopmentProps) {
             <h3 className={styles.contentRowTitle}>Libraries</h3>
             {itemToDisplay.libraries.map((item: string, index: number) => <p key={index}>{item}</p>)}
           </div>
-          <div>
-            <h3 className={styles.subtitle}>Linked Projects</h3>
+          <div className={styles.contentRow}>
+            <h3 className={styles.contentRowTitle}>Linked Projects</h3>
             {itemToDisplay.linkedProjects.map((item: string, index: number) => <p key={index}>{item}</p>)}
           </div>
         </>
@@ -37,10 +37,15 @@ function SkillsDevelopment({skillsContent}: SkillsDevelopmentProps) {
     <div className={styles.container}>
       <SkillCategoryTitle title={"Development"}/>
 
-      <SkillsDevelopmentIcons onIconClicked={updateItemDisplayed}/>
+      <div className={styles.content}>
+        <div className={styles.content_title}>
+          <h2>{CommonHelper.Capitalize(itemDisplayed)}</h2>
+          {displaySkillContent()}
+        </div>
 
-      <h2>{CommonHelper.Capitalize(itemDisplayed)}</h2>
-      {displaySkillContent()}
+        <SkillsDevelopmentIcons onIconClicked={updateItemDisplayed}/>
+      </div>
+
     </div>
   );
 }

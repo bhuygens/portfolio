@@ -1,9 +1,8 @@
 .skills_page {
-  position: relative;
-  /*max-width: 1100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

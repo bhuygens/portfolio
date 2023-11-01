@@ -3,6 +3,7 @@ import SkillIconItem
   from "@/app/skills/components/skills-development/skills-development-icons/skills-icon-item/skill-icon-item";
 import styles from "./skills-development-icons.module.scss";
 import useWindowSize from "@/hooks/window.hook";
+import {CommonHelper} from "@/helpers/common.helper";
 
 type SkillsIconsProps = {
   onIconClicked: (icon: string) => void;
@@ -22,20 +23,20 @@ function SkillsDevelopmentIcons({onIconClicked}: SkillsIconsProps) {
   }
 
   const displayIconOnLine = () => {
-    return <div className={styles.skillIconLine}>
+    return <div className={styles.skill_icon_line}>
       {flattenedIcons.map((icon: string, index: number) =>
-        <p key={index} onClick={() => handleIconClick(icon)}>{icon}</p>
+        <p className={styles.skill} key={index}
+           onClick={() => handleIconClick(icon)}>{CommonHelper.Capitalize(icon)}</p>
       )}
     </div>
   }
 
   return (
     windowWidth.width > 768 ? (
-      <div className={styles.skillIconCircle} style={{right: lines * divider + 32}}>
-        <p>{windowWidth.width}</p>
+      <div className={styles.skill_icon_circle}>
         {icons.map((iconRow: string[], index: number) => {
-          const count = (lines - index) * divider; // width of each circle
-          const position = (index * divider) / 2; // position of each circle
+          const count = (lines - index) * divider;
+          const position = (index * divider) / 2;
           return (
             <div key={index}>
               <SkillIconItem
