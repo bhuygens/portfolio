@@ -1,16 +1,19 @@
 "use client"
 import React, {useState} from 'react';
-import SkillCategoryTitle from "@/app/skills/components/skill-category-title/skill-category-title";
-import styles from "./skills-development.module.scss";
-import SkillsDevelopmentIcons
-  from "@/app/skills/components/skills-development/skills-development-icons/skills-development-icons";
+import SkillCategoryTitle from "@/app/skills/components/skill-title/skill-category-title";
+import styles from "./development.module.scss";
+import DevelopmentIcons
+  from "@/app/skills/components/development/development-icons/development-icons";
 import {CommonHelper} from "@/helpers/common.helper";
+import Link from "next/link";
+import Image from "next/image";
+import ArrowDown from "@/components/arrow_down/arrow-down";
 
 type SkillsDevelopmentProps = {
   skillsContent: DevelopmentSkill[]
 }
 
-function SkillsDevelopment({skillsContent}: SkillsDevelopmentProps) {
+function Development({skillsContent}: SkillsDevelopmentProps) {
   const [itemDisplayed, setItemDisplayed] = useState('react');
 
 
@@ -43,11 +46,13 @@ function SkillsDevelopment({skillsContent}: SkillsDevelopmentProps) {
           {displaySkillContent()}
         </div>
 
-        <SkillsDevelopmentIcons onIconClicked={updateItemDisplayed}/>
+        <DevelopmentIcons onIconClicked={updateItemDisplayed}/>
+
+        <ArrowDown linkTo={"certifications"}/>
       </div>
 
     </div>
   );
 }
 
-export default SkillsDevelopment;
+export default Development;

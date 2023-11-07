@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from './skill-icon-item.module.scss';
+import styles from './icon-item.module.scss';
 
 type SkillIconItemProps = {
   parentWidth: number,
@@ -14,7 +14,7 @@ type SkillIconItemProps = {
   onIconClicked: (icon: string) => void
 }
 
-export default function SkillIconItem({
+export default function IconItem({
                                         parentWidth,
                                         parentHeight,
                                         parentBorder,

@@ -1,7 +1,7 @@
 "use client"
-import SkillIconItem
-  from "@/app/skills/components/skills-development/skills-development-icons/skills-icon-item/skill-icon-item";
-import styles from "./skills-development-icons.module.scss";
+import IconItem
+  from "@/app/skills/components/development/development-icons/icon-item/icon-item";
+import styles from "./development-icons.module.scss";
 import useWindowSize from "@/hooks/window.hook";
 import {CommonHelper} from "@/helpers/common.helper";
 
@@ -9,7 +9,7 @@ type SkillsIconsProps = {
   onIconClicked: (icon: string) => void;
 };
 
-function SkillsDevelopmentIcons({onIconClicked}: SkillsIconsProps) {
+function DevelopmentIcons({onIconClicked}: SkillsIconsProps) {
   const icons = [['react', 'angular'], ['nest', 'node'], ['aws']];
   const flattenedIcons = icons.reduce((acc, current) => acc.concat(current), []);
 
@@ -39,7 +39,7 @@ function SkillsDevelopmentIcons({onIconClicked}: SkillsIconsProps) {
           const position = (index * divider) / 2;
           return (
             <div key={index}>
-              <SkillIconItem
+              <IconItem
                 parentBorder={"1px solid grey"}
                 parentHeight={count}
                 parentWidth={count}
@@ -58,4 +58,4 @@ function SkillsDevelopmentIcons({onIconClicked}: SkillsIconsProps) {
   );
 }
 
-export default SkillsDevelopmentIcons;
+export default DevelopmentIcons;

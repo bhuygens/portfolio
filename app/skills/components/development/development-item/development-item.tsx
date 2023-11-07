@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./skills-development-item.module.scss";
+import styles from "./development-item.module.scss";
 import Image from "next/image";
 
 type SkillsDevelopmentItemProps = {
@@ -8,7 +8,7 @@ type SkillsDevelopmentItemProps = {
   content: string[]
 }
 
-function SkillsDevelopmentItem({icon, title, content}: SkillsDevelopmentItemProps) {
+function DevelopmentItem({icon, title, content}: SkillsDevelopmentItemProps) {
   return (
     <div className={styles.container}>
       <Image src={`/icons/${icon}.svg`} alt={title} width={50} height={50}/>
@@ -19,4 +19,4 @@ function SkillsDevelopmentItem({icon, title, content}: SkillsDevelopmentItemProp
   );
 }
 
-export default SkillsDevelopmentItem;
+export default DevelopmentItem;

@@ -1,8 +1,12 @@
 .skills_page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .skills_item {
+    height: calc(100vh - 100px);
+  }
 }
 
 @media screen and (max-width: 768px) {
