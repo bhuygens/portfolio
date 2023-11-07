@@ -22,9 +22,11 @@
       font-weight: 700;
       font-size: 16px;
 
-      &.selected {
+      &.selected:after {
         border-bottom: solid 3px $font-primary-color;
-        color: white;
+        content: '';
+        display: block;
+        transform: scaleX(0.8);
       }
 
       &:not(.selected):after {
@@ -36,8 +38,27 @@
       }
 
       &:not(.selected):hover:after {
-        transform: scaleX(1);
+        transform: scaleX(0.8);
       }
+    }
+  }
+
+  .navbar_external_links {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_container {
+    padding:0;
+    .navbar_items {
+      gap: 12px;
+    }
+
+    .navbar_external_links {
+      flex-direction: column;
+      gap: 12px;
     }
   }
 }

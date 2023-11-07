@@ -4,7 +4,7 @@ import {notionClient} from "./notion"
 export default async function getMissionByID(missionId: number) {
   const response = await notionClient.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
-    filter: {property: "ID", unique_id: {equals: missionId}},
+    filter: {property: "ID", unique_id: {equals: missionId},},
   });
   const notionResults = response.results as NotionMissionItem[]
 

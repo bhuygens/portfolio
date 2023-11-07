@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import getSkillsContent from "@/lib/getSkillContent";
 import Certifications from "@/app/skills/components/certifications/certifications";
 
-async function SkillsPage() {
+export default async function SkillsPage() {
   let developmentData: DevelopmentSkill[] = await getSkillsContent();
   return (
     <div className={styles.skills_page}>
@@ -17,4 +17,3 @@ async function SkillsPage() {
   );
 }
 
-export default SkillsPage;

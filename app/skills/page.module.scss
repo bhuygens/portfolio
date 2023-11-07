@@ -12,5 +12,8 @@
 @media screen and (max-width: 768px) {
   .skills_page {
     margin-left: 0;
+    .skills_item {
+      width: 100vw;
+    }
   }
 }

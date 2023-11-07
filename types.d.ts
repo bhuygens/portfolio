@@ -242,6 +242,6 @@ type NotionMultiSelect = {
 
 type DevelopmentSkill = {
   name: string,
-  linkedProjects: string[],
+  linkedProjects: NotionMissionItem[],
   libraries: string[]
 }

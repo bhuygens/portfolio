@@ -1,17 +1,14 @@
 "use client"
-import IconItem
-  from "@/app/skills/components/development/development-icons/icon-item/icon-item";
 import styles from "./development-icons.module.scss";
 import useWindowSize from "@/hooks/window.hook";
-import {CommonHelper} from "@/helpers/common.helper";
+import IconCircle from "@/app/skills/components/development/development-icons/icon-circle/icon-circle";
 
 type SkillsIconsProps = {
   onIconClicked: (icon: string) => void;
+  icons: string[][]
 };
 
-function DevelopmentIcons({onIconClicked}: SkillsIconsProps) {
-  const icons = [['react', 'angular'], ['nest', 'node'], ['aws']];
-  const flattenedIcons = icons.reduce((acc, current) => acc.concat(current), []);
+function DevelopmentIcons({onIconClicked, icons}: SkillsIconsProps) {
 
   const divider = 56;
   const lines = icons.length;
@@ -22,24 +19,15 @@ function DevelopmentIcons({onIconClicked}: SkillsIconsProps) {
     onIconClicked(icon);
   }
 
-  const displayIconOnLine = () => {
-    return <div className={styles.skill_icon_line}>
-      {flattenedIcons.map((icon: string, index: number) =>
-        <p className={styles.skill} key={index}
-           onClick={() => handleIconClick(icon)}>{CommonHelper.Capitalize(icon)}</p>
-      )}
-    </div>
-  }
-
   return (
-    windowWidth.width > 768 ? (
+    windowWidth.width > 768 && (
       <div className={styles.skill_icon_circle}>
         {icons.map((iconRow: string[], index: number) => {
           const count = (lines - index) * divider;
           const position = (index * divider) / 2;
           return (
             <div key={index}>
-              <IconItem
+              <IconCircle
                 parentBorder={"1px solid grey"}
                 parentHeight={count}
                 parentWidth={count}
@@ -54,7 +42,7 @@ function DevelopmentIcons({onIconClicked}: SkillsIconsProps) {
           );
         })}
       </div>
-    ) : displayIconOnLine()
+    )
   );
 }
 

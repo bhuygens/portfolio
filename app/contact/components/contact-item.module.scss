@@ -1,0 +1,23 @@
+@import "@/style/common.module";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+
+    .title {
+      font-size: 18px;
+    }
+
+    .content {
+      font-size: 14px;
+      color: $font-secondary-color;
+    }
+  }
+}
