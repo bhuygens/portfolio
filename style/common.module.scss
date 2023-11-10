@@ -1,27 +1,18 @@
 @import "font.module";
 
-
 // COLORS
 $primary-color: #000;
 $secondary_color: #EEEEEF;
+
+$first: rgba(5, 22, 26, 1);
+$second: rgba(7, 46, 51, 1);
+$third: rgba(12, 112, 120, 1);
+$fourth: rgba(15, 150, 144, 1);
+$fifth: rgba(109, 165, 192, 1);
+$linear-gradient: linear-gradient(0deg, $first 0%, $second 20%, $third 51%, $fourth 100%, $fifth 100%);
+
 // FONTS
 $font-main: 'saol', sans-serif;
-
 $font-primary-color: white;
 $font-secondary-color: #ADADAD;
 $font-alternative-color: black;
-
-$linear-gradient: linear-gradient(0deg, rgba(5,22,26,1) 0%, rgba(7,46,51,1) 20%, rgba(12,112,120,1) 51%, rgba(15,150,144,1) 100%, rgba(109,165,192,1) 100%);
-
-// TEXT
-.text_hoverable {
-  &:hover {
-    text-decoration: 1px solid $secondary_color underline;
-    text-underline-offset: 2px;
-  }
-}
-
-.text_selected {
-  text-decoration: 1px solid $secondary_color underline;
-  text-underline-offset: 2px;
-}

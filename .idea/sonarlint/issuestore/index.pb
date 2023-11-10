@@ -66,3 +66,27 @@ E
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+r
+Bapp/skills/components/skill-title/skill-category-title.module.scss,b/a/ba4af7ec3337173eb280321383f8d37810f8c2ac
+j
+:app/skills/components/skill-title/skill-category-title.tsx,3/1/312cd5d1a580e70235ea18c4ccac424e119f222b
+W
+'app/career/components/podium/podium.tsx,2/6/269481841dd05e7011ddc63f77e1d448a29381ec
+_
+/app/career/components/podium/podium.module.scss,3/9/39dc0055851b99795ac01280843752cadca39da0
+a
+1app/skills/components/development/development.tsx,6/f/6fec497f51f2650e40dbf10777710aef35ead801
+i
+9app/skills/components/development/development.module.scss,a/9/a978164f4184d3f52572788a42c189dd489b7b8f
+H
+hooks/scrollTop.hook.tsx,4/1/418cb222b6ce502132a3f4be789529707fd4f1f2
+B
+enums/tabs.enum.ts,1/4/1491c78c71224afa1b177e595da046185f82f22b
+M
+components/menu/menu_item.tsx,b/b/bbbce63c160ca4fe78b4e76eed986b8e30f1082d
+O
+components/menu/menu_toggle.tsx,a/c/acc93e9c0ac2feace48fcd1a5ebe377c6e0e4497
+U
+%components/menu/menu_item.module.scss,3/8/38ee7d8841eecb391f0ffbe73fc68c6211aa8135
+D
+app/contact/page.tsx,d/e/de48bb340e7af7a2fdce2e5688182aff83182897

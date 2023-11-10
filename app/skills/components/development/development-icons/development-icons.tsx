@@ -20,7 +20,7 @@ function DevelopmentIcons({onIconClicked, icons}: SkillsIconsProps) {
   }
 
   return (
-    windowWidth.width > 768 && (
+    windowWidth.windowsWidth > 768 && (
       <div className={styles.skill_icon_circle}>
         {icons.map((iconRow: string[], index: number) => {
           const count = (lines - index) * divider;
