@@ -13,11 +13,12 @@
     align-items: center;
     gap: 12px;
 
-    &:hover {
-      cursor: pointer;
-    }
 
     .podium_item_icon {
+      &:hover {
+        cursor: pointer;
+      }
+
       .podium_item_icon_second {
         height: 150px;
         width: 150px;
@@ -42,7 +43,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   @import "@/style/common.module";
 
   .container {
@@ -63,6 +64,7 @@
           width: 100px;
         }
       }
+
       .podium_item_support {
         width: 80px;
       }

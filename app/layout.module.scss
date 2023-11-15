@@ -22,6 +22,11 @@
     .navbar_link {
       font-weight: 700;
       font-size: 16px;
+      transition: scale 300ms;
+      &:hover {
+        scale: 1.2;
+        transition: scale 300ms
+      }
 
       &.selected:after {
         border-bottom: solid 3px $font-primary-color;
@@ -56,6 +61,7 @@
     position: fixed;
     top: 0;
     flex-direction: column;
+
     .logo {
       width: 48px;
       height: 48px;

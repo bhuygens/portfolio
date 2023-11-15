@@ -26,6 +26,7 @@
     .tags {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 12px;
       color: $secondary_color;
       font-size: 12px;
@@ -50,13 +51,13 @@
   }
 }
 
-@media screen and (max-width: 968px){
+@media screen and (max-width: 968px) {
   .missionCard {
     gap: 8px;
     flex-direction: column !important;
   }
   .missionCard_image {
-    width: 200px;
+    width: 150px;
   }
 
   .missionCard_content {

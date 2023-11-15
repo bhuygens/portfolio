@@ -1,0 +1,30 @@
+@import "style/common.module";
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 200px;
+  border-radius: 12px;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+
+  .icon {
+    height: auto;
+  }
+}
+
+
+.first{
+  background: $first;
+}
+.second {
+  background: $second;
+}
+.third {
+  background: $third;
+}
+
+.fourth {
+  background: $fourth;
+}
