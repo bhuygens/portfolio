@@ -11,7 +11,7 @@ export default function ContactItem({image, detail, title}: ContactItemProps) {
     <Image src={`/icons/${image}.svg`} alt={image} height={32} width={24}/>
     <div className={styles.content}>
       <p className={styles.title}>{title}</p>
-      <p className={styles.content}>{detail}</p>
+      <p className={styles.text}>{detail}</p>
     </div>
   </div>;
 }

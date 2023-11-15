@@ -1,27 +1,48 @@
 @import "font.module";
 
-
 // COLORS
 $primary-color: #000;
 $secondary_color: #EEEEEF;
+$tertiary-color: #444444;
+
+// PALETTE
+$first: rgba(5, 22, 26, 1);
+$second: rgba(7, 46, 51, 1);
+$third: rgba(12, 112, 120, 1);
+$fourth: rgba(15, 150, 144, 1);
+$fifth: rgba(109, 165, 192, 1);
+
+// GRADIENTS
+$linear-gradient: linear-gradient(0deg, $first 0%, $second 20%, $third 51%, $fourth 100%, $fifth 100%);
+
 // FONTS
 $font-main: 'saol', sans-serif;
-
 $font-primary-color: white;
 $font-secondary-color: #ADADAD;
-$font-alternative-color: black;
+$font-alternative-color: #1D1D1D;
 
-$linear-gradient: linear-gradient(0deg, rgba(5,22,26,1) 0%, rgba(7,46,51,1) 20%, rgba(12,112,120,1) 51%, rgba(15,150,144,1) 100%, rgba(109,165,192,1) 100%);
+// FONT STYLES
+$font-light: 100;
+$font-regular: 500;
+$font-bold: 700;
 
-// TEXT
-.text_hoverable {
-  &:hover {
-    text-decoration: 1px solid $secondary_color underline;
-    text-underline-offset: 2px;
-  }
-}
+// FONT SIZES
+$font-sm: 0.9rem; // span
+$font-md: 1rem; // p
+$font-lg: 1.25rem; // h3
+$font-xl: 1.5rem; // h2
+$font-2xl: 2.25rem; // h1
+$font-3xl: 4rem; // Home Title only
 
-.text_selected {
-  text-decoration: 1px solid $secondary_color underline;
-  text-underline-offset: 2px;
-}
+// SIZING
+$sm: 8px;
+$md: 16px;
+$lg: 24px;
+$xl: 32px;
+$xl-2: 48px;
+$xl-3: 64px;
+$xl-4: 80px;
+
+// COMMON STYLE
+$common-radius: $sm;
+

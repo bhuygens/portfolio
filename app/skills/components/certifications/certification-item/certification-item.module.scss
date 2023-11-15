@@ -1,6 +1,21 @@
-.certification_item {
+@import "style/common.module";
+
+.container {
   display: flex;
   flex-direction: row;
-  gap: 32px;
-  align-items: center;
+  gap: $xl;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content_text {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+
+      .content_textTitle {
+        font-weight: $font-bold;
+      }
+    }
+  }
 }

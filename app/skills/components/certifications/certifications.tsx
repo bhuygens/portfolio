@@ -6,34 +6,36 @@ import CertificationItem from "@/app/skills/components/certifications/certificat
 
 function Certifications() {
 
-  return (
-    <>
-      <div className={styles.container} style={{marginBottom: 120}}>
-        <SkillCategoryTitle title={"Certifications"}/>
+    return (
+        <>
+            <div className={styles.container} style={{marginBottom: 120}}>
+                <SkillCategoryTitle title={"Certifications"}/>
 
-        <div className={styles.content}>
-          <CertificationItem title={"Cloud Practitioner"}
-                             detail={"Obtained: October 2023, Valid until: October 2026"}
-                             image={"aws"}/>
-          <CertificationItem title={"Azure AZ-900"} detail={"Cloud basics"}
-                             image={"azure"}/>
-        </div>
-      </div>
+                <div className={styles.content}>
+                    <CertificationItem title={"AWS"}
+                                       detail={"Cloud practitioner"}
+                                       image={"aws"}
+                                       subtitle={"Obtained: October 2023, Valid until: October 2026"}
+                    />
+                    <CertificationItem title={"Azure"} detail={" AZ-900: Cloud basics"}
+                                       image={"azure"}/>
+                </div>
+            </div>
 
-      <div className={styles.container}>
-        <SkillCategoryTitle title={"Languages"}/>
+            <div className={styles.container}>
+                <SkillCategoryTitle title={"Languages"}/>
 
-        <div className={styles.content}>
-          <CertificationItem title={"French"}
-                             detail={"Native"}
-                             image={"flag-fr"}/>
-          <CertificationItem title={"English"} detail={"Professional"}
-                             image={"flag-gb"}/>
-        </div>
-      </div>
-    </>
+                <div className={styles.content}>
+                    <CertificationItem title={"French"}
+                                       detail={"Native"}
+                                       image={"flag-fr"}/>
+                    <CertificationItem title={"English"} detail={"Professional"}
+                                       image={"flag-gb"}/>
+                </div>
+            </div>
+        </>
 
-  );
+    );
 }
 
 export default Certifications;

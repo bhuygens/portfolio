@@ -4,13 +4,18 @@
   display: flex;
   flex-direction: row;
   max-width: 900px;
-  gap: 64px;
+  gap: $xl-3;
   align-items: center;
   width: 100%;
 
   &.reverse {
     flex-direction: row-reverse;
     text-align: right;
+    .missionCard_content {
+      .tags {
+        justify-content: flex-end;
+      }
+    }
   }
 
   .missionCard_image {
@@ -19,44 +24,44 @@
 
   .missionCard_content {
     display: flex;
-    gap: 8px;
+    gap: $sm;
     flex-direction: column;
-    padding: 28px;
+    padding: $lg;
 
     .tags {
       display: flex;
       flex-direction: row;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: $sm;
       color: $secondary_color;
-      font-size: 12px;
       align-items: baseline;
 
-      :first-child {
-        border-radius: 12px;
-        background: $secondary_color;
-        color: #1D1D1D;
-        padding: 6px;
+      span {
+        color: $font-secondary-color;
+        font-style: italic;
       }
     }
 
     .title {
-      font-size: 24px;
-      font-weight: 700;
+      font-weight: $font-bold;
+      margin-bottom: $sm;
     }
 
     .detailText {
-      font-size: 16px;
+      font-size: $font-md;
+      font-weight: $font-light;
+      text-align: justify;
     }
   }
 }
 
-@media screen and (max-width: 968px){
+@media screen and (max-width: 968px) {
   .missionCard {
-    gap: 8px;
+    gap: $sm;
     flex-direction: column !important;
   }
   .missionCard_image {
-    width: 200px;
+    width: 150px;
   }
 
   .missionCard_content {

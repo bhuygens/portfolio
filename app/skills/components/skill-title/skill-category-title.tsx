@@ -7,8 +7,8 @@ type SkillCategoryTitleProps = {
 
 function SkillCategoryTitle({title}: SkillCategoryTitleProps) {
   return (
-    <div>
-      <h1 style={{fontSize: 36}}>{title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
       <svg height={1} style={{width: '60vw'}}>
         <rect className={styles.bar} height="1"
               style={{fill: "#ADADAD", strokeWidth: 3, stroke: "#ADADAD", width: '80vw'}}/>

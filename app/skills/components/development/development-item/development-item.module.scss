@@ -1,6 +1,8 @@
+@import "style/common.module";
+
 .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 48px;
+  gap: $xl-3;
 }

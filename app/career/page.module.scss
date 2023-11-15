@@ -1,3 +1,4 @@
+@import "style/common.module";
 .body {
   all: unset;
 }
@@ -19,7 +20,7 @@
 .section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin-bottom: 24px;
+  margin-bottom: $lg;
 }
 
 .svg {
@@ -29,14 +30,14 @@
 .titleSection {
   display: grid;
   place-content: center;
-  gap: 12px;
+  gap: $sm;
   position: sticky;
   top: 20vh;
   color: white;
 }
 
 .h1 {
-  font-size: 24px;
+  font-size: $font-lg;
 }
 
 .img {
@@ -48,22 +49,18 @@
   min-height: 400px;
   width: 100%;
   display: grid;
-  font-size: 24px;
-  font-family: sans-serif;
+  font-size: $font-lg;
+  font-family: "montserrat", sans-serif;
   color: white;
 }
 
 .main_missions {
   width: 100vw;
-  margin-top: 64px;
+  margin: $xl-3 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: calc(100vh - 120px);
-
-  .title {
-    font-size: 40px;
-  }
 
   .arrow_down_icon {
     position: absolute;
@@ -74,7 +71,7 @@
 
   .content {
     width: 100vw;
-    margin-top: 64px;
+    margin-top: $xl-3;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,5 +87,15 @@
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titleSection {
+    justify-content: unset;
+  }
+  .contentSection {
+    min-height: unset;
+    margin-bottom: $xl-3;
   }
 }

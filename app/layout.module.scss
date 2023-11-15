@@ -8,19 +8,26 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 $sm;
   color: white;
-  background-color: #1D1D1D;
+  background-color: rgba(22, 22, 23, .8);
   z-index: 10;
+  backdrop-filter: saturate(180%) blur(20px);
 
   .navbar_items {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: $xl;
 
     .navbar_link {
-      font-weight: 700;
-      font-size: 16px;
+      font-weight: $font-bold;
+      font-size: $font-md;
+      transition: scale 300ms;
+
+      &:hover {
+        scale: 1.1;
+        transition: scale 300ms
+      }
 
       &.selected:after {
         border-bottom: solid 3px $font-primary-color;
@@ -51,14 +58,23 @@
 
 @media screen and (max-width: 768px) {
   .navbar_container {
-    padding:0;
+    padding: unset;
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+
+    .logo {
+      width: 48px;
+      height: 48px;
+    }
+
     .navbar_items {
-      gap: 12px;
+      gap: $sm;
     }
 
     .navbar_external_links {
       flex-direction: column;
-      gap: 12px;
+      gap: $sm;
     }
   }
 }

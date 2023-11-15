@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html {
+    font-size: 16px;
+}
+
 html,
 body {
     max-width: 100vw;
@@ -24,11 +28,36 @@ a {
 }
 
 h1, h2, h3 {
-    font-family: "saol", sans-serif
+    font-family: "montserrat", sans-serif
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    cursor: default;
+}
+
+span {
+    font-size: 0.8rem;
+    color: #ADADAD;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
 }

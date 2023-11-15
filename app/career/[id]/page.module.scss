@@ -8,7 +8,7 @@
     ". headerArea ."
     "imagePresentation imagePresentation imagePresentation"
     "sidebar contentArea .";
-  row-gap: 40px;
+  row-gap: $xl;
 
   .header {
     max-width: 800px;
@@ -17,28 +17,33 @@
     grid-area: headerArea;
 
     > :not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: $xl;
     }
 
-    .tags {
+    .header_tags {
       display: flex;
       flex-direction: row;
-      gap: 80px;
+      justify-content: space-between;
       align-items: baseline;
-      font-size: 16px;
+      font-size: $font-md;
       color: $font-secondary-color;
 
       :first-child {
-        border-radius: 12px;
+        border-radius: $common-radius;
         background: $secondary_color;
         color: $font-alternative-color;
-        padding: 8px;
+        padding: $sm;
       }
+    }
+
+    .header_title {
+      font-family: "saol", sans-serif;
+      font-weight: $font-light;
     }
   }
 
   .image_presentation {
-    margin-bottom: 125px;
+    margin-bottom: $xl-4;
     grid-area: imagePresentation;
   }
 
@@ -54,38 +59,103 @@
       align-items: center;
       position: sticky;
       top: 0;
-      padding-top: 32px;
+      padding-top: $xl-3;
+      font-weight: $font-light;
 
       > :not(:last-child) {
-        margin-bottom: 32px;
+        margin-bottom: $xl-3;
       }
+
+      .sidebar_item {
+        margin-bottom: $md;
+        transition: all 300ms;
+        color: $font-secondary-color;
+
+        &:hover {
+          scale: 1.1;
+          transition: all 300ms;
+          color: $font-primary-color;
+        }
+      }
+
     }
   }
 
   .content {
     grid-area: contentArea;
+    font-weight: 100;
+  }
 
+  .mentions {
+    display: flex;
+    flex-direction: row;
+    gap: $xl;
+    overflow-x: scroll;
+    width: 60vw;
+
+    .mentions_item {
+      display: flex;
+      flex-direction: column;
+      gap: $md;
+
+      .mentions_itemImage {
+        width: 220px;
+        height: auto;
+      }
+
+      .mentions_itemTitle {
+        font-size: $font-md;
+      }
+
+      .mentions_itemSubtitle {
+        font-size: $font-md;
+      }
+
+      .mentions_itemTags {
+        display: flex;
+        flex-direction: row;
+        gap: $sm;
+        color: $font-secondary-color;
+      }
+    }
   }
 }
 
 
 @media screen and (max-width: 1020px) {
   .careerDetailContainer {
-    padding: 12px;
+    padding: $sm;
     grid-template-areas:
     "headerArea headerArea headerArea"
     "imagePresentation imagePresentation imagePresentation"
-    "sidebar contentArea contentArea";
+    "contentArea contentArea contentArea";
 
     .header {
-      .tags {
-        gap: 12px;
+      .header_tags {
+        gap: $sm;
         flex-wrap: wrap;
       }
     }
 
     .image_presentation {
       width: calc(100vw - 24px) !important;
+      margin-bottom: unset;
+    }
+
+    .content {
+      padding: $md;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .careerDetailContainer {
+    .sidebar {
+      display: none;
+    }
+
+    .mentions {
+      width: 80vw;
     }
   }
 }

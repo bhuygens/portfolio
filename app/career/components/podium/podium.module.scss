@@ -5,19 +5,20 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: flex-end;
   max-width: 700px;
-  gap: 18px;
+  gap: $md;
 
   .podium_item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: $sm;
 
-    &:hover {
-      cursor: pointer;
-    }
 
     .podium_item_icon {
+      &:hover {
+        cursor: pointer;
+      }
+
       .podium_item_icon_second {
         height: 150px;
         width: 150px;
@@ -37,13 +38,12 @@
     .podium_item_support {
       background: $linear-gradient;
       width: 200px;
-      border-radius: 12px;
+      border-radius: $common-radius;
     }
   }
 }
 
-@media screen and (max-width: 768px){
-  @import "@/style/common.module";
+@media screen and (max-width: 768px) {
 
   .container {
     .podium_item {
@@ -63,6 +63,7 @@
           width: 100px;
         }
       }
+
       .podium_item_support {
         width: 80px;
       }

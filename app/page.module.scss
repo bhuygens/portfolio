@@ -29,21 +29,33 @@
 
     .title {
       font-family: $font-main;
-      font-size: 64px;
+      font-size: $font-3xl;
     }
 
     .subtitle {
       font-family: $font-main;
-      font-size: 28px;
+      font-size: $font-lg;
     }
   }
 }
 
 
 @media screen and (max-width: 1020px) {
-  .background {
-    .background_image {
-      width: 90vw;
+  .main {
+    position: unset;
+    .background {
+      .background_image {
+        width: 90vw;
+      }
+    }
+
+    .content {
+      .title {
+        font-size: $font-xl;
+      }
+      .subtitle {
+        font-size: $font-lg;
+      }
     }
   }
 }
