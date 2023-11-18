@@ -1,25 +1,20 @@
 @import "font.module";
 
+// BACKGROUND:
+$background: rgba(0, 0, 0, 0.05);
+
 // COLORS
-$primary-color: #000;
-$secondary_color: #EEEEEF;
-$tertiary-color: #444444;
+$primary-color: #4F48AD;
+$secondary_color: #CBC8F9;
+$accent-color: #2618DC;
 
-// PALETTE
-$first: rgba(5, 22, 26, 1);
-$second: rgba(7, 46, 51, 1);
-$third: rgba(12, 112, 120, 1);
-$fourth: rgba(15, 150, 144, 1);
-$fifth: rgba(109, 165, 192, 1);
-
-// GRADIENTS
-$linear-gradient: linear-gradient(0deg, $first 0%, $second 20%, $third 51%, $fourth 100%, $fifth 100%);
 
 // FONTS
-$font-main: 'saol', sans-serif;
-$font-primary-color: white;
-$font-secondary-color: #ADADAD;
-$font-alternative-color: #1D1D1D;
+$font-family-main: 'saol', sans-serif;
+$font-family-secondary: var(--font-montserrat);
+$font-primary-color: #060425;
+$font-secondary-color: $secondary_color;
+$font-accent-color: $accent-color;
 
 // FONT STYLES
 $font-light: 100;

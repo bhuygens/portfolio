@@ -1,22 +1,13 @@
 @import "style/common.module";
+
+
 .skills_page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  padding-bottom: $xl;
   .skills_item {
-    height: calc(100vh - 100px);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills_page {
-    margin-left: 0;
-    .skills_item {
-      width: 100vw;
-      padding: $sm;
-      height: unset;
-    }
+    margin-bottom: $xl;
   }
 }

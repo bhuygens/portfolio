@@ -1,0 +1,21 @@
+@import "style/common.module";
+
+.content_by_year {
+  margin-bottom: $xl;
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    gap: $xl;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content_by_year {
+    .items {
+      justify-content: center;
+
+    }
+  }
+}

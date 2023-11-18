@@ -28,7 +28,9 @@ export default async function getAllMissions() {
                 year: new Date(item.properties.year.date.start),
                 id: item.properties.ID.unique_id.number,
                 content: JSON.parse(contentFormatted),
-                mentions: JSON.parse(mentionsFormatted) ?? []
+                mentions: JSON.parse(mentionsFormatted) ?? [],
+              company: item.properties.company.rich_text[0].plain_text
+
             }
         });
 }

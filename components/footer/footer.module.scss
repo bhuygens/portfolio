@@ -1,0 +1,74 @@
+@import "style/common.module";
+
+.footer {
+  margin-top: $xl;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $lg;
+    border-radius: $common-radius;
+    background: $background;
+    padding: 3em 5em;
+    width: 80%;
+    margin-bottom: 5em;
+
+    .brand {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: $md;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: $xl-3;
+      flex-wrap: wrap;
+
+      .links_column {
+        display: flex;
+        flex-direction: column;
+        gap: $lg;
+
+        .social_icon {
+          display: flex;
+          flex-direction: row;
+          gap: $md;
+        }
+      }
+
+
+      .column_title {
+        opacity: 0.7;
+      }
+    }
+
+    .separator {
+      width: 90%;
+      align-self: center;
+      height: 1px;
+      background-color: $accent-color;
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      gap: $sm;
+
+      .bottom_text {
+        display: flex;
+        flex-direction: row;
+        gap: $sm;
+      }
+
+    }
+  }
+}

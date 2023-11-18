@@ -11,7 +11,9 @@ export default async function getAllMissionsByYear() {
     .sort((a, b) => sortByDate(a.properties.year.date.start, b.properties.year.date.start))
     .map((item: NotionMissionItem, id: number): MissionType => {
       let contentFormatted = "";
-      item.properties.content.rich_text.map((text) => {contentFormatted += text.plain_text})
+      item.properties.content.rich_text.map((text) => {
+        contentFormatted += text.plain_text
+      })
 
       let mentionsFormatted = "";
       notionResults[0].properties.mentions.rich_text.map((text) => {
@@ -28,7 +30,8 @@ export default async function getAllMissionsByYear() {
         reverse: (!!(id % 2)),
         id: item.properties.ID.unique_id.number,
         content: JSON.parse(contentFormatted),
-        mentions: JSON.parse(mentionsFormatted)
+        mentions: JSON.parse(mentionsFormatted) ?? [],
+        company: item.properties.company.rich_text[0].plain_text
       }
     });
 

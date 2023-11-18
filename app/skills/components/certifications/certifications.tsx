@@ -8,7 +8,7 @@ function Certifications() {
 
     return (
         <>
-            <div className={styles.container} style={{marginBottom: 120}}>
+            <div className={styles.container}>
                 <SkillCategoryTitle title={"Certifications"}/>
 
                 <div className={styles.content}>

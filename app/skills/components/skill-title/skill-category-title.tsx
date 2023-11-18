@@ -11,7 +11,7 @@ function SkillCategoryTitle({title}: SkillCategoryTitleProps) {
       <h1 className={styles.title}>{title}</h1>
       <svg height={1} style={{width: '60vw'}}>
         <rect className={styles.bar} height="1"
-              style={{fill: "#ADADAD", strokeWidth: 3, stroke: "#ADADAD", width: '80vw'}}/>
+              style={{fill: "#2618DC", width: '80vw'}}/>
       </svg>
     </div>
   );

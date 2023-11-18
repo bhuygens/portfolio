@@ -1,0 +1,92 @@
+@import "style/common.module";
+
+.intro {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  background: #4F48AD;
+  margin-bottom: $xl-3;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 420px;
+    background: url("../../public/skill_background.svg");
+    background-size: cover;
+  }
+
+  .intro_icon {
+    width: auto;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30vh;
+  }
+
+  .intro_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $xl-2;
+
+
+    .intro_text_title {
+      color: $font-primary-color;
+      font-weight: $font-bold;
+    }
+
+    .intro_text_subtitle {
+      color: $font-secondary-color;
+      text-align: center;
+      font-size: $lg;
+      font-style: normal;
+      font-weight: 100;
+      max-width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro:before {
+    height: 70px;
+  }
+
+  .intro {
+    .intro_icon {
+      bottom: -45px;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+  .intro:before {
+    height: 120px;
+  }
+  .skills_page {
+    margin-left: 0;
+
+    .skills_item {
+      width: 100vw;
+      padding: $sm;
+      height: unset;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .intro:before {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .intro:before {
+    height: 170px;
+  }
+}

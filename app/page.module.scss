@@ -1,40 +1,43 @@
 @import "../style/common.module";
 
 .main {
-  position: relative;
-  width: 100vw;
+  background: $primary-color;
+  width: 100%;
   height: 100vh;
+  position: absolute;
+  z-index: -1;
 
-  .background {
+  .background_image {
     position: absolute;
+    right: 0;
     z-index: -1;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -56%);
-
+    transform: translate(-5%, -50%);
   }
 
   .content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50vh;
-    width: 100vw;
     flex-direction: column;
+    gap: $lg;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -56%);
-    text-align: center;
+    bottom: 0;
+    transform: translate(-5%, -50%);
+    margin-left: $xl-2;
 
-    .title {
-      font-family: $font-main;
-      font-size: $font-3xl;
+    .header {
+      .title {
+        font-family: $font-family-secondary;
+        font-size: $xl-3;
+        font-weight: $font-light;
+        color: $font-secondary-color;
+      }
+
     }
 
-    .subtitle {
-      font-family: $font-main;
+    .current_job {
+      font-family: $font-family-main;
       font-size: $font-lg;
+      color: $font-secondary-color;
     }
   }
 }
@@ -43,16 +46,28 @@
 @media screen and (max-width: 1020px) {
   .main {
     position: unset;
-    .background {
-      .background_image {
-        width: 90vw;
-      }
+
+    .background_image {
+      color: transparent;
+      height: 50vh;
+      width: 40vh;
+      transform: translate(-8px, -45%);
     }
 
     .content {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin-left: 12px;
+      height: calc(100vh - 60px);
+      justify-content: space-between;
+      transform: unset;
+      padding: $xl-4 0;
+
       .title {
         font-size: $font-xl;
       }
+
       .subtitle {
         font-size: $font-lg;
       }

@@ -1,5 +1,16 @@
+@import "style/common.module";
+
 .container {
+  margin-bottom: $xl;
+
   .title {
-    font-family: "saol", sans-serif;
+    font-family: "montserrat", sans-serif;
+    font-weight: $font-light;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: $xl;
   }
 }

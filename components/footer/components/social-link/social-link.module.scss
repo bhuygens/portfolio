@@ -1,0 +1,12 @@
+.link {
+  transition: all 300ms;
+  &:hover {
+    scale: 1.1;
+    transition: all 300ms;
+  }
+
+  &:focus {
+    scale: 0.95;
+    transition: all 300ms;
+  }
+}

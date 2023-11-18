@@ -11,15 +11,18 @@ html {
 html,
 body {
     max-width: 100vw;
-    overflow-x: hidden;
-    all: unset;
-    color: white;
+    color: #060425;
     font-family: "montserrat", sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background: #1D1D1D;
+    background: #DCDAFB;
+    /*
+    background: #310A58;
+    background: #934B58
+    background: #934BA2
+    */
 }
 
 a {
@@ -50,7 +53,7 @@ p {
 
 span {
     font-size: 0.8rem;
-    color: #ADADAD;
+    color: #2618DC;
     font-style: italic;
 }
 

@@ -1,6 +1,7 @@
 @import "style/common.module";
 
 .container {
+  margin-top: $xl-2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +36,7 @@
           width: 400px;
           height: 30px;
           border: none;
-          background: $tertiary-color;
+          background: $secondary_color;
         }
 
         .content_textarea {
@@ -43,34 +44,13 @@
           height: 220px;
           resize: none;
           border: none;
-          background: $tertiary-color;
+          background: $secondary_color;
         }
       }
 
       .content_button {
         align-self: center;
 
-        .content_button_item {
-          background: transparent;
-          border-radius: $common-radius;
-          color: $font-primary-color;
-          border: 1px solid $font-primary-color;
-          padding: $sm $md;
-          transition: all 300ms;
-
-          &:hover {
-            scale: 1.1;
-            transition: all 300ms;
-          }
-
-          &:active {
-            border: 1px solid $font-alternative-color;
-            color: $font-alternative-color;
-            background: $secondary_color;
-            transition: all 300ms;
-
-          }
-        }
       }
     }
 
@@ -86,11 +66,12 @@
   .container {
     .content {
       flex-direction: column-reverse;
+      padding: $md;
 
       .content_form {
         .content_item {
           .content_input, .content_textarea {
-            width: 100vw;
+            width: 100%;
           }
         }
       }
