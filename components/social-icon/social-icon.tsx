@@ -15,6 +15,8 @@ function SocialIcon({icon, link}: SocialIconProps) {
       target="_blank"
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.95}}
+      aria-label={icon}
+      role={"link"}
     >
       <Image src={`/icons/${icon}.svg`} alt={icon} width={32} height={32}/>
     </motion.a>

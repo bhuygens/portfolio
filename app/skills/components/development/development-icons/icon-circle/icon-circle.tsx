@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, {useEffect} from "react";
+import React from "react";
 import styles from './icon-circle.module.scss';
 
 type SkillIconItemProps = {
@@ -15,16 +15,16 @@ type SkillIconItemProps = {
 }
 
 export default function IconCircle({
-                                   parentWidth,
-                                   parentHeight,
-                                   parentBorder,
-                                   icons,
-                                   iconTop,
-                                   iconLeft = 0,
-                                   parentRight = 24,
-                                   parentTop = 0,
-                                   onIconClicked
-                                 }: SkillIconItemProps) {
+                                     parentWidth,
+                                     parentHeight,
+                                     parentBorder,
+                                     icons,
+                                     iconTop,
+                                     iconLeft = 0,
+                                     parentRight = 24,
+                                     parentTop = 0,
+                                     onIconClicked
+                                   }: SkillIconItemProps) {
 
   const calculateTop = (index: number) => {
     return index === 0 ? iconTop : iconTop / (1 + index);
@@ -43,7 +43,7 @@ export default function IconCircle({
                 right: parentRight
               }}>
     {icons.map((icon: string, index: number) =>
-      <button key={index}>
+      <button key={index} type={"button"} role={"button"} aria-label={"button"}>
         <Image src={`/icons/${icon}.svg`} alt={icon} width={32}
                height={32}
                className={styles.skill_icon}

@@ -5,8 +5,13 @@ import TypedComponent from "@/components/typed-component/typed-component";
 import {Sequence} from "react-type-animation/dist/cjs/components/TypeAnimation/index.types";
 
 export const metadata: Metadata = {
-  title: "HB - Portfolio",
-  description: "Welcome to Benjamin Huygens's portfolio",
+  title: "Huygens Benjamin - Freelance developer",
+  description: "I'm Benjamin,a fullstack developer.Here you could find my skills, success, " +
+    "missions and certifications. Feel free to contact me on the dedicated page",
+  keywords: [
+    "fullstack", "developer", "javascript", "js", "next", "nextjs", "react", "nestjs",
+    "nest", "huygens", "huygens benjamin", "frontend", "backend", "typescript", "freelance", "montreal", "french"
+  ]
 }
 export default function Home() {
   const subTitleSequence: Sequence = [1000, "Developer Freelance", 1300, "Developer Fullstack"];

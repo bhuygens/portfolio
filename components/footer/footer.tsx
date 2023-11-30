@@ -3,6 +3,7 @@ import styles from "./footer.module.scss";
 import Image from "next/image";
 import SocialIcon from "@/components/social-icon/social-icon";
 import SocialLink from './components/social-link/social-link';
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -37,11 +38,22 @@ function Footer() {
         <div className={styles.bottom}>
           <div className={styles.bottom_text}>
             <p>Made with ❤ by</p>
-            <a style={{textDecoration: "underline"}} href="https://www.instagram.com/benhuyg" target="_blank">@benhuy</a>
+            <Link style={{textDecoration: "underline"}} href="https://www.instagram.com/benhuyg"
+                  target="_blank"
+                  aria-label={'@benhuy'}
+                  role={"link"}>
+              @benhuy
+            </Link>
           </div>
           <div className={styles.bottom_text}>
             <p style={{fontSize: 12}}>Images from</p>
-            <a style={{textDecoration: "underline", fontSize: 12}} href="https://fr.freepik.com/vecteurs" target="_blank">freepick</a>
+            <Link style={{textDecoration: "underline", fontSize: 12}}
+                  href="https://fr.freepik.com/vecteurs"
+                  target="_blank"
+                  aria-label={'freepick'}
+                  role={"link"}>
+              freepick
+            </Link>
           </div>
         </div>
       </div>

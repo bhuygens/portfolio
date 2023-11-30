@@ -10,7 +10,7 @@ type ButtonProps = {
 
 function Button({isLoading, loadingText, text}: ButtonProps) {
   return <button className={styles.button} type="submit" aria-disabled={isLoading}
-                 disabled={isLoading}>
+                 disabled={isLoading} role={"button"} aria-label={"button"}>
     {isLoading ? loadingText : text}
   </button>;
 }

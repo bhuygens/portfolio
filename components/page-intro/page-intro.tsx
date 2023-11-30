@@ -11,12 +11,12 @@ type PageIntroProps = {
 }
 
 function PageIntro({children, subtitle, title}: PageIntroProps) {
-  return <div className={styles.intro}>
+  return <div className={styles.intro} role={"contentinfo"} aria-label={`introduction of the ${title} page`}>
     <div className={styles.intro_text}>
       <h1 className={styles.intro_text_title}>{title}</h1>
       {
         subtitle &&
-          <p className={styles.intro_text_subtitle}>
+          <p className={styles.intro_text_subtitle} role={"heading"} aria-level={2}>
             {subtitle}
           </p>
       }

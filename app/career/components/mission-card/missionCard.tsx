@@ -23,7 +23,8 @@ export default function MissionCard({media, tags, title, url, id, company}: Miss
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.95}}
     >
-      <CldImage className={styles.company_logo} width="400" height="400" src={media.source.url}
+      <CldImage className={`${styles.company_logo} ${id === '11' && styles.talion_logo}`} width="400" height="400"
+                src={media.source.url}
                 alt={media.source.url}/>
 
       <motion.div whileHover={{scale: 1.1}}>

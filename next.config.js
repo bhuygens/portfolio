@@ -9,6 +9,9 @@ const nextConfig = {
     domains: ['res.cloudinary.com']
   },
   reactStrictMode: false,
+  experimental: {
+    appDir: true,
+  }
 }
 
 module.exports = nextConfig

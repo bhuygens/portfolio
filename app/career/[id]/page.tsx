@@ -6,6 +6,7 @@ import Image from "next/image";
 import {Metadata} from "next";
 import Link from "next/link";
 import CareerDetailWebsite from "@/app/career/[id]/components/career-detail-website/career-detail-website";
+import {CommonHelper} from "@/helpers/common.helper";
 
 type Params = {
   params: {
@@ -93,7 +94,8 @@ export default async function CareerDetailPage({params: {id}}: Params) {
           <div className={styles.mention_content}>
             {
               mission.mentions.map((item: MentionType, index: number) =>
-                <Link href={item.link} target="_blank" key={index} className={styles.mentions_item}>
+                <Link href={item.link} target="_blank" key={index} className={styles.mentions_item}
+                      aria-label={item.title}>
                   <Image alt={item.title} src={item.image_url} className={styles.mentions_itemImage}
                          width={220} height={0}/>
                   <h2 className={styles.mentions_itemTitle}>{item.title}</h2>
@@ -114,7 +116,7 @@ export default async function CareerDetailPage({params: {id}}: Params) {
     <div className={styles.careerDetailContainer}>
       <div className={styles.header}>
         <div className={styles.header_tags}>
-          {mission.tags.map((tag, id) => <span key={id}>{tag}</span>)}
+          {mission.tags.map((tag, id) => <span key={id}>{CommonHelper.Capitalize(tag)}</span>)}
         </div>
         <h1 className={styles.header_title}>{mission.title} @ {mission.company}</h1>
       </div>
