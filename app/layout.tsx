@@ -14,6 +14,7 @@ import {MenuItem} from "@/components/menu/menu_item";
 import {TabsEnum} from "@/enums/tabs.enum";
 import {CommonHelper} from "@/helpers/common.helper";
 import Footer from "@/components/footer/footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const navBarVariants = {
   open: {},
@@ -186,6 +187,7 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
       {children}
     </motion.div>
     {currentPath !== "" && <Footer/>}
+    <Analytics/>
     </body>
     </html>
   );
