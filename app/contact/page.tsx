@@ -19,7 +19,7 @@ function ContactPage() {
 
         <div className={styles.content_infos}>
           <ContactItem image={"address"} detail={"Montreal"} title={"Address"}/>
-          <ContactItem image={"phone"} detail={"+33 6 59 58 29 54"} title={"Phone"}/>
+          <ContactItem image={"phone"} detail={"FR: +33 6 59 58 29 54, CA: +1 (438) 448-1802"} title={"Phone"}/>
           <ContactItem image={"mail"} detail={"huygens.benjamin@gmail.com"} title={"Mail"}/>
         </div>
       </div>

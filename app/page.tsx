@@ -6,7 +6,7 @@ import {Sequence} from "react-type-animation/dist/cjs/components/TypeAnimation/i
 
 export const metadata: Metadata = {
   title: "Huygens Benjamin - Freelance developer",
-  description: "I'm Benjamin,a fullstack developer.Here you could find my skills, success, " +
+  description: "I'm Benjamin, a fullstack developer.Here you could find my skills, success, " +
     "missions and certifications. Feel free to contact me on the dedicated page",
   keywords: [
     "fullstack", "developer", "javascript", "js", "next", "nextjs", "react", "nestjs",

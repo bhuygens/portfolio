@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 }
 export default async function SkillsPage() {
   let developmentData: DevelopmentSkill[] = await getSkillsContent();
-  const subtitle = "After 3 years as a freelance developer and many experiences, I have now strong knowledge in Javascript development"
+  const subtitle = "After 5 years as a freelance developer and many experiences, I have now strong knowledge in Javascript development"
   return (
     <div style={{background: "#DCDAFB", color: "black"}}>
       <PageIntro title={"Skills"}
