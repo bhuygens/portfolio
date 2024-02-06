@@ -1,6 +1,7 @@
 @import "style/common.module";
 
 .careerDetailContainer {
+  background: $background-page;
   display: grid;
   grid-template-columns: [leftColumn] 30vw [centerColumn] auto [rightColumn] 20vw;
   grid-template-rows: auto;
@@ -9,7 +10,7 @@
     "imagePresentation imagePresentation imagePresentation"
     "sidebar contentArea .";
   row-gap: $xl;
-  margin-top: $xl-2;
+  padding-top: $xl;
   .header {
     max-width: 800px;
     display: flex;

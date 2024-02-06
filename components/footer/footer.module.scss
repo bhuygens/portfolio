@@ -1,11 +1,11 @@
 @import "style/common.module";
 
 .footer {
-  margin-top: $xl;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  background: #DCDAFB;
 
   .content {
     display: flex;

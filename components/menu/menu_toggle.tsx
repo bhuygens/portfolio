@@ -24,7 +24,7 @@ export const MenuToggle = ({onClick}: MenuToggleProps) => (
             <Path
                 stroke="white"
                 variants={{
-                    closed: {d: "M 2 0 L 20 0"},
+                    closed: {d: "M 2 2 L 20 2"},
                     open: {d: "M 3 16.5 L 17 2.5"}
                 }}
             />
