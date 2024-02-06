@@ -15,6 +15,7 @@
     "@mui/material": "^5.14.12",
     "@notionhq/client": "^2.2.13",
     "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.9",
     "framer-motion": "^10.16.4",
     "next": "14.0.1",
     "next-cloudinary": "^4.23.1",
