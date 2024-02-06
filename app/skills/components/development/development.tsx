@@ -22,7 +22,7 @@ function Development({skillsContent}: SkillsDevelopmentProps) {
     return skillsContent.find((item: DevelopmentSkill) => item.name === itemDisplayed);
   }
 
-  const displaySkills = (type: "frontend" | "backend") => {
+  const displaySkills = (type: "frontend" | "backend" | "mobile") => {
     const filteredFrameworks = skillsContent.filter(item => item.type === type);
     return (
       <>
@@ -50,6 +50,7 @@ function Development({skillsContent}: SkillsDevelopmentProps) {
 
       {displaySkills("frontend")}
       {displaySkills("backend")}
+      {displaySkills("mobile")}
 
     </div>
   );

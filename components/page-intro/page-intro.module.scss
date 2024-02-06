@@ -1,6 +1,7 @@
 @import "style/common.module";
 
 .intro {
+  margin-top: $xl-3;
   width: 100%;
   min-height: 50vh;
   position: relative;
@@ -58,7 +59,7 @@
 
   .intro {
     .intro_icon {
-      bottom: -45px;
+      bottom: -65px;
     }
   }
 }

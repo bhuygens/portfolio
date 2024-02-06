@@ -58,7 +58,6 @@ const navbarItemsVariants = {
     },
   },
 };
-
 const RootLayout = ({children}: { children: React.ReactNode }) => {
   const [currentPath, setCurrentPath] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -88,8 +87,10 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
 
   return (
     <html lang="en">
-    <head/>
-    <body style={{background: `${currentPath === "" ? "#4F48AD" : "#DCDAFB"}`}}>
+    <head>
+      <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    </head>
+    <body>
     <motion.div
       initial={{opacity: 0}}
       animate={{opacity: 1}}
@@ -184,7 +185,6 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
           </>
         )}
       </motion.div>
-      <div style={{height: windowsWidth > 768 ? 0 : 52}}></div>
       {children}
     </motion.div>
     {currentPath !== "" && <Footer/>}

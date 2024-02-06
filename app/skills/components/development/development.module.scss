@@ -17,7 +17,8 @@
     flex-direction: row;
     gap: $xl-4;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 48px;
 
     .framework_item {
       max-width: 250px;

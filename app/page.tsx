@@ -11,7 +11,9 @@ export const metadata: Metadata = {
   keywords: [
     "fullstack", "developer", "javascript", "js", "next", "nextjs", "react", "nestjs",
     "nest", "huygens", "huygens benjamin", "frontend", "backend", "typescript", "freelance", "montreal", "french"
-  ]
+  ],
+// @ts-ignore
+  'apple-mobile-web-app-status-bar-style': "black",
 }
 export default function Home() {
   const subTitleSequence: Sequence = [1000, "Developer Freelance", 1300, "Developer Fullstack"];

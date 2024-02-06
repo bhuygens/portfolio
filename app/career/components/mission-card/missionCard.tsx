@@ -16,7 +16,7 @@ type MissionCardProps = {
 }
 
 
-export default function MissionCard({media, tags, title, url, id, company}: MissionCardProps) {
+export default function MissionCard({media, tags, title, url, id, company}: Readonly<MissionCardProps>) {
   return (
     <motion.a
       className={styles.container} href={`/career/${id}`}
@@ -27,7 +27,7 @@ export default function MissionCard({media, tags, title, url, id, company}: Miss
                 src={media.source.url}
                 alt={media.source.url}/>
 
-      <motion.div whileHover={{scale: 1.1}}>
+      <motion.div>
         <CldImage
           className={styles.missionCard_presentation}
           alt={url}
