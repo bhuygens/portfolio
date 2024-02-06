@@ -14,7 +14,8 @@ import {MenuItem} from "@/components/menu/menu_item";
 import {TabsEnum} from "@/enums/tabs.enum";
 import {CommonHelper} from "@/helpers/common.helper";
 import Footer from "@/components/footer/footer";
-import { Analytics } from '@vercel/analytics/react';
+import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from "@vercel/speed-insights/next";
 
 const navBarVariants = {
   open: {},
@@ -90,8 +91,8 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
     <head/>
     <body style={{background: `${currentPath === "" ? "#4F48AD" : "#DCDAFB"}`}}>
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
     >
       <motion.div
         className={`${styles.navbar_container} ${
@@ -188,6 +189,7 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
     </motion.div>
     {currentPath !== "" && <Footer/>}
     <Analytics/>
+    <SpeedInsights/>
     </body>
     </html>
   );
