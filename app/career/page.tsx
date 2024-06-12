@@ -17,7 +17,7 @@ export default async function CareerPage() {
     <div style={{background: "#DCDAFB", color: "black"}}>
       <div className={styles.title}>
         <PageIntro title={"Missions"}
-                   subtitle={"I've been involved in 10 projects. Most of the time in Javascript, for both front and back ends"}/>
+                   subtitle={"I've been involved in 11 projects. Most of the time in Javascript (TS), for both front and back"}/>
       </div>
 
       <div className={styles.container}>

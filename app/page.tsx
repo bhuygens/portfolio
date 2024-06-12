@@ -41,7 +41,7 @@ export default function Home() {
           <rect width="2" height="300" rx="15" fill={"#CCCCCC"}/>
         </svg>
 
-        <p className={styles.current_job}>Currently working @ Decathlon</p>
+        <p className={styles.current_job}>Currently working @ Pivot (Montreal)</p>
 
       </div>
     </main>
