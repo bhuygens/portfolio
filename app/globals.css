@@ -1,66 +1,168 @@
+/* ============================================
+   MODERN DARK THEME - Global Styles
+   ============================================ */
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background: #0a0a0b;
 }
 
 html,
 body {
-    max-width: 100vw;
-    color: #060425;
-    font-family: "montserrat", sans-serif;
-    scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: #fafafa;
+  font-family: var(--font-space-grotesk), "Space Grotesk", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    background: #DCDAFB;
-    /*
-    background: #310A58;
-    background: #934B58
-    background: #934BA2
-    */
+  background: transparent;
+  min-height: 100vh;
 }
 
+/* Typography */
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+  transition: color 200ms ease;
 }
 
-h1, h2, h3 {
-    font-family: "montserrat", sans-serif
+a:hover {
+  color: #6366f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-grotesk), "Space Grotesk", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fafafa;
 }
 
 h1 {
-    font-size: 2.25rem;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-    font-size: 1.25rem;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 p {
-    font-size: 1rem;
-    cursor: default;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #a1a1aa;
 }
 
 span {
-    font-size: 0.8rem;
-    color: #2618DC;
-    font-style: italic;
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  font-style: normal;
 }
 
+/* Lists */
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
+/* Buttons */
 button {
-    cursor: pointer;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fafafa;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section anchors offset for fixed nav */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
 }

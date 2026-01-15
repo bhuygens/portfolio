@@ -1,169 +1,249 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
 .careerDetailContainer {
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.header {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-6;
+  padding: $space-12 0;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $space-8 $space-4;
+  }
+}
+
+.header_tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: $space-3;
+  flex-wrap: wrap;
+
+  span {
+    @include tag;
+  }
+}
+
+.header_title {
+  font-size: $font-4xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  letter-spacing: -0.02em;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-3xl;
+  }
+}
+
+.image_presentation {
+  margin-bottom: $space-8;
+}
+
+.mainWrapper {
   display: grid;
-  grid-template-columns: [leftColumn] 30vw [centerColumn] auto [rightColumn] 20vw;
-  grid-template-rows: auto;
-  grid-template-areas:
-    ". headerArea ."
-    "imagePresentation imagePresentation imagePresentation"
-    "sidebar contentArea .";
-  row-gap: $xl;
-  margin-top: $xl-2;
-  .header {
-    max-width: 800px;
+  grid-template-columns: minmax(0, 800px) 240px;
+  gap: $space-8;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $space-6;
+
+  @media (max-width: $breakpoint-xl) {
+    grid-template-columns: minmax(0, 1fr) 200px;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+  height: max-content;
+  align-self: start;
+
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.sidebarContent {
+  @include glass;
+  border-radius: $radius-xl;
+  padding: $space-6;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+
+  h3 {
+    font-size: $font-lg;
+    font-weight: $font-semibold;
+    color: $text-primary;
+    margin-bottom: $space-2;
+  }
+
+  ol {
     display: flex;
     flex-direction: column;
-    grid-area: headerArea;
-
-    > :not(:last-child) {
-      margin-bottom: $xl;
-    }
-
-    .header_tags {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: $font-md;
-      color: $font-secondary-color;
-
-      :first-child {
-        border-radius: $common-radius;
-        background: $secondary_color;
-        color: $font-accent-color;
-        padding: $sm;
-      }
-    }
-
-    .header_title {
-      font-family: "saol", sans-serif;
-      font-weight: $font-light;
-    }
+    gap: $space-2;
   }
 
-  .image_presentation {
-    margin-bottom: $xl-4;
-    grid-area: imagePresentation;
+  svg {
+    display: none;
+  }
+}
+
+.sidebar_item {
+  transition: all $transition-base;
+
+  a {
+    display: block;
+    padding: $space-2 $space-3;
+    border-radius: $radius-md;
+    color: $text-secondary;
+    font-size: $font-sm;
+    font-weight: $font-medium;
+    transition: all $transition-base;
+
+    &:hover {
+      color: $accent-primary;
+      background: rgba(99, 102, 241, 0.1);
+    }
+  }
+}
+
+.content {
+  min-width: 0;
+  padding-bottom: $space-16;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 $space-6 $space-16;
   }
 
-  .sidebar {
-    grid-area: sidebar;
+  @media (max-width: $breakpoint-md) {
+    padding: 0 $space-4 $space-16;
+  }
+
+  ol {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: $space-12;
 
-    .sidebarContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      padding-top: $xl-3;
-      font-weight: $font-light;
+    > li {
+      @include card;
+      padding: $space-8;
 
-      > :not(:last-child) {
-        margin-bottom: $xl-3;
+      &:hover {
+        transform: none;
       }
 
-      .sidebar_item {
-        margin-bottom: $md;
-        transition: all 300ms;
-        color: $font-primary-color;
-
-        &:hover {
-          scale: 1.05;
-          transition: all 300ms;
-          color: $font-accent-color;
-          font-weight: $font-bold;
-        }
+      h2 {
+        font-size: $font-2xl;
+        font-weight: $font-semibold;
+        color: $text-primary;
+        margin-bottom: $space-6;
+        padding-bottom: $space-4;
+        border-bottom: 1px solid $border-primary;
       }
 
-    }
-  }
+      div {
+        color: $text-secondary;
+        line-height: 1.8;
+        font-size: $font-md;
 
-  .content {
-    grid-area: contentArea;
-    font-weight: 100;
-  }
-
-  .mentions_container {
-    display: flex;
-    flex-direction: row;
-    gap: $xl;
-    overflow-x: hidden;
-    width: 60vw;
-
-    .mention_content {
-      display: flex;
-      flex-direction: row;
-      gap: $xl;
-      overflow: auto;
-
-      .mentions_item {
-        display: flex;
-        flex-direction: column;
-        gap: $md;
-
-        .mentions_itemImage {
-          width: 220px;
-          height: auto;
+        p {
+          margin-bottom: $space-4;
         }
 
-        .mentions_itemTitle {
-          font-size: $font-md;
+        ul, ol {
+          margin: $space-4 0;
+          padding-left: $space-6;
+
+          li {
+            margin-bottom: $space-2;
+            color: $text-secondary;
+          }
         }
 
-        .mentions_itemSubtitle {
-          font-size: $font-md;
+        strong {
+          color: $text-primary;
+          font-weight: $font-semibold;
         }
 
-        .mentions_itemTags {
-          display: flex;
-          flex-direction: row;
-          gap: $sm;
-          color: $font-secondary-color;
+        a {
+          color: $accent-primary;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+
+          &:hover {
+            color: $accent-secondary;
+          }
         }
       }
     }
   }
 }
 
+.mentions_container {
+  width: 100%;
 
-@media screen and (max-width: 1020px) {
-  .careerDetailContainer {
-    padding: $sm;
-    grid-template-areas:
-    "headerArea headerArea headerArea"
-    "imagePresentation imagePresentation imagePresentation"
-    "contentArea contentArea contentArea";
-
-    .header {
-      .header_tags {
-        gap: $sm;
-        flex-wrap: wrap;
-      }
-    }
-
-    .image_presentation {
-      width: calc(100vw - 24px) !important;
-      margin-bottom: unset;
-    }
-
-    .content {
-      padding: $md;
-    }
+  .mention_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: $space-6;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .careerDetailContainer {
-    .sidebar {
-      display: none;
-    }
+.mentions_item {
+  @include card;
+  padding: $space-4;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  text-decoration: none;
 
-    .mentions_container {
-      width: 80vw;
-    }
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.mentions_itemImage {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  object-fit: cover;
+}
+
+.mentions_itemTitle {
+  font-size: $font-lg;
+  font-weight: $font-semibold;
+  color: $text-primary;
+}
+
+.mentions_itemSubtitle {
+  font-size: $font-sm;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.mentions_itemTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+
+  span {
+    @include tag;
+    font-size: $font-xs;
   }
 }

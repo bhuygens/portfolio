@@ -1,0 +1,303 @@
+@import "@/style/common.module";
+
+.experience {
+  @include section-padding;
+  background: transparent;
+  position: relative;
+}
+
+.container {
+  @include container;
+  max-width: 1000px;
+  cursor: pointer;
+}
+
+// Header
+.header {
+  text-align: center;
+  margin-bottom: $space-16;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-2 $space-5;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: $radius-full;
+  font-size: $font-sm;
+  color: #a5b4fc;
+  font-weight: $font-medium;
+  margin-bottom: $space-6;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: #818cf8;
+  }
+}
+
+.section_title {
+  font-size: $font-5xl;
+  font-weight: $font-bold;
+  @include gradient-text;
+  margin-bottom: $space-5;
+  font-style: italic;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-3xl;
+  }
+}
+
+.title_line {
+  display: none;
+}
+
+.section_description {
+  font-size: $font-lg;
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-md;
+  }
+}
+
+// Experience List
+.experiences_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+// Divider between experience items
+.experience_divider {
+  height: 1px;
+  margin-top: $space-6;
+  margin-bottom: $space-6;
+  background: linear-gradient(to right, transparent, #4b5563, transparent);
+
+  @media (min-width: $breakpoint-md) {
+    margin-top: $space-12;
+    margin-bottom: $space-12;
+  }
+}
+
+// Experience Card - NO visible card, just layout
+.experience_card {
+  display: flex;
+  gap: $space-8;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.03) 0%,
+      rgba(139, 92, 246, 0.02) 50%,
+      transparent 100%
+    );
+  }
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: $space-5;
+  }
+}
+
+// Card Icon - Rounded square with colored background
+.card_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  border-radius: 20px;
+  border: none;
+  flex-shrink: 0;
+  position: relative;
+  top: 0;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 16px;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+// Card Content
+.card_content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0;
+}
+
+// Period with calendar icon
+.card_period {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $font-sm;
+  color: #fff;
+  margin-bottom: $space-3;
+
+  svg {
+    color: #6b7280;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// Title - Large and bold
+.card_title {
+  font-size: 2.25rem;
+  font-weight: $font-bold;
+  color: #f9fafb;
+  margin-bottom: $space-1;
+  line-height: 1.2;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-xl;
+  }
+}
+
+// Company - Colored (blue by default)
+.card_company {
+  display: block;
+  font-size: $font-lg;
+  font-weight: $font-semibold;
+  margin-bottom: $space-6;
+}
+
+// Description
+.card_description {
+  font-size: $font-md;
+  color: #d1d5db;
+  line-height: 1.8;
+  margin-bottom: $space-8;
+  max-width: 900px;
+}
+
+// Section Labels (Achievements & Technologies)
+.section_label {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $font-md;
+  font-weight: $font-semibold;
+  color: #f3f4f6;
+  margin-bottom: $space-4;
+}
+
+.label_icon {
+  font-size: 1.125rem;
+}
+
+// Achievements Section
+.achievements_section {
+  margin-bottom: $space-8;
+}
+
+.achievements_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+    font-size: $font-md;
+    color: #d1d5db;
+    line-height: 1.6;
+
+    &::before {
+      content: "•";
+      flex-shrink: 0;
+      color: #6b7280;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Technologies Section
+.tech_section {
+  margin-top: 0;
+}
+
+.card_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: $space-3 $space-5;
+  background: rgba(31, 41, 55, 0.3);
+  border: 2px solid rgba(55, 65, 81, 0.5);
+  border-radius: $radius-md;
+  font-size: $font-sm;
+  color: #e5e7eb;
+  transition: all $transition-base;
+  height: 36px;
+
+  &:hover {
+    border-color: rgba(37, 99, 235, 0.4);
+    height: 40px;
+    transform: scale(1.05);
+  }
+}
+
+// CTA
+.cta {
+  text-align: center;
+  margin-top: $space-16;
+}
+
+.btn_secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-4 $space-6;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: $radius-full;
+  font-size: $font-md;
+  font-weight: $font-medium;
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: all $transition-smooth;
+
+  svg {
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.5);
+    color: #c7d2fe;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}

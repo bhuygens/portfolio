@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import styles from "@/app/career/[id]/page.module.scss";
+import styles from "./career-detail-website.module.scss";
 import {CldImage} from "next-cloudinary";
 
 type CareerDetailWebsiteProps = {

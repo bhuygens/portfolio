@@ -5,3 +5,7 @@
   src: url("fonts/saol.ttf") format("truetype");
   font-display: swap;
 }
+
+// Space Grotesk from Google Fonts
+// Imported via Next.js font optimization in app/font.ts
+$font-space-grotesk: var(--font-space-grotesk), 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

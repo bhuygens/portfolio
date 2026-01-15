@@ -1,17 +1,29 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
 .container {
-  margin-bottom: $xl;
+  margin-bottom: $space-6;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
 
   .title {
-    font-family: "montserrat", sans-serif;
-    font-weight: $font-light;
+    font-weight: $font-bold;
     font-size: $font-2xl;
+    color: $text-primary;
+    white-space: nowrap;
+  }
+
+  .bar {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, $accent-primary, transparent);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpoint-md) {
   .container {
-    margin-left: $xl;
+    .title {
+      font-size: $font-xl;
+    }
   }
 }

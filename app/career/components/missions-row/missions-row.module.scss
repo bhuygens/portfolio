@@ -1,21 +1,39 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
 .content_by_year {
-  margin-bottom: $xl;
+  margin-bottom: $space-12;
+
+  .year_label {
+    font-size: $font-2xl;
+    font-weight: $font-bold;
+    color: $text-primary;
+    margin-bottom: $space-6;
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, $border-secondary, transparent);
+    }
+  }
 
   .items {
-    display: flex;
-    flex-direction: row;
-    gap: $xl;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: $space-6;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpoint-md) {
   .content_by_year {
-    .items {
-      justify-content: center;
+    margin-bottom: $space-8;
 
+    .items {
+      grid-template-columns: 1fr;
+      gap: $space-4;
     }
   }
 }

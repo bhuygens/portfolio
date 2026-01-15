@@ -9,7 +9,9 @@ type MissionType = {
   reverse: boolean;
   content: Object,
   mentions: MentionType[],
-  company: string
+  company: string,
+  icon: string,
+  externalUrl: string,
 }
 
 type MentionType = {
@@ -37,6 +39,34 @@ type NotionMissionItem = {
   parent: string,
   archived: boolean,
   properties: {
+    externalUrl: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
+    icon: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
     ID: {
       id: string,
       type: string,

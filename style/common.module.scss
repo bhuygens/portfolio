@@ -1,35 +1,77 @@
 @import "font.module";
 
-// BACKGROUND:
-$background: rgba(0, 0, 0, 0.05);
+// ============================================
+// MODERN DARK THEME - 2024 Design System
+// ============================================
 
-// COLORS
-$primary-color: #4F48AD;
-$secondary_color: #CBC8F9;
-$accent-color: #2618DC;
+// BACKGROUNDS
+$bg-primary: #0a0a0b;
+$bg-secondary: #111113;
+$bg-tertiary: #18181b;
+$bg-card: #1c1c1f;
+$bg-card-hover: #242428;
 
+// ACCENT COLORS
+$accent-primary: #6366f1; // Indigo
+$accent-secondary: #8b5cf6; // Purple
+$accent-gradient: linear-gradient(135deg, $accent-primary 0%, $accent-secondary 100%);
+$accent-glow: rgba(99, 102, 241, 0.15);
+
+// TEXT COLORS
+$text-primary: #fafafa;
+$text-secondary: #a1a1aa;
+$text-muted: #71717a;
+$text-accent: $accent-primary;
+
+// BORDER COLORS
+$border-primary: #27272a;
+$border-secondary: #3f3f46;
+$border-accent: rgba(99, 102, 241, 0.3);
+
+// STATUS COLORS
+$success: #22c55e;
+$warning: #f59e0b;
+$error: #ef4444;
 
 // FONTS
-$font-family-main: 'saol', sans-serif;
-$font-family-secondary: var(--font-montserrat);
-$font-primary-color: #060425;
-$font-secondary-color: $secondary_color;
-$font-accent-color: $accent-color;
+$font-family-main: var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-display: 'saol', Georgia, serif;
 
-// FONT STYLES
-$font-light: 100;
-$font-regular: 500;
+// FONT WEIGHTS
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
 $font-bold: 700;
 
 // FONT SIZES
-$font-sm: 0.9rem; // span
-$font-md: 1rem; // p
-$font-lg: 1.25rem; // h3
-$font-xl: 1.5rem; // h2
-$font-2xl: 2.25rem; // h1
-$font-3xl: 4rem; // Home Title only
+$font-xs: 0.75rem;   // 12px
+$font-sm: 0.875rem;  // 14px
+$font-md: 1rem;      // 16px
+$font-lg: 1.125rem;  // 18px
+$font-xl: 1.25rem;   // 20px
+$font-2xl: 1.5rem;   // 24px
+$font-3xl: 1.875rem; // 30px
+$font-4xl: 2.25rem;  // 36px
+$font-5xl: 3rem;     // 48px
+$font-6xl: 3.75rem;  // 60px
+$font-7xl: 4.5rem;   // 72px
 
-// SIZING
+// SPACING
+$space-1: 0.25rem;  // 4px
+$space-2: 0.5rem;   // 8px
+$space-3: 0.75rem;  // 12px
+$space-4: 1rem;     // 16px
+$space-5: 1.25rem;  // 20px
+$space-6: 1.5rem;   // 24px
+$space-8: 2rem;     // 32px
+$space-10: 2.5rem;  // 40px
+$space-12: 3rem;    // 48px
+$space-16: 4rem;    // 64px
+$space-20: 5rem;    // 80px
+$space-24: 6rem;    // 96px
+
+// Legacy spacing (for compatibility)
 $sm: 8px;
 $md: 16px;
 $lg: 24px;
@@ -38,6 +80,191 @@ $xl-2: 48px;
 $xl-3: 64px;
 $xl-4: 80px;
 
-// COMMON STYLE
-$common-radius: $sm;
+// BORDER RADIUS
+$radius-sm: 0.375rem;  // 6px
+$radius-md: 0.5rem;    // 8px
+$radius-lg: 0.75rem;   // 12px
+$radius-xl: 1rem;      // 16px
+$radius-2xl: 1.5rem;   // 24px
+$radius-full: 9999px;
 
+// SHADOWS
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+$shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
+
+// TRANSITIONS
+$transition-fast: 150ms ease;
+$transition-base: 200ms ease;
+$transition-slow: 300ms ease;
+$transition-smooth: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// BREAKPOINTS
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// CONTAINER
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1200px;
+
+// Legacy variables (for backward compatibility)
+$primary-color: $accent-primary;
+$secondary_color: $accent-secondary;
+$accent-color: $accent-primary;
+$font-primary-color: $text-primary;
+$font-secondary-color: $text-secondary;
+$font-accent-color: $text-accent;
+$common-radius: $radius-md;
+
+// MIXINS
+@mixin card {
+  background: linear-gradient(145deg, rgba(28, 28, 31, 0.9) 0%, rgba(24, 24, 27, 0.9) 100%);
+  border: 1px solid $border-primary;
+  border-radius: $radius-xl;
+  transition: all $transition-smooth;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity $transition-base;
+  }
+
+  &:hover {
+    border-color: $border-secondary;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 40px rgba(99, 102, 241, 0.08);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin card-glow {
+  background: linear-gradient(145deg, rgba(28, 28, 31, 0.95) 0%, rgba(24, 24, 27, 0.95) 100%);
+  border: 1px solid $border-primary;
+  border-radius: $radius-xl;
+  transition: all $transition-smooth;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), transparent 50%, rgba(139, 92, 246, 0.1));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity $transition-base;
+  }
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 60px rgba(99, 102, 241, 0.1);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin glass {
+  background: rgba(17, 17, 19, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  // border: 1px solid $border-primary;
+}
+
+@mixin gradient-text {
+  background: $accent-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin container {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 0 $space-6;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 $space-4;
+  }
+}
+
+@mixin section-padding {
+  padding: $space-24 0;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $space-16 0;
+  }
+}
+
+@mixin button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  background: $accent-gradient;
+  color: $text-primary;
+  font-weight: $font-medium;
+  font-size: $font-sm;
+  border: none;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-glow;
+  }
+}
+
+@mixin button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  background: transparent;
+  color: $text-primary;
+  font-weight: $font-medium;
+  font-size: $font-sm;
+  border: 1px solid $border-secondary;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: $bg-card;
+    border-color: $accent-primary;
+  }
+}
+
+@mixin tag {
+  display: inline-flex;
+  align-items: center;
+  padding: $space-1 $space-3;
+  background: $accent-glow;
+  color: $accent-primary;
+  font-size: $font-xs;
+  font-weight: $font-medium;
+  border-radius: $radius-full;
+  border: 1px solid $border-accent;
+}

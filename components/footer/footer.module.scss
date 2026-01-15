@@ -1,74 +1,166 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
 .footer {
-  margin-top: $xl;
+  background: $bg-tertiary;
+  border-top: 1px solid $border-primary;
+  padding: $space-16 0 $space-8;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $space-12 0 $space-6;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: $space-12;
+  margin-bottom: $space-12;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: $space-8;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+}
+
+.brand {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  gap: $space-5;
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: $lg;
-    border-radius: $common-radius;
-    background: $background;
-    padding: 3em 5em;
-    width: 80%;
-    margin-bottom: 5em;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  text-decoration: none;
+  width: fit-content;
 
-    .brand {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: $md;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      gap: $xl-3;
-      flex-wrap: wrap;
-
-      .links_column {
-        display: flex;
-        flex-direction: column;
-        gap: $lg;
-
-        .social_icon {
-          display: flex;
-          flex-direction: row;
-          gap: $md;
-        }
-      }
-
-
-      .column_title {
-        opacity: 0.7;
-      }
-    }
-
-    .separator {
-      width: 90%;
-      align-self: center;
-      height: 1px;
-      background-color: $accent-color;
-    }
-
-    .bottom {
-      display: flex;
-      flex-direction: column;
-      gap: $sm;
-
-      .bottom_text {
-        display: flex;
-        flex-direction: row;
-        gap: $sm;
-      }
-
+  &:hover {
+    img {
+      transform: scale(1.05);
     }
   }
+
+  img {
+    transition: transform $transition-base;
+  }
+}
+
+.brand_text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.brand_name {
+  font-size: $font-lg;
+  font-weight: $font-bold;
+  color: $text-primary;
+}
+
+.brand_title {
+  font-size: $font-sm;
+  color: $text-muted;
+}
+
+.brand_description {
+  font-size: $font-sm;
+  color: $text-secondary;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.links_section,
+.social_section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.links_title {
+  font-size: $font-sm;
+  font-weight: $font-semibold;
+  color: $text-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.link {
+  font-size: $font-sm;
+  color: $text-secondary;
+  text-decoration: none;
+  transition: color $transition-base;
+  width: fit-content;
+
+  &:hover {
+    color: $accent-primary;
+  }
+}
+
+.social_links {
+  display: flex;
+  gap: $space-3;
+}
+
+.social_link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: $radius-lg;
+  color: $text-secondary;
+  transition: all $transition-base;
+
+  &:hover {
+    background: $accent-glow;
+    border-color: $border-accent;
+    color: $accent-primary;
+  }
+}
+
+.divider {
+  height: 1px;
+  background: $border-primary;
+  margin-bottom: $space-8;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-4;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  font-size: $font-sm;
+  color: $text-muted;
+}
+
+.made_with {
+  font-size: $font-sm;
+  color: $text-muted;
 }

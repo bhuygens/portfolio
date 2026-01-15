@@ -1,87 +1,130 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
-.container {
-  margin-top: $xl-2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.page {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: $bg-primary;
+}
 
-  .title {
-    width: fit-content;
-    font-family: "saol", sans-serif;
-    font-size: $font-2xl;
-  }
+.header {
+  @include container;
+  text-align: center;
+  padding: $space-12 0;
+  margin-bottom: $space-8;
+}
 
-  .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
-    max-width: 1100px;
+.tag {
+  @include tag;
+  margin-bottom: $space-4;
+  display: inline-block;
+}
 
-    .content_form {
-      display: flex;
-      flex-direction: column;
+.title {
+  font-size: $font-4xl;
+  font-weight: $font-bold;
+  margin-bottom: $space-4;
+  color: $text-primary;
 
-      > :not(:last-child) {
-        margin-bottom: $md;
-      }
-
-      .content_item {
-        .content_title {
-          margin-bottom: $sm;
-        }
-
-        .content_input {
-          width: 400px;
-          height: 30px;
-          border: none;
-          background: $secondary_color;
-        }
-
-        .content_textarea {
-          width: 400px;
-          height: 220px;
-          resize: none;
-          border: none;
-          background: $secondary_color;
-        }
-      }
-
-      .content_button {
-        align-self: center;
-
-      }
-    }
-
-    .content_infos {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-3xl;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    .content {
-      flex-direction: column-reverse;
-      padding: $md;
+.gradient {
+  @include gradient-text;
+}
 
-      .content_form {
-        .content_item {
-          .content_input, .content_textarea {
-            width: 100%;
-          }
+.subtitle {
+  font-size: $font-lg;
+  color: $text-secondary;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-md;
+  }
+}
+
+.container {
+  @include container;
+  padding-bottom: $space-16;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: $space-12;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+
+  .content_form {
+    @include card;
+    padding: $space-8;
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $space-6;
+    }
+
+    .content_item {
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+
+      .content_title {
+        font-size: $font-sm;
+        font-weight: $font-medium;
+        color: $text-primary;
+      }
+
+      .content_input,
+      .content_textarea {
+        width: 100%;
+        padding: $space-4;
+        background: $bg-tertiary;
+        border: 1px solid $border-primary;
+        border-radius: $radius-md;
+        color: $text-primary;
+        font-size: $font-md;
+        font-family: inherit;
+        transition: all $transition-base;
+
+        &::placeholder {
+          color: $text-muted;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $accent-primary;
+          box-shadow: 0 0 0 3px $accent-glow;
         }
       }
 
-      .content_infos {
-        flex-direction: row;
-        gap: $lg;
-        flex-wrap: wrap;
-        margin: $xl-2 0;
+      .content_textarea {
+        resize: vertical;
+        min-height: 160px;
       }
+    }
+
+    .content_button {
+      margin-top: $space-2;
+    }
+  }
+
+  .content_infos {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    @media (max-width: $breakpoint-md) {
+      order: -1;
     }
   }
 }

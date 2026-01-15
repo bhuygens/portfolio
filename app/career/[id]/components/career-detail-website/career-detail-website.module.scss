@@ -1,15 +1,11 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
 .image_presentation {
-  margin-bottom: $xl-4;
-  grid-area: imagePresentation;
-}
+  width: 100%;
+  height: auto;
+  margin-bottom: $space-8;
 
-
-@media screen and (max-width: 1020px) {
-
-  .image_presentation {
-    width: calc(100vw - 24px) !important;
-    margin-bottom: unset;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: $space-6;
   }
 }

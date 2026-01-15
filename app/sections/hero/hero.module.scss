@@ -1,0 +1,200 @@
+@import "@/style/common.module";
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  .gradient_orb_1 {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .gradient_orb_2 {
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 10s ease-in-out infinite reverse;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-20 0;
+}
+
+.content {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-6;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: $font-bold;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 3rem;
+  }
+}
+
+.role_badge {
+  display: inline-flex;
+  padding: $space-4 $space-10;
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.9) 0%, rgba(236, 72, 153, 0.9) 50%, rgba(139, 92, 246, 0.9) 100%);
+  border-radius: $radius-xl;
+  margin: $space-2 0;
+
+  span {
+    font-size: $font-2xl;
+    font-weight: $font-semibold;
+    color: white;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-xl;
+    }
+  }
+}
+
+.description {
+  max-width: 600px;
+  font-size: $font-xl;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin-top: $space-4;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-lg;
+  }
+}
+
+.social_links {
+  display: flex;
+  gap: $space-4;
+  margin-top: $space-6;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.social_link {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-3 $space-5;
+  background: $bg-card;
+  border: 1px solid $border-primary;
+  border-radius: $radius-lg;
+  color: $text-primary;
+  font-size: $font-sm;
+  font-weight: $font-medium;
+  text-decoration: none;
+  transition: all $transition-base;
+
+  svg {
+    color: $text-secondary;
+    transition: color $transition-base;
+  }
+
+  &:hover {
+    background: $bg-card-hover;
+    border-color: $border-secondary;
+
+    svg {
+      color: $accent-primary;
+    }
+  }
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-3 $space-5;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: $radius-full;
+  margin-top: $space-6;
+
+  .status_dot {
+    width: 10px;
+    height: 10px;
+    background: $success;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  span {
+    font-size: $font-sm;
+    font-weight: $font-medium;
+    color: $success;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.scroll_indicator {
+  position: absolute;
+  bottom: $space-8;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-2;
+  color: $text-muted;
+  font-size: $font-sm;
+
+  @media (max-width: $breakpoint-md) {
+    bottom: $space-4;
+  }
+}
+
+.scroll_arrow {
+  color: $text-muted;
+}

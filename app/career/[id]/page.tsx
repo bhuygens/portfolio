@@ -43,8 +43,8 @@ export default async function CareerDetailPage({params: {id}}: Params) {
   const displayContent = () => {
     return (
       Object.entries(mission.content).map(([key, value]) => (
-        <li key={key} style={{marginBottom: "80px"}}>
-          <h2 id={key} style={{marginBottom: "24px"}}>{key}</h2>
+        <li key={key}>
+          <h2 id={key}>{key}</h2>
           <div dangerouslySetInnerHTML={{__html: value}}></div>
         </li>
       ))
@@ -88,8 +88,8 @@ export default async function CareerDetailPage({params: {id}}: Params) {
 
   const displayMentions = () => {
     return (
-      <li style={{marginBottom: "80px"}}>
-        <h2 id="mentions" style={{marginBottom: "24px"}}>Mentions</h2>
+      <li>
+        <h2 id="mentions">Mentions</h2>
         <div className={styles.mentions_container}>
           <div className={styles.mention_content}>
             {
@@ -123,15 +123,16 @@ export default async function CareerDetailPage({params: {id}}: Params) {
 
       {mission.url && <CareerDetailWebsite title={mission.title} url={mission.url}/>}
 
-      <div className={styles.sidebar}>
-        {displaySidebar()}
-      </div>
-      <div className={styles.content}>
-        <ol style={{textAlign: "justify"}}>
-          {displayContent()}
-          {displayMentions()}
-        </ol>
-
+      <div className={styles.mainWrapper}>
+        <div className={styles.content}>
+          <ol>
+            {displayContent()}
+            {displayMentions()}
+          </ol>
+        </div>
+        <aside className={styles.sidebar}>
+          {displaySidebar()}
+        </aside>
       </div>
     </div>
   );

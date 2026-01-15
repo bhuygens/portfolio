@@ -1,0 +1,395 @@
+@import "@/style/common.module";
+
+.projects {
+  @include section-padding;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+
+  // Decorative gradient orb
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.15) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+}
+
+.container {
+  @include container;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+// Header
+.header {
+  text-align: center;
+  margin-bottom: $space-16;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  background: rgba(20, 24, 35, 0.8);
+  border: 1px solid rgba(75, 85, 99, 0.4);
+  border-radius: $radius-full;
+  font-size: $font-sm;
+  color: #8b5cf6;
+  font-weight: $font-medium;
+  margin-bottom: $space-6;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: #8b5cf6;
+  }
+}
+
+.section_title {
+  font-size: $font-5xl;
+  font-weight: $font-bold;
+  font-style: italic;
+  @include gradient-text;
+  margin-bottom: $space-4;
+  letter-spacing: -0.02em;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-3xl;
+  }
+}
+
+.title_line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  margin: 0 auto $space-6;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #6366f1;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: $radius-full;
+  }
+}
+
+.section_description {
+  font-size: $font-lg;
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-md;
+  }
+}
+
+// Projects List
+.projects_list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+// Project Card
+.project_card {
+  position: relative;
+  min-height: 480px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 22, 32, 0.98) 0%,
+    rgba(14, 18, 26, 0.98) 100%
+  );
+  border: 1px solid rgba(55, 65, 81, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all $transition-smooth;
+  opacity: 1;
+  display: flex;
+  transform: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(99, 102, 241, 0.08);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    min-height: 420px;
+  }
+}
+
+// Background Image
+.card_background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 85%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 85%
+  );
+
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+    opacity: 0.25;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+    -webkit-mask-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 0%,
+      transparent 70%
+    );
+  }
+}
+
+// Card Content
+.card_content {
+  position: relative;
+  z-index: 2;
+  padding: $space-8 $space-10;
+  max-width: 60%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-lg) {
+    max-width: 70%;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+    padding: $space-6;
+  }
+}
+
+// Tags
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-bottom: $space-6;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-2 $space-5;
+  background: rgba(25, 30, 40, 0.9);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: $radius-full;
+  font-size: $font-sm;
+  color: #e5e7eb;
+  font-weight: $font-medium;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+  }
+}
+
+.tag_featured {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #a78bfa;
+
+  svg {
+    color: #fbbf24;
+    fill: #fbbf24;
+  }
+}
+
+.tag_live {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-2 $space-5;
+  background: rgba(25, 30, 40, 0.9);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: $radius-full;
+  font-size: $font-sm;
+  color: #e5e7eb;
+  font-weight: $font-medium;
+}
+
+.live_dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+// Title
+.project_title {
+  font-size: 2.75rem;
+  font-weight: $font-bold;
+  color: #f9fafb;
+  margin-bottom: $space-1;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-2xl;
+  }
+}
+
+// Company
+.project_company {
+  display: block;
+  font-size: $font-lg;
+  color: #6b7280;
+  margin-bottom: $space-4;
+  font-weight: $font-regular;
+}
+
+// Description
+.project_description {
+  font-size: $font-md;
+  color: #d1d5db;
+  line-height: 1.75;
+  margin-bottom: $space-8;
+  max-width: 95%;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+    font-size: $font-sm;
+  }
+}
+
+// Card Actions
+.card_actions {
+  display: flex;
+  align-items: center;
+  gap: $space-6;
+  flex-wrap: wrap;
+}
+
+.visit_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-4 $space-8;
+  background: rgba(20, 25, 35, 0.95);
+  border: 1px solid rgba(55, 65, 81, 0.6);
+  border-radius: $radius-lg;
+  font-size: $font-md;
+  font-weight: $font-medium;
+  color: #f3f4f6;
+  text-decoration: none;
+  transition: all $transition-smooth;
+
+  svg {
+    transition: transform $transition-base;
+    order: -1;
+  }
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #a5b4fc;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(107, 114, 128, 0.5);
+  border-radius: 50%;
+  transition: all $transition-base;
+}
+
+.dot_active {
+  width: 24px;
+  border-radius: 10px;
+  background: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+// CTA
+.cta {
+  text-align: center;
+  margin-top: $space-12;
+}
+
+.btn_primary {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-4 $space-8;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: $radius-full;
+  font-size: $font-md;
+  font-weight: $font-medium;
+  color: white;
+  text-decoration: none;
+  transition: all $transition-smooth;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+
+  svg {
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}

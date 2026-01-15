@@ -1,13 +1,66 @@
-@import "style/common.module";
+@import "@/style/common.module";
 
+.page {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: $bg-primary;
+}
+
+.header {
+  @include container;
+  text-align: center;
+  padding: $space-12 0;
+  margin-bottom: $space-8;
+}
+
+.tag {
+  @include tag;
+  margin-bottom: $space-4;
+  display: inline-block;
+}
+
+.title {
+  font-size: $font-4xl;
+  font-weight: $font-bold;
+  margin-bottom: $space-4;
+  color: $text-primary;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-3xl;
+  }
+}
+
+.gradient {
+  @include gradient-text;
+}
+
+.subtitle {
+  font-size: $font-lg;
+  color: $text-secondary;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: $space-8;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-md;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
 
 .skills_page {
+  @include container;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: $xl;
-  .skills_item {
-    margin-bottom: $xl;
-  }
+  padding-bottom: $space-16;
+}
+
+.skills_item {
+  margin-bottom: $space-12;
+  width: 100%;
 }
