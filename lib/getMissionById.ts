@@ -22,12 +22,14 @@ export default async function getMissionByID(missionId: number) {
     media: JSON.parse(notionResults.properties.media.rich_text[0].plain_text),
     tags: notionResults.properties.Tags.multi_select.map(tag => tag.name),
     title: notionResults.properties.title.title[0].plain_text,
-    url: notionResults.properties.url.rich_text[0]?.plain_text ?? undefined,
+    url: notionResults.properties.url.rich_text[0]?.plain_text ?? "",
     year: new Date(notionResults.properties.year.date.start),
     id: notionResults.properties.ID.unique_id.number,
     content: JSON.parse(contentFormatted),
     mentions: JSON.parse(mentionsFormatted),
-    company: notionResults.properties.company.rich_text[0].plain_text
+    company: notionResults.properties.company.rich_text[0].plain_text,
+    icon: notionResults.properties.icon.rich_text[0]?.plain_text ?? "",
+    externalUrl: notionResults.properties.externalUrl?.rich_text?.[0]?.plain_text ?? ""
   }
 
 }

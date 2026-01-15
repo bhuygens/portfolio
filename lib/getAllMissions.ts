@@ -29,6 +29,7 @@ export default async function getAllMissions() {
         mentions: JSON.parse(mentionsFormatted) ?? [],
         company: item.properties.company.rich_text[0].plain_text,
         icon: item.properties.icon.rich_text[0].plain_text,
+        externalUrl: item.properties.externalUrl?.rich_text?.[0]?.plain_text ?? "",
       };
     }
   );

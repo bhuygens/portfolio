@@ -165,7 +165,6 @@ export const CosmicWavesShaders = forwardRef<
             u_starDensity: { type: "1f", value: starDensity },
             u_colorShift: { type: "1f", value: colorShift },
           }}
-          style={{ width: "100%", height: "100%" }}
         />
       </div>
     );

@@ -94,6 +94,7 @@
 
   @media (max-width: $breakpoint-lg) {
     gap: $space-6;
+    flex-wrap: wrap;
   }
 }
 
