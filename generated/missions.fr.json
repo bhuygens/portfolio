@@ -1,0 +1,451 @@
+[
+  {
+    "id": 13,
+    "year": "2026-01-27",
+    "title": "Full Stack Developer",
+    "detailText": "Évolution du système de recommandation groupe (stream Recommend & Push) : APIs NestJS, BFF, front, MongoDB et Kafka, avec un focus sur les tests, le CI/CD et l'observabilité.",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "NestJS",
+      "node",
+      "Typescript",
+      "MongoDB",
+      "Kafka",
+      "TDD",
+      "CI/CD"
+    ],
+    "url": "",
+    "externalUrl": "https://www.adeo.com/fr/adeo",
+    "company": "ADEO - Freelance",
+    "icon": "adeo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "adeo_logo_ecrjtl"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "year": "2024-03-18",
+    "title": "Lead Developer",
+    "detailText": "Le co-pilote intelligent pour les restaurants. Porté par l'IA, Pivot simplifie radicalement la gestion des plannings, de la paie, des coûts salariaux... et bien plus encore.",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "react",
+      "firebase",
+      "GCP",
+      "clean architecture",
+      "stripe",
+      "framer motion"
+    ],
+    "url": "pivot_presentation_ni1edt",
+    "externalUrl": "https://www.pivotapp.ca/",
+    "company": "Pivot (Montréal, Canada) - Freelance",
+    "icon": "pivot",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "logo_pivot_uookrk"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "year": "2023-05-25",
+    "title": "Backend & Roll-out Engineer",
+    "detailText": "Déploiement réussi de l'application shopping dans 25 pays à travers le monde",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/2022_highlights.svg",
+        "title": "2022 Highlights",
+        "subtitle": "6 new countries",
+        "tags": [
+          "Shopping App",
+          "Roll-out"
+        ],
+        "link": "https://www.decathlon.cz/Blog-Homepage_lp-EHXJIZ"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/cz_opening.svg",
+        "title": "Czech Republic",
+        "subtitle": "Launching of the app",
+        "tags": [
+          "2022",
+          "October",
+          "Opening"
+        ],
+        "link": "https://www.decathlon.cz/Blog-Homepage_lp-EHXJIZ"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/ci_opening.svg",
+        "title": "Ivory Coast opening",
+        "subtitle": "Launching of the app",
+        "tags": [
+          "2022",
+          "December",
+          "Opening"
+        ],
+        "link": "https://www.decathlon.ci/#:~:text=SPORTS DU MOMENT-,DECATHLON SHOPPING,-Le Sport au"
+      }
+    ],
+    "tags": [
+      "aws",
+      "node",
+      "clean architecture",
+      "VueJS"
+    ],
+    "url": "decathlon_presentation",
+    "externalUrl": "https://www.decathlon.fr/landing/application-decathlon-decathlon/_/R-a-appli-decathlon",
+    "company": "Decathlon United - Freelance",
+    "icon": "decathlon",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "decathlon_logo"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "year": "2023-05-01",
+    "title": "Fullstack Developer",
+    "detailText": "Développement d'un site web interactif propulsé par Framer Motion et l'API Notion pour une société de production française",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "notion",
+      "framer motion",
+      "NextJS",
+      "NestJS"
+    ],
+    "url": "talion-film-website",
+    "externalUrl": "https://www.talionfilms.fr/",
+    "company": "Talion Films - Freelance",
+    "icon": "talion",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "talion-film-logo"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "year": "2023-02-01",
+    "title": "Fullstack Developer",
+    "detailText": "Développement d'un système de support multi-services avec pour objectifs la digitalisation des demandes de consommables des techniciens",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "react",
+      "postgres",
+      "figma",
+      "NestJS"
+    ],
+    "url": "suez_presentation",
+    "externalUrl": "",
+    "company": "Suez - Freelance",
+    "icon": "suez",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "Suez_logo_lhsmqp"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "year": "2022-10-20",
+    "title": "Instructor",
+    "detailText": "Modules : - Développement Fullstack- Développement Backend",
+    "content": {
+      "Modules": "<ul><li>Développement fullstack : React, Html, JS</li><li>Développement backend : Gestion d'API, Express, Authentification, ...</li></ul>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "express",
+      "node"
+    ],
+    "url": "supinfo_presentation",
+    "externalUrl": "",
+    "company": "Supinfo - Freelance",
+    "icon": "supinfo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "supinfo_logo_muqnsx"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "year": "2022-04-21",
+    "title": "Consulting",
+    "detailText": "Consulting",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "node",
+      "aws",
+      "VueJS"
+    ],
+    "url": "listen-too_presentation",
+    "externalUrl": "",
+    "company": "Listen Too",
+    "icon": "listentoo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "listen-too_logo"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "year": "2021-09-01",
+    "title": "Fullstack Developer",
+    "detailText": "Pour ma dernière année d'études, j'ai rejoint une entreprise familiale opérant dans le domaine ésotérique. Ma mission était de lancer la marque sur internet.\nPendant 8 mois, j'ai développé un site e-commerce en Angular / NestJS avec un parcours client entièrement automatisé et un back-office.\n\n\n\n<strong>La plateforme est en phase finale avant le lancement officiel.</strong>",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "stripe",
+      "sendinblue",
+      "NestJS"
+    ],
+    "url": "maka-bane_presentation",
+    "externalUrl": "",
+    "company": "Maka-Bane - Freelance",
+    "icon": "makaBane",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "maka-bane_logo"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "year": "2021-02-09",
+    "title": "Fullstack developer",
+    "detailText": "Développement d'une plateforme pour identifier les aides disponibles optimales pour la transition énergétique en France.",
+    "content": {
+      "Contexte": "<p>Développement d'une plateforme pour identifier les aides disponibles optimales pour la transition énergétique en France.</p>",
+      "Fonctionnel": "<p>Implémentation d'un algorithme de calcul automatisé intégrant les derniers tarifs publiés via l'utilisation de diverses APIs gouvernementales.</p>",
+      "Tech": "<p>La plateforme a été développée en Angular/NodeJS et hébergée sur Firebase (cloud functions) et Vercel.</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "firebase",
+      "node",
+      "angular"
+    ],
+    "url": "onivo_presentation",
+    "externalUrl": "",
+    "company": "Onivo - Freelance",
+    "icon": "onivo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "onivo_logo_yrnlie"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "year": "2021-02-01",
+    "title": "Fullstack developer",
+    "detailText": "En troisième année d'études, j'ai rejoint Capgemini, une entreprise technologique mondiale.\n\n\n\nDurant cette année, j'ai travaillé dans l'équipe ORP-AGENT. En tant que seul développeur front-end, mon objectif était de développer le logiciel chargé de gérer les plannings des agents de maintenance ferroviaire.",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "java",
+      "agile"
+    ],
+    "url": "cap_presentation",
+    "externalUrl": "",
+    "company": "Capgemini",
+    "icon": "capgemini",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "capgemini_logo"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "year": "2020-03-01",
+    "title": "Fullstack developer",
+    "detailText": "En troisième année d'études, j'ai créé ma propre structure en tant que développeur freelance avec deux camarades de classe.\n\n\n\nDepuis, j'ai pu participer à de nombreux projets pour des entreprises françaises et belges telles que maka-bane.be, lecontratenbeton, onivo, brouillier, bilancovid.fr, ...",
+    "content": {
+      "Contexte": "Pendant mes études, j'ai créé avec deux de mes amis 3H-D, une société freelance dédiée à accompagner les entreprises dans le développement de leurs projets",
+      "Technique": "Frontend : Angular, React. Backend : NodeJS, NestJS, Vercel, Firebase"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "firebase",
+      "NestJS"
+    ],
+    "url": "3HD_logo",
+    "externalUrl": "",
+    "company": "3H-D - Freelance",
+    "icon": "3H-D",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "3HD_logo"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "year": "2019-09-01",
+    "title": "System & network engineer",
+    "detailText": "Pour ma deuxième année d'études, j'ai travaillé dans une entreprise de mode française.\n\n\nMon objectif était de migrer toute la société vers le cloud Office 365 et de participer à la gestion du parc informatique de 50 magasins et plus de 100 employés au siège.",
+    "content": {},
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "office_365",
+      "cisco",
+      "stormshield"
+    ],
+    "url": "dmev_presentation",
+    "externalUrl": "",
+    "company": "Des Marques & Vous",
+    "icon": "deviane",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "devianne_logo"
+      }
+    }
+  }
+]

@@ -2,10 +2,16 @@
 
 import { motion } from "framer-motion";
 import styles from "./hero.module.scss";
+import type { HomeSectionsCopy } from "@/lib/i18n/sections-content";
 
-const Hero = () => {
+type HeroProps = {
+  copy: HomeSectionsCopy["hero"];
+};
+
+const Hero = ({ copy }: HeroProps) => {
   const socialLinks = [
     {
+      key: "github",
       name: "GitHub",
       href: "https://github.com/bhuygens",
       icon: (
@@ -15,6 +21,7 @@ const Hero = () => {
       ),
     },
     {
+      key: "linkedin",
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/benjamin-huygens",
       icon: (
@@ -24,7 +31,8 @@ const Hero = () => {
       ),
     },
     {
-      name: "Email",
+      key: "email",
+      name: copy.socialEmail,
       href: "mailto:huygens.benjamin@gmail.com",
       icon: (
         <svg
@@ -71,7 +79,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <span>Fullstack Developer</span>
+            <span>{copy.roleBadge}</span>
           </motion.div>
 
           <motion.p
@@ -80,8 +88,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Crafting exceptional digital experiences with clean code and
-            thoughtful design
+            {copy.description}
           </motion.p>
 
           <motion.div
@@ -92,10 +99,10 @@ const Hero = () => {
           >
             {socialLinks.map((link, index) => (
               <motion.a
-                key={index}
+                key={link.key}
                 href={link.href}
-                target={link.name !== "Email" ? "_blank" : undefined}
-                rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                target={link.key !== "email" ? "_blank" : undefined}
+                rel={link.key !== "email" ? "noopener noreferrer" : undefined}
                 className={styles.social_link}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -113,7 +120,7 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.5 }}
           >
             <span className={styles.status_dot} />
-            <span>Available for projects</span>
+            <span>{copy.availability}</span>
           </motion.div>
         </motion.div>
 
@@ -123,7 +130,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <span>Scroll for more</span>
+          <span>{copy.scrollHint}</span>
           <motion.div
             className={styles.scroll_arrow}
             animate={{ y: [0, 8, 0] }}

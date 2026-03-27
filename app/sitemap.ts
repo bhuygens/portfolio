@@ -1,46 +1,48 @@
-import {MetadataRoute} from 'next'
+import { MetadataRoute } from "next";
 import getAllMissions from "@/lib/getAllMissions";
+import { getSiteUrl } from "@/lib/site-url";
+import { locales } from "@/lib/i18n/config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const allMissions = await getAllMissions();
+  const base = getSiteUrl();
+  const entries: MetadataRoute.Sitemap = [];
 
-  const careerPages = allMissions.reduce(
-    (accumulator: any[], currentValue: Omit<MissionType, "reverse">) => {
-      accumulator.push({
-        url: `https://huygens.io/career/${currentValue.id.toString()}`,
-        lastModified: new Date(),
-        priority: 0.6
-      });
-      return accumulator;
-    },
-    []
-  );
+  for (const locale of locales) {
+    const allMissions = await getAllMissions(locale);
 
-  return [
-    {
-      url: 'https://huygens.io',
+    entries.push({
+      url: `${base}/${locale}`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 1,
-    },
-    {
-      url: 'https://huygens.io/career',
+    });
+    entries.push({
+      url: `${base}/${locale}/career`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://huygens.io/skills',
+      changeFrequency: "yearly",
+      priority: 0.9,
+    });
+    entries.push({
+      url: `${base}/${locale}/skills`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://huygens.io/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.8,
-    },
-    ...careerPages,
-  ]
+    });
+    entries.push({
+      url: `${base}/${locale}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.8,
+    });
+
+    for (const m of allMissions) {
+      entries.push({
+        url: `${base}/${locale}/career/${m.id}`,
+        lastModified: new Date(),
+        priority: 0.6,
+      });
+    }
+  }
+
+  return entries;
 }

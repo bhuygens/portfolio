@@ -3,10 +3,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import styles from "./experience.module.scss";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { defaultLocale, isLocale } from "@/lib/i18n/config";
 import Image from "next/image";
+import type { HomeSectionsCopy } from "@/lib/i18n/sections-content";
 
-type ExperienceItem = {
+export type ExperienceItem = {
   id: string;
   year: string;
   title: string;
@@ -15,6 +17,8 @@ type ExperienceItem = {
   tags: string[];
   achievements?: string[];
   icon: string;
+  /** When set, opens this URL instead of /career/:id (e.g. static home-only entries). */
+  externalUrl?: string;
 };
 
 import Decathlon from "@/public/icons/decathlon.png";
@@ -24,9 +28,11 @@ import Supinfo from "@/public/icons/supinfo.svg";
 import ListenToo from "@/public/icons/listen-too.png";
 import MakaBane from "@/public/icons/maka-bane.png";
 import Onivo from "@/public/icons/onivo.png";
+import Adeo from "@/public/icons/adeo.png";
 
 interface ExperienceProps {
   experiences: ExperienceItem[];
+  copy: HomeSectionsCopy["experience"];
 }
 
 // Icons for different experience types
@@ -38,6 +44,7 @@ const experienceIcons = {
   listentoo: <Image src={ListenToo} width={75} height={75} alt="ListenToo" />,
   makaBane: <Image src={MakaBane} width={75} height={75} alt="MakaBane" />,
   onivo: <Image src={Onivo} width={75} height={75} alt="Onivo" />,
+  adeo: <Image src={Adeo} width={75} height={75} alt="ADEO" />,
 };
 
 // Color themes for each card
@@ -49,10 +56,17 @@ const cardColors = [
   { bg: "#06b6d4", border: "transparent", icon: "#ffffff", company: "#22d3ee" },
 ];
 
-const Experience = ({ experiences }: ExperienceProps) => {
+const Experience = ({ experiences, copy }: ExperienceProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const router = useRouter();
+  const params = useParams();
+  const rawLocale = params?.locale;
+  const locale =
+    typeof rawLocale === "string" && isLocale(rawLocale)
+      ? rawLocale
+      : defaultLocale;
+  const careerBase = `/${locale}/career`;
 
   return (
     <section className={styles.experience} id="experience" ref={ref}>
@@ -76,13 +90,12 @@ const Experience = ({ experiences }: ExperienceProps) => {
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 6 12 12 16 14" />
             </svg>
-            Professional Journey
+            {copy.badge}
           </span>
-          <h2 className={styles.section_title}>Experience</h2>
+          <h2 className={styles.section_title}>{copy.sectionTitle}</h2>
           <div className={styles.title_line}></div>
           <p className={styles.section_description}>
-            My professional journey and the impact I&apos;ve made across
-            different domains
+            {copy.sectionDescription}
           </p>
         </motion.div>
 
@@ -92,7 +105,13 @@ const Experience = ({ experiences }: ExperienceProps) => {
             <div key={index}>
               {index > 0 && <div className={styles.experience_divider} />}
               <motion.div
-                onClick={() => router.push(`/career/${item.id}`)}
+                onClick={() => {
+                  if (item.externalUrl) {
+                    window.open(item.externalUrl, "_blank", "noopener,noreferrer");
+                  } else {
+                    router.push(`${careerBase}/${item.id}`);
+                  }
+                }}
                 className={styles.experience_card}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -150,7 +169,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
                     <div className={styles.achievements_section}>
                       <h4 className={styles.section_label}>
                         <span className={styles.label_icon}>🏆</span>
-                        Key Achievements
+                        {copy.keyAchievements}
                       </h4>
                       <ul className={styles.achievements_list}>
                         {item.achievements.map((achievement, i) => (
@@ -164,7 +183,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
                   <div className={styles.tech_section}>
                     <h4 className={styles.section_label}>
                       <span className={styles.label_icon}>📦</span>
-                      Technologies & Skills
+                      {copy.techSkills}
                     </h4>
                     <div className={styles.card_tags}>
                       {item.tags.map((tag, tagIndex) => (
@@ -187,8 +206,8 @@ const Experience = ({ experiences }: ExperienceProps) => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <a href="/career" className={styles.btn_secondary}>
-            View Full Career History
+          <a href={careerBase} className={styles.btn_secondary}>
+            {copy.cta}
             <svg
               width="16"
               height="16"

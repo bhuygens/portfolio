@@ -1,0 +1,490 @@
+[
+  {
+    "id": 13,
+    "year": "2026-01-27",
+    "title": "Full Stack Developer",
+    "detailText": "Evolving the group recommendation system (Recommend & Push stream): NestJS APIs, BFF, front, MongoDB and Kafka, with focus on testing, CI/CD and observability.",
+    "content": {
+      "Context": "<p>ADEO Services is part of the ADEO Group, a major global player in home improvement retail. The group federates autonomous, interconnected businesses across many countries. Within the <strong>search &amp; publication (CCDP)</strong> domain, the mission is to build and operate tools to publish and search products for Leroy Merlin business units worldwide.</p><p><br></p><p>I joined the <strong>Recommend &amp; Push</strong> stream, which owns the group <strong>recommendation system</strong>: it combines data and algorithms (including ML), business knowledge (including the knowledge graph), and publication tooling so relevant products reach customers at the right time. The stream works end-to-end with developers, data scientists, data engineers, analysts, a product owner, and UX designers, in an agile setup focused on clean, stable, and scalable delivery.</p><p><br></p><p>Together with the team (pair and mob programming), my work is structured around four main areas:</p><p><br></p><p><strong>Understanding the product and constraints</strong></p><p>Map recommendation flows, API and BFF responsibilities, and how events and data move through Kafka and MongoDB. Align with data and product on use cases, non-functional requirements, and rollout constraints for multiple BUs.</p><p><br></p><p><strong>Shipping features on the stack</strong></p><p>Implement and evolve the recommendation product on the <strong>API, BFF, and front</strong> layers using <strong>Node.js, NestJS, and TypeScript</strong>, backed by <strong>MongoDB</strong> and <strong>Kafka</strong>. Contribute to integrations that keep publication and consumption of recommendations consistent and reliable.</p><p><br></p><p><strong>Raising the bar on quality</strong></p><p>Strengthen <strong>TDD</strong> and automated tests, improve <strong>CI/CD</strong> (including GitHub Actions), and clarify alerting and monitoring so regressions and incidents are visible early. Aim for maintainable code and predictable releases.</p><p><br></p><p><strong>Operating as one team</strong></p><p>Participate actively in ceremonies and technical discussions, share ownership of the product, and help spread good practices (software craftsmanship, code review, documentation) so the platform stays evolvable as traffic and features grow.</p>",
+      "Dashboard": "<p>Beyond feature delivery on the recommendation surfaces, I contribute to how we <strong>observe and operate</strong> the system in production.</p><p><br></p><p>On the engineering side, this means tightening pipelines and checks in CI/CD, standardizing how we run and monitor services, and using tools such as <strong>Datadog</strong> (or equivalent) to track health, latency, and errors. The goal is to make the recommendation stack easier to reason about for on-call and day-to-day development.</p><p><br></p><p>On the product and data side, I collaborate with analysts and the data organization so that <strong>recommendation performance and usage</strong> can be measured and improved over time—similar in spirit to providing countries with clear indicators on the Decathlon app, but here focused on recommendation quality, coverage, and business outcomes across BUs.</p><p><br></p><p>When relevant, I also help improve <strong>internal or back-office experiences</strong> (configuration, publication workflows, or operational views) so teams can adjust and validate recommendation behavior without unnecessary friction.</p>",
+      "Soft skills": "French (fluent, working language)<br><br>English (professional)<br><br>Agile methods (Scrum / Kanban)<br><br>Collaboration with product, UX, and data profiles<br><br>Pair programming and mob programming<br><br>Knowledge sharing and technical communication",
+      "Tech": "Recommendation platform (API / BFF / front):<br><br>Backend: Node.js - NestJS - TypeScript - MongoDB - Kafka<br><br>Frontend: (stack as used in the stream—e.g. modern JavaScript / TypeScript SPA or SSR framework)<br><br>Delivery &amp; operations: GitHub Actions (CI/CD) - testing (TDD) - monitoring / alerting (e.g. Datadog) - Kubernetes (environment dependent)"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "NestJS",
+      "node",
+      "Typescript",
+      "MongoDB",
+      "Kafka",
+      "TDD",
+      "CI/CD"
+    ],
+    "url": "",
+    "externalUrl": "https://www.adeo.com/fr/adeo",
+    "company": "ADEO - Freelance",
+    "icon": "adeo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "adeo_logo_ecrjtl"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "year": "2024-03-18",
+    "title": "Lead Developer",
+    "detailText": "The intelligent co-pilot for restaurants. Powered by AI, Pivot radically simplifies the management of schedules, payroll, labor costs... and much more.",
+    "content": {
+      "Mission": "Design, develop, and maintain front-end features using React and React Native.<br><br>Work closely with the founders and the design team to turn concepts into high-performing features.<br><br>Contribute to optimizing the user experience by ensuring the application's responsiveness and user-friendliness.<br><br>Collaborate as a team to solve complex technical problems and implement innovative solutions.<br><br>Actively participate in code reviews to ensure the quality and consistency of the source code.<br><br>Stay up-to-date with the latest technologies and best development practices.<br><br>",
+      "Tech": "For the website :<br><br>React - Firebase (Auth, Database, Cloud functions, PubSub)<br><br>For the Mobile App : React Native"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "react",
+      "firebase",
+      "GCP",
+      "clean architecture",
+      "stripe",
+      "framer motion"
+    ],
+    "url": "pivot_presentation_ni1edt",
+    "externalUrl": "https://www.pivotapp.ca/",
+    "company": "Pivot (Montréal, Canada) - Freelance",
+    "icon": "pivot",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "logo_pivot_uookrk"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "year": "2023-05-25",
+    "title": "Backend & Roll-out Engineer",
+    "detailText": "Successful deployment of the shopping app in 25 countries around the world",
+    "content": {
+      "Context": "<p>Decathlon is a world-famous French company.In recent years, Decathlon has started a new digital transition. As an external consultant, my mission was to prepare this transition by upgrading the Decathlon Shopping App to the the challenges of tomorrow.In a team of 2 people, our objective is to contact each countries that would like to use the app. According to their needs, we planned a roadmap of 3 months to deploy the app. This roadmap separated into 4 points :</p><p><br></p><p><strong>Introducing the app</strong></p><p>We have set up a file to centralize all information about the country (legal constraint, loyalty program, stock availabilities, checkout integration, ...)</p><p><br></p><p><br></p><p><strong>Carry out the technical part</strong></p><p>When all information is filled, I do required development to add the country to our backend (login & stock connection, homefeed instantiation, ...).Then I have to setup the front part of the app. So I do a development both for IOS (Swift) and Android (Kotlin) to connect the front to the backend.</p><p>Lastly I do an internal test phase with my team.</p><p><br></p><p><br></p><p><strong>Following the testing phase</strong></p><p>Once the app is tested on our side, we launch the beta testing phase with the country. The group is composed by around 10 people. During 2 weeks, we will accompany them to test the customer journey and all of the features of the app.</p><p><br></p><p><br></p><p><strong>Final deployment</strong></p><p>At the end, when the application is ready to be launched, we organize an event with the country leader and his marketing team and we launch the app.Once the app is tested on our side, we launch the beta testing phase with the country. The group is composed by around 10 people. During 2 weeks, we will accompany them to test the customer journey and all of the features of the app.</p>",
+      "Dashboard": "In parallel of my main objective, I work on a dashboard dedicated to the app config and the data analyze.<br><br>On our side and to be more efficient, I improve a standardization of each country config. We use now many parameters to configure the app directly from the dashboard such as the price format (Croatia adopt the euro currency in 2023).<br><br>On the country side, I develop a dedicated space to manage the homefeed and the catalog of the app. This tool is used by the marketing team to personalized the app in function of the period (Christmas, Saint Patrick, WorldCup of Football, ...)<br><br>Then, as the analytics is very important to improve the app. I work with the data team to provide each country with many indicators of the application's performance (number of customers, IOS / Android percentage, reviews, ...)",
+      "Soft skills": "English<br><br>Agile method<br><br>Project Management<br><br>Support<br><br>Follow up country",
+      "Tech": "For the Shopping app :<br><br>Backend : NodeJS - Express - AWS<br><br>Frontend: Swift - Kotlin<br><br>For the Dashboard : VueJS - NestJS - AWS"
+    },
+    "mentions": [
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/2022_highlights.svg",
+        "title": "2022 Highlights",
+        "subtitle": "6 new countries",
+        "tags": [
+          "Shopping App",
+          "Roll-out"
+        ],
+        "link": "https://www.decathlon.cz/Blog-Homepage_lp-EHXJIZ"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/cz_opening.svg",
+        "title": "Czech Republic",
+        "subtitle": "Launching of the app",
+        "tags": [
+          "2022",
+          "October",
+          "Opening"
+        ],
+        "link": "https://www.decathlon.cz/Blog-Homepage_lp-EHXJIZ"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/ci_opening.svg",
+        "title": "Ivory Coast opening",
+        "subtitle": "Launching of the app",
+        "tags": [
+          "2022",
+          "December",
+          "Opening"
+        ],
+        "link": "https://www.decathlon.ci/#:~:text=SPORTS DU MOMENT-,DECATHLON SHOPPING,-Le Sport au"
+      }
+    ],
+    "tags": [
+      "aws",
+      "node",
+      "clean architecture",
+      "VueJS"
+    ],
+    "url": "decathlon_presentation",
+    "externalUrl": "https://www.decathlon.fr/landing/application-decathlon-decathlon/_/R-a-appli-decathlon",
+    "company": "Decathlon United - Freelance",
+    "icon": "decathlon",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "decathlon_logo"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "year": "2023-05-01",
+    "title": "Fullstack Developer",
+    "detailText": "Development of an interactive website powered by Framer Motion and the Notion API for a French production company",
+    "content": {
+      "Context": "<p>Talion film is specialized in the production of institutional and advertising films. After few years of hard work, the company has experienced rapid growth. To increase its visibility and show its creations to the world, the company decided to develop a brand new website.</p><br><br><p> </p><br><br><p><strong>Customer needs</strong></p><br><br><p>Develop a new website according to show their projects.</p><br><br><p>Customize every page, because customers need to feel the emotion and message behind every project.</p><br><br><p>Fully dynamic and animated.</p><br><br>",
+      "Soft skills": "<p>Project roadmap</p><br><br><p>Design project</p><br><br><p>Notion API presentation</p><br><br><p> </p>",
+      "Tech": "<p>Backend : Notion API, JWT Authentication<br/><br/><br/>Frontend: Next JS, Framer Motion<br/><br/><br/>Content delivery: Cloudinary<br/><br/></p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "notion",
+      "framer motion",
+      "NextJS",
+      "NestJS"
+    ],
+    "url": "talion-film-website",
+    "externalUrl": "https://www.talionfilms.fr/",
+    "company": "Talion Films - Freelance",
+    "icon": "talion",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "talion-film-logo"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "year": "2023-02-01",
+    "title": "Fullstack Developer",
+    "detailText": "Development of a multi-service support system with the objectives of digitizing technicians' requests ",
+    "content": {
+      "Context": "<p>Development of a multi-service support system with the objectives of digitizing technicians' requests for consumables, establishing and maintaining an inventory to reduce equipment renewal costs, and implementing a maintenance schedule and tracking for machines and vehicles.</p>",
+      "Functionnal": "<p>Implementation of rituals to understand customer needs</p><p>Creating the specifications document</p><p>Independently creating mock-ups</p><p>Training users on platform operation</p><p>Providing support during the platform launch</p>",
+      "Technical": "<p>Developing the necessary functionalities for the platform using React / NestJS.<br/><br/>Setting up a Postgres database and managing it via Prisma.<br/><br/> Integration of various libraries: Smartlook, Google Analytics, PrimeReact, Nodemailer, react-toastify, ...</p>",
+      "Results": "<p>Reduction by a factor of 3 in the cost per technician related to equipment. Increase in logistical efficiency. Adherence to vehicle and equipment maintenance deadlines and dates</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "react",
+      "postgres",
+      "figma",
+      "NestJS"
+    ],
+    "url": "suez_presentation",
+    "externalUrl": "",
+    "company": "Suez - Freelance",
+    "icon": "suez",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "Suez_logo_lhsmqp"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "year": "2022-10-20",
+    "title": "Instructor",
+    "detailText": "Modules : - Fullstack development- Backend development",
+    "content": {
+      "Modules": "<ul><li>Fullstack development: React, Html, JS</li><li>Backend development: Api management, Express, Authentication, ...</li></ul>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "express",
+      "node"
+    ],
+    "url": "supinfo_presentation",
+    "externalUrl": "",
+    "company": "Supinfo - Freelance",
+    "icon": "supinfo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "supinfo_logo_muqnsx"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "year": "2022-04-21",
+    "title": "Consulting",
+    "detailText": "Consulting",
+    "content": {
+      "Context": "<p>I was a consultant at Listen-Too for clients such as Decathlon and Wayconnect for more than one year.</p>",
+      "Clients": "<p>Decathlon, WayKonect</p>",
+      "Tech": "<p>Frontend: VueJS, React</p><br/><br/><p>Backend: AWS, NodeJS, Clean Architecture</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "node",
+      "aws",
+      "VueJS"
+    ],
+    "url": "listen-too_presentation",
+    "externalUrl": "",
+    "company": "Listen Too",
+    "icon": "listentoo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "listen-too_logo"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "year": "2021-09-01",
+    "title": "Fullstack Developer",
+    "detailText": "For my last year of study, I’ve joined a family business operating in the esoteric field. My mission was to introduce the brand on the internet.\nDuring 8 months, I’ve developed an e-commerce website in Angular / NestJS with fully automated customer journey and back-office.\n<br><br>\n<strong>The platform is in its final stage before the official launch.</strong>",
+    "content": {
+      "Context": "<p>Independently developed an e-commerce platform and its dedicated back-office for a company operating in the field of esotericism, including integration of a CRM tool and a secure payment method.</p>",
+      "Functionnal": "<p>Analyzed client requirements, created specifications, and collaborated with a team of designers to develop prototypes ensuring a clear understanding of the needs. </p><br/><br/><p>Implemented an agile culture within the team. Managed the project using shortcut.io. </p><br/><br/><p>Created and supported testing teams. </p><br/><br/><p>Implemented real-time stock management between the physical stores and the platform.</p><p><br></p>",
+      "Technical": "<p>Developed necessary functionalities for the platform using Angular/NestJS. Implemented a Postgres database and managed it through TypeORM. </p><br/><br/><p>Integrated various libraries such as Stripe, Smartlook, Axceptio, Google Analytics, and Google Tag Manager. Managed the community through a CRM system using Sendinblue. </p><br/><br/><p>Automated internal tasks including generating and printing delivery forms by connecting to shipping APIs. Implemented automatic order tracking for the customer's account.</p>",
+      "Results": "<p>Increasing traffic on the platformMajor player in esotericism in Belgium in 2022. Reduction of time-consuming tasks related to e-commerce platform managementIncrease in time to develop other aspects of an e-commerce businessInternational expansion</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "stripe",
+      "sendinblue",
+      "NestJS"
+    ],
+    "url": "maka-bane_presentation",
+    "externalUrl": "",
+    "company": "Maka-Bane - Freelance",
+    "icon": "makaBane",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "maka-bane_logo"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "year": "2021-02-09",
+    "title": "Fullstack developer",
+    "detailText": "Developed a platform to identify the optimal available incentives for energy transition in France.",
+    "content": {
+      "Context": "<p>Developed a platform to identify the optimal available incentives for energy transition in France. </p>",
+      "Functionnal": "<p>Implemented an automated calculation algorithm that incorporates the latest published rates through the utilization of various government APIs. </p>",
+      "Tech": "<p>The platform has been developed using Angular/NodeJS and hosted on Firebase (cloud functions) and Vercel.</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "firebase",
+      "node",
+      "angular"
+    ],
+    "url": "onivo_presentation",
+    "externalUrl": "",
+    "company": "Onivo - Freelance",
+    "icon": "onivo",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "onivo_logo_yrnlie"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "year": "2021-02-01",
+    "title": "Fullstack developer",
+    "detailText": "During my third year of study, I’ve joined Capgemini, a worldwide tech company.\n<br><br>\nDuring this year, I worked in the team ORP-AGENT. As the only front-end developer, my goal was to develop the software in charge of managing the schedules of railway maintenance employees.",
+    "content": {
+      "Context": "<p>During my third year of study, I’ve joined Capgemini, a Worldwide Tech Company.<br><br>In 2020, The French government voted a new law allowing competition on the French railways. So far, only one company called SNCF had the monopoly but after this new step, the company had to reinvent itself to continue to exist. So, SNCF launched a new program called ORP dedicated to split the monolith in place in multiple more efficient applications.<br><br><br>In a team of 15 people, my mission was to develop a platform for the management of employees called ORP AGENT.</p>",
+      "Skills": "<p>I arrived at the very beginning of the project as the only angular developer. So I was in charge of developing the first screens of the app. When the poc was agreed by the SNCF, the team has grown and I continue to develop the platform as a fullstack developer.<br><br>In parallel of my developer mission, I participated in agile rituals, UI-UX brainstorming to study the feasibility of requests, preparation of the specifications with the client, ...<br><br></p>",
+      "Tech": "<p>JAVA 8<br><br>Angular 8<br><br>Typescript<br><br>Oracle Database<br><br>Liquibase<br><br>SCSS</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "java",
+      "agile"
+    ],
+    "url": "cap_presentation",
+    "externalUrl": "",
+    "company": "Capgemini",
+    "icon": "capgemini",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "capgemini_logo"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "year": "2020-03-01",
+    "title": "Fullstack developer",
+    "detailText": "During my third year of study, I’ve created my own structure as a freelance developer with two classmates.\n<br><br>\nSince then, I’ve been able to participate in many projects for French and Belgium companies such as maka-bane.be, lecontratenbeton,  onivo, brouillier, bilancovid.fr, ...",
+    "content": {
+      "Context": "During my studies, I've created with two of my friends 3H-D, a freelance company dedicated to help companies to develop their project",
+      "Technical": "Frontend: Angular, React. Backend: NodeJS, NestJS, Vercel, Firebase"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "angular",
+      "firebase",
+      "NestJS"
+    ],
+    "url": "3HD_logo",
+    "externalUrl": "",
+    "company": "3H-D - Freelance",
+    "icon": "3H-D",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "3HD_logo"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "year": "2019-09-01",
+    "title": "System & network engineer",
+    "detailText": "For my second year of study, I worked in a french fashion company.\n<br><br>My goal was to migrate all the company in the Office 365 cloud and participate in the management of IT asset of 50 shops and more than 100 HQ employees.",
+    "content": {
+      "Context": "<p>Des marques & Vous (formerly Devianne) is a French fashion company created over 40 years ago. In a world where e-commerce is very important for a company, DMEV decided to start a cloud transition in order to be more efficient.</p>",
+      "Tasks": "<p>My missions were multiple. The first one was to manage IT asset of 50 shops and more than 400 employees including firewall, telephony, end-devices, remote access, ... <br>Then, with the network admin, we upgraded the company's network system by introducing an MPLS. After that, I migrated the company to the Office 365 cloud.<br><br></p>",
+      "Tech": "<p>Stormshield, Cisco, Nginx, Office 365, Aruba, ESXi, Windows Server, Linux, NAS<br><br>Plan meetings with shop managers to prepare for migrations<br>Management of IT assets<br>Management of a budget<br>Putting different service providers in touch with each other</p>"
+    },
+    "mentions": [
+      {
+        "image_url": "",
+        "title": "",
+        "subtitle": "",
+        "tags": [
+          "",
+          ""
+        ],
+        "link": ""
+      }
+    ],
+    "tags": [
+      "office_365",
+      "cisco",
+      "stormshield"
+    ],
+    "url": "dmev_presentation",
+    "externalUrl": "",
+    "company": "Des Marques & Vous",
+    "icon": "deviane",
+    "media": {
+      "type": "IMAGE",
+      "source": {
+        "url": "devianne_logo"
+      }
+    }
+  }
+]

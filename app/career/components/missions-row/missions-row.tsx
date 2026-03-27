@@ -4,10 +4,12 @@ import {motion, Transition, useInView, Variants} from "framer-motion";
 import styles from "./missions-row.module.scss";
 import SkillCategoryTitle from "@/app/skills/components/skill-title/skill-category-title";
 import MissionCard from "@/app/career/components/mission-card/missionCard";
+import type { Locale } from "@/lib/i18n/config";
 
 type MissionRowProps = {
-  missionPerYear: { year: number; foundMissionsByYear: MissionType[] },
-}
+  missionPerYear: { year: number; foundMissionsByYear: MissionType[] };
+  locale: Locale;
+};
 
 const displayVariants: Variants = {
   visible: {
@@ -28,7 +30,10 @@ const displayTransition: Transition = {
   delayChildren: 0.3,
   staggerChildren: 0.2
 }
-export default function MissionsRow({missionPerYear}: MissionRowProps) {
+export default function MissionsRow({
+  missionPerYear,
+  locale,
+}: MissionRowProps) {
 
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
@@ -45,10 +50,16 @@ export default function MissionsRow({missionPerYear}: MissionRowProps) {
       <div className={styles.items}>
         {
           missionPerYear.foundMissionsByYear.map((item: MissionType) =>
-            <MissionCard title={item.title} media={item.media}
-                         tags={item.tags} url={item.url} key={item.id}
-                         id={item.id.toString()}
-                         company={item.company}/>
+            <MissionCard
+              title={item.title}
+              media={item.media}
+              tags={item.tags}
+              url={item.url}
+              key={item.id}
+              id={item.id.toString()}
+              company={item.company}
+              locale={locale}
+            />
           )
         }
       </div>

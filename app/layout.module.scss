@@ -20,10 +20,13 @@
   -webkit-backdrop-filter: blur(2px);
 }
 
-// Main content wrapper
+// Main content wrapper (overflow hides locale slide off-screen)
 .main_content {
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .navbar {
@@ -99,6 +102,97 @@
   display: flex;
   align-items: center;
   gap: $space-2;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.lang_switch {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 2px;
+  margin-left: $space-2;
+  padding: 3px;
+  border-radius: $radius-md;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lang_btn_wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  padding: $space-1 $space-3;
+  font-size: $font-xs;
+  font-weight: $font-semibold;
+  color: $text-secondary;
+  text-decoration: none;
+  border-radius: $radius-sm;
+  transition: color $transition-base;
+  z-index: 0;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.lang_btn_wrap_active {
+  color: $accent-primary;
+}
+
+.lang_pill {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-sm;
+  background: rgba(99, 102, 241, 0.28);
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.35);
+  z-index: -1;
+}
+
+.lang_btn_label {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile_lang_row {
+  display: flex;
+  gap: $space-2;
+  padding: $space-3 $space-4 $space-2;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: $space-2;
+}
+
+.mobile_lang_btn_wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-3;
+  font-size: $font-sm;
+  font-weight: $font-semibold;
+  color: $text-secondary;
+  text-decoration: none;
+  border-radius: $radius-lg;
+  z-index: 0;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.mobile_lang_btn_wrap_active {
+  color: $accent-primary;
+}
+
+.mobile_lang_pill {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-lg;
+  background: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.3);
+  z-index: -1;
 }
 
 .nav_link {

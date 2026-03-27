@@ -5,8 +5,13 @@ import { useRef, useState, FormEvent } from "react";
 import { toast } from "sonner";
 import { submitForm } from "@/app/contact/send-mail.action";
 import styles from "./contact.module.scss";
+import type { HomeSectionsCopy } from "@/lib/i18n/sections-content";
 
-const Contact = () => {
+type ContactProps = {
+  copy: HomeSectionsCopy["contact"];
+};
+
+const Contact = ({ copy }: ContactProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isLoading, setIsLoading] = useState(false);
@@ -18,14 +23,14 @@ const Contact = () => {
 
     try {
       toast.promise(submitForm(formData), {
-        loading: "Sending message...",
+        loading: copy.toast.loading,
         success: () => {
           (e.target as HTMLFormElement).reset();
-          return "Message sent successfully!";
+          return copy.toast.success;
         },
         error: (error: Error): string => {
           console.error("MAIL_ERROR", error);
-          return "An error occurred, please try again";
+          return copy.toast.error;
         },
         finally: () => {
           setIsLoading(false);
@@ -33,7 +38,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("MAIL_ERROR", error);
-      toast.error("An error occurred, please try again");
+      toast.error(copy.toast.error);
       setIsLoading(false);
     }
   };
@@ -53,7 +58,7 @@ const Contact = () => {
           <circle cx="12" cy="10" r="3" />
         </svg>
       ),
-      label: "Location",
+      label: copy.labels.location,
       value: "Lille, France",
     },
     {
@@ -70,7 +75,7 @@ const Contact = () => {
           <polyline points="22,6 12,13 2,6" />
         </svg>
       ),
-      label: "Email",
+      label: copy.labels.email,
       value: "huygens.benjamin@gmail.com",
       href: "mailto:huygens.benjamin@gmail.com",
     },
@@ -87,7 +92,7 @@ const Contact = () => {
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
       ),
-      label: "Phone",
+      label: copy.labels.phone,
       value: "+33 6 59 58 29 54",
       href: "tel:+33659582954",
     },
@@ -136,15 +141,12 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.section_tag}>Contact</span>
+          <span className={styles.section_tag}>{copy.sectionTag}</span>
           <h2 className={styles.section_title}>
-            Let&apos;s work{" "}
-            <span className={styles.gradient_text}>together</span>
+            {copy.titleBefore}{" "}
+            <span className={styles.gradient_text}>{copy.titleHighlight}</span>
           </h2>
-          <p className={styles.section_description}>
-            Have a project in mind? I&apos;d love to hear about it. Send me a
-            message and let&apos;s create something amazing.
-          </p>
+          <p className={styles.section_description}>{copy.description}</p>
         </motion.div>
 
         <div className={styles.content}>
@@ -179,7 +181,7 @@ const Contact = () => {
             </div>
 
             <div className={styles.social}>
-              <span className={styles.social_label}>Follow me</span>
+              <span className={styles.social_label}>{copy.followMe}</span>
               <div className={styles.social_links}>
                 {socialLinks.map((link, index) => (
                   <motion.a
@@ -207,41 +209,41 @@ const Contact = () => {
           >
             <div className={styles.form_group}>
               <label htmlFor="subject" className={styles.label}>
-                Subject
+                {copy.form.subject}
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
                 className={styles.input}
-                placeholder="What's this about?"
+                placeholder={copy.form.subjectPlaceholder}
                 required
               />
             </div>
 
             <div className={styles.form_group}>
               <label htmlFor="mail" className={styles.label}>
-                Email
+                {copy.form.email}
               </label>
               <input
                 type="email"
                 id="mail"
                 name="mail"
                 className={styles.input}
-                placeholder="your@email.com"
+                placeholder={copy.form.emailPlaceholder}
                 required
               />
             </div>
 
             <div className={styles.form_group}>
               <label htmlFor="mail_content" className={styles.label}>
-                Message
+                {copy.form.message}
               </label>
               <textarea
                 id="mail_content"
                 name="mail_content"
                 className={styles.textarea}
-                placeholder="Tell me about your project..."
+                placeholder={copy.form.messagePlaceholder}
                 rows={6}
                 required
               />
@@ -255,11 +257,11 @@ const Contact = () => {
               {isLoading ? (
                 <>
                   <span className={styles.spinner} />
-                  Sending...
+                  {copy.form.sending}
                 </>
               ) : (
                 <>
-                  Send message
+                  {copy.form.submit}
                   <svg
                     width="18"
                     height="18"

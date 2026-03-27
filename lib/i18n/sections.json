@@ -1,0 +1,336 @@
+{
+  "fr": {
+    "hero": {
+      "roleBadge": "Développeur full stack",
+      "description": "Je conçois des expériences digitales soignées, avec du code clair et une approche design réfléchie.",
+      "availability": "Disponible pour des projets",
+      "scrollHint": "Défiler pour en voir plus",
+      "socialEmail": "E-mail"
+    },
+    "about": {
+      "badge": "Apprenez à me connaître",
+      "sectionTitle": "À propos",
+      "sectionSubtitle": "Des expériences digitales avec passion, précision et sens du détail",
+      "greeting": "Bonjour, je suis Benjamin Huygens",
+      "introBefore": "Un ",
+      "introFullstack": "développeur full stack",
+      "introMid1": " et ",
+      "introTech": "passionné de tech",
+      "introMid2": ", avec ",
+      "introYears": "plus de 5 ans",
+      "introAfter": " d’expérience à créer des produits que les utilisateurs adorent.",
+      "paragraph1": "Je passe le plus clair de mon temps sur des produits web : interfaces, APIs, données, déploiement. React, Next.js et TypeScript sont au centre de ce que je fais au quotidien, avec du Node ou NestJS côté serveur quand le contexte l’exige.",
+      "paragraph2": "Je m’intéresse à ce qui tient dans la durée : code lisible, choix d’archi et outils qu’une équipe peut vraiment faire vivre.",
+      "techTitle": "Technologies clés",
+      "connectTitle": "Restons en contact",
+      "achievementsTitle": "Réalisations",
+      "hireTitle": "Disponible en mission",
+      "achievements": [
+        { "icon": "⭐", "text": "Plus de 5 ans d’expérience" },
+        { "icon": "🎯", "text": "Expertise React & Node.js" },
+        { "icon": "🚀", "text": "Plus de 10 projets livrés" }
+      ],
+      "availability": [{ "icon": "🌐", "text": "Remote & sur site" }],
+      "experiences": [
+        {
+          "title": "Développeur full stack",
+          "company": "ADEO — Freelance",
+          "period": "2026 - Aujourd’hui",
+          "description": "Évolution du système de recommandations groupe (stream Recommend & Push) : APIs NestJS, BFF, front, MongoDB et Kafka, avec exigence sur les tests, la CI/CD et l’observabilité.",
+          "badge": "NestJS, MongoDB, Kafka"
+        },
+        {
+          "title": "Lead développeur",
+          "company": "Pivot — Freelance",
+          "period": "2023 - Aujourd’hui",
+          "description": "Applications web modernes avec React, Next.js et Node.js, pour des clients entreprise et des besoins scalables.",
+          "badge": "Plateforme SaaS"
+        },
+        {
+          "title": "Développeur backend & déploiement",
+          "company": "Decathlon United",
+          "period": "2022 - 2024",
+          "description": "Déploiement réussi de l’app shopping dans plus de 25 pays.",
+          "badge": "NestJS, Clean Architecture, AWS"
+        }
+      ]
+    },
+    "skills": {
+      "sectionTitle": "Stack technique",
+      "sectionDescription": "Les technologies avec lesquelles je donne vie aux idées",
+      "tabAll": "Tout",
+      "categories": [
+        {
+          "name": "Backend",
+          "skills": [
+            { "name": "Node.js", "level": "Expert", "years": "5 ans d’exp" },
+            { "name": "NestJS", "level": "Expert", "years": "3 ans d’exp" },
+            { "name": "Express", "level": "Expert", "years": "4 ans d’exp" },
+            {
+              "name": "GraphQL",
+              "level": "Intermédiaire",
+              "years": "2 ans d’exp"
+            },
+            { "name": "REST APIs", "level": "Expert", "years": "5 ans d’exp" }
+          ]
+        },
+        {
+          "name": "Frontend",
+          "skills": [
+            { "name": "React", "level": "Expert", "years": "5 ans d’exp" },
+            { "name": "Next.js", "level": "Expert", "years": "4 ans d’exp" },
+            { "name": "TypeScript", "level": "Expert", "years": "4 ans d’exp" },
+            { "name": "SCSS/CSS", "level": "Expert", "years": "5 ans d’exp" },
+            {
+              "name": "Tailwind CSS",
+              "level": "Expert",
+              "years": "3 ans d’exp"
+            },
+            {
+              "name": "Framer Motion",
+              "level": "Expert",
+              "years": "2 ans d’exp"
+            }
+          ]
+        },
+        {
+          "name": "Base de données",
+          "skills": [
+            { "name": "PostgreSQL", "level": "Expert", "years": "4 ans d’exp" },
+            { "name": "MongoDB", "level": "Expert", "years": "3 ans d’exp" },
+            {
+              "name": "Redis",
+              "level": "Intermédiaire",
+              "years": "2 ans d’exp"
+            },
+            { "name": "Prisma", "level": "Expert", "years": "2 ans d’exp" }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "skills": [
+            { "name": "Git", "level": "Expert", "years": "5 ans d’exp" },
+            {
+              "name": "Docker",
+              "level": "Intermédiaire",
+              "years": "2 ans d’exp"
+            },
+            { "name": "Vercel", "level": "Expert", "years": "3 ans d’exp" },
+            { "name": "AWS", "level": "Intermédiaire", "years": "2 ans d’exp" }
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "badge": "Parcours professionnel",
+      "sectionTitle": "Expérience",
+      "sectionDescription": "Mon parcours et l’impact sur différents domaines",
+      "keyAchievements": "Réalisations clés",
+      "techSkills": "Technologies & compétences",
+      "cta": "Voir tout le parcours"
+    },
+    "projects": {
+      "badge": "Sélection de projets",
+      "sectionTitle": "Projets en avant",
+      "sectionDescription": "Un aperçu de mon travail : web, intégration produit et innovation digitale",
+      "clientPrefix": "Client : ",
+      "live": "En ligne",
+      "visitWebsite": "Voir le site",
+      "cta": "Voir tous les projets"
+    },
+    "contact": {
+      "sectionTag": "Contact",
+      "titleBefore": "Travaillons",
+      "titleHighlight": "ensemble",
+      "description": "Un projet en tête ? Écrivez-moi : construisons quelque chose de solide.",
+      "labels": {
+        "location": "Localisation",
+        "email": "E-mail",
+        "phone": "Téléphone"
+      },
+      "followMe": "Suivez-moi",
+      "form": {
+        "subject": "Sujet",
+        "subjectPlaceholder": "De quoi s’agit-il ?",
+        "email": "E-mail",
+        "emailPlaceholder": "vous@email.com",
+        "message": "Message",
+        "messagePlaceholder": "Parlez-moi de votre projet…",
+        "submit": "Envoyer",
+        "sending": "Envoi…"
+      },
+      "toast": {
+        "loading": "Envoi du message…",
+        "success": "Message envoyé !",
+        "error": "Une erreur s’est produite, réessayez"
+      }
+    }
+  },
+  "en": {
+    "hero": {
+      "roleBadge": "Fullstack Developer",
+      "description": "Crafting exceptional digital experiences with clean code and thoughtful design",
+      "availability": "Available for projects",
+      "scrollHint": "Scroll for more",
+      "socialEmail": "Email"
+    },
+    "about": {
+      "badge": "Get To Know Me",
+      "sectionTitle": "About Me",
+      "sectionSubtitle": "Crafting digital experiences with passion, precision, and purpose",
+      "greeting": "Hello, I'm Benjamin Huygens",
+      "introBefore": "A passionate ",
+      "introFullstack": "Full Stack Developer",
+      "introMid1": " and ",
+      "introTech": "Tech enthusiast",
+      "introMid2": " with ",
+      "introYears": "5+ years",
+      "introAfter": " of experience crafting digital experiences that users love.",
+      "paragraph1": "I specialize in building scalable web and mobile applications using React, Next.js, TypeScript, and modern development technologies. I thrive on turning complex problems into elegant solutions that users love.",
+      "paragraph2": "Beyond work, I love exploring emerging technologies, contributing to open-source projects, and mentoring aspiring developers. I believe in continuous learning and staying at the forefront of technological innovation.",
+      "techTitle": "Core Technologies",
+      "connectTitle": "Let's Connect",
+      "achievementsTitle": "Achievements",
+      "hireTitle": "Available for Hire",
+      "achievements": [
+        { "icon": "⭐", "text": "5+ Years Experience" },
+        { "icon": "🎯", "text": "Expert in React & Node.js" },
+        { "icon": "🚀", "text": "10+ Projects Delivered" }
+      ],
+      "availability": [{ "icon": "🌐", "text": "Remote & On-site Available" }],
+      "experiences": [
+        {
+          "title": "Full Stack Developer",
+          "company": "ADEO - Freelance",
+          "period": "2026 - Present",
+          "description": "Evolving the group recommendation system (Recommend & Push stream): NestJS APIs, BFF, front, MongoDB and Kafka, with focus on testing, CI/CD and observability.",
+          "badge": "NestJS, MongoDB, Kafka"
+        },
+        {
+          "title": "Lead Developer",
+          "company": "Pivot - Freelance",
+          "period": "2023 - Present",
+          "description": "Building modern web applications using React, Next.js, and Node.js. Working on scalable solutions for enterprise clients.",
+          "badge": "SaaS platform"
+        },
+        {
+          "title": "Backend and Rollout developer",
+          "company": "Decathlon United",
+          "period": "2022 - 2024",
+          "description": "Successful deployment of the shopping app in 25 countries around the world",
+          "badge": "NestJS, Clean Architecture, AWS"
+        }
+      ]
+    },
+    "skills": {
+      "sectionTitle": "Technology Stack",
+      "sectionDescription": "Technologies I use to bring ideas to life",
+      "tabAll": "All",
+      "categories": [
+        {
+          "name": "Backend",
+          "skills": [
+            { "name": "Node.js", "level": "Expert", "years": "5 years exp" },
+            { "name": "NestJS", "level": "Expert", "years": "3 years exp" },
+            { "name": "Express", "level": "Expert", "years": "4 years exp" },
+            {
+              "name": "GraphQL",
+              "level": "Intermediate",
+              "years": "2 years exp"
+            },
+            { "name": "REST APIs", "level": "Expert", "years": "5 years exp" }
+          ]
+        },
+        {
+          "name": "Frontend",
+          "skills": [
+            { "name": "React", "level": "Expert", "years": "5 years exp" },
+            { "name": "Next.js", "level": "Expert", "years": "4 years exp" },
+            { "name": "TypeScript", "level": "Expert", "years": "4 years exp" },
+            { "name": "SCSS/CSS", "level": "Expert", "years": "5 years exp" },
+            {
+              "name": "Tailwind CSS",
+              "level": "Expert",
+              "years": "3 years exp"
+            },
+            {
+              "name": "Framer Motion",
+              "level": "Expert",
+              "years": "2 years exp"
+            }
+          ]
+        },
+        {
+          "name": "Database",
+          "skills": [
+            { "name": "PostgreSQL", "level": "Expert", "years": "4 years exp" },
+            { "name": "MongoDB", "level": "Expert", "years": "3 years exp" },
+            {
+              "name": "Redis",
+              "level": "Intermediate",
+              "years": "2 years exp"
+            },
+            { "name": "Prisma", "level": "Expert", "years": "2 years exp" }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "skills": [
+            { "name": "Git", "level": "Expert", "years": "5 years exp" },
+            {
+              "name": "Docker",
+              "level": "Intermediate",
+              "years": "2 years exp"
+            },
+            { "name": "Vercel", "level": "Expert", "years": "3 years exp" },
+            { "name": "AWS", "level": "Intermediate", "years": "2 years exp" }
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "badge": "Professional Journey",
+      "sectionTitle": "Experience",
+      "sectionDescription": "My professional journey and the impact I've made across different domains",
+      "keyAchievements": "Key Achievements",
+      "techSkills": "Technologies & Skills",
+      "cta": "View Full Career History"
+    },
+    "projects": {
+      "badge": "Portfolio Showcase",
+      "sectionTitle": "Featured Projects",
+      "sectionDescription": "Discover my latest work in web development, AI integration, and digital innovation",
+      "clientPrefix": "Client: ",
+      "live": "Live",
+      "visitWebsite": "Visit website",
+      "cta": "View all projects"
+    },
+    "contact": {
+      "sectionTag": "Contact",
+      "titleBefore": "Let's work",
+      "titleHighlight": "together",
+      "description": "Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.",
+      "labels": {
+        "location": "Location",
+        "email": "Email",
+        "phone": "Phone"
+      },
+      "followMe": "Follow me",
+      "form": {
+        "subject": "Subject",
+        "subjectPlaceholder": "What's this about?",
+        "email": "Email",
+        "emailPlaceholder": "your@email.com",
+        "message": "Message",
+        "messagePlaceholder": "Tell me about your project...",
+        "submit": "Send message",
+        "sending": "Sending..."
+      },
+      "toast": {
+        "loading": "Sending message...",
+        "success": "Message sent successfully!",
+        "error": "An error occurred, please try again"
+      }
+    }
+  }
+}

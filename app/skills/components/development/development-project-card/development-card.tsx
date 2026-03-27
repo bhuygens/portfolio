@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import {CldImage} from "next-cloudinary";
+import { useParams } from "next/navigation";
+import { CldImage } from "next-cloudinary";
 import styles from "./development-card.module.scss";
+import { defaultLocale, isLocale } from "@/lib/i18n/config";
 
 type DevelopmentCardProps = {
   name: string,
@@ -11,6 +15,10 @@ type DevelopmentCardProps = {
 }
 
 function DevelopmentCard({link, name, subtitle, icon, index}: DevelopmentCardProps) {
+  const params = useParams();
+  const raw = params?.locale;
+  const locale =
+    typeof raw === "string" && isLocale(raw) ? raw : defaultLocale;
   const jobTitle = name.split('@')[0];
   const company = name.split('@')[1];
 
@@ -35,7 +43,7 @@ function DevelopmentCard({link, name, subtitle, icon, index}: DevelopmentCardPro
   }
 
   return (
-    <Link href={`/career/${link}`}>
+    <Link href={`/${locale}/career/${link}`}>
       <div className={getContainerClassnames()}>
         <CldImage src={icon} alt={icon} height={0} width={90} className={styles.icon}/>
         <h2>{jobTitle}</h2>

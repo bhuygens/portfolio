@@ -5,6 +5,7 @@ import {CldImage} from "next-cloudinary";
 import {motion} from "framer-motion";
 import {Tooltip} from "@mui/material";
 import {CommonHelper} from "@/helpers/common.helper";
+import type { Locale } from "@/lib/i18n/config";
 
 type MissionCardProps = {
   title: string,
@@ -13,13 +14,14 @@ type MissionCardProps = {
   url: string,
   id: string,
   company: string,
+  locale: Locale,
 }
 
 
-export default function MissionCard({media, tags, title, url, id, company}: MissionCardProps) {
+export default function MissionCard({media, tags, title, url, id, company, locale}: MissionCardProps) {
   return (
     <motion.a
-      className={styles.container} href={`/career/${id}`}
+      className={styles.container} href={`/${locale}/career/${id}`}
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.95}}
     >

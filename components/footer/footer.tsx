@@ -5,6 +5,8 @@ import styles from "./footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import type { Locale } from "@/lib/i18n/config";
+import { getUi } from "@/lib/i18n/ui";
 
 const socialLinks = [
   {
@@ -36,22 +38,23 @@ const socialLinks = [
   },
 ];
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Career", href: "/career" },
-  { label: "Skills", href: "/skills" },
-  { label: "Contact", href: "/contact" },
-];
-
-function Footer() {
+function Footer({ locale }: { locale: Locale }) {
   const currentYear = new Date().getFullYear();
+  const ui = getUi(locale);
+
+  const quickLinks = [
+    { label: ui.nav.home, href: `/${locale}` },
+    { label: ui.nav.career, href: `/${locale}/career` },
+    { label: ui.nav.skills, href: `/${locale}/skills` },
+    { label: ui.nav.contact, href: `/${locale}/contact` },
+  ];
 
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo}>
+            <Link href={`/${locale}`} className={styles.logo}>
               <Image
                 src="/brand_logo.svg"
                 alt="BH Logo"
@@ -65,13 +68,14 @@ function Footer() {
               </div>
             </Link>
             <p className={styles.brand_description}>
-              Building modern web applications with passion and precision.
-              Available for freelance projects worldwide.
+              {locale === "fr"
+                ? "Conception d’applications web modernes avec exigence et sens du détail. Disponible pour des missions et projets freelance."
+                : "Building modern web applications with passion and precision. Available for freelance projects worldwide."}
             </p>
           </div>
 
           <div className={styles.links_section}>
-            <h4 className={styles.links_title}>Quick Links</h4>
+            <h4 className={styles.links_title}>{ui.footer.quickLinks}</h4>
             <nav className={styles.links}>
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href} className={styles.link}>
@@ -82,7 +86,7 @@ function Footer() {
           </div>
 
           <div className={styles.social_section}>
-            <h4 className={styles.links_title}>Connect</h4>
+            <h4 className={styles.links_title}>{ui.footer.connect}</h4>
             <div className={styles.social_links}>
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -106,10 +110,12 @@ function Footer() {
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            {currentYear} Benjamin Huygens. All rights reserved.
+            {currentYear} Benjamin Huygens. {ui.footer.rights}
           </p>
           <p className={styles.made_with}>
-            Built with Next.js & deployed on Vercel
+            {locale === "fr"
+              ? "Construit avec Next.js — déployé sur Vercel"
+              : "Built with Next.js & deployed on Vercel"}
           </p>
         </div>
       </div>

@@ -2,7 +2,10 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useParams } from "next/navigation";
+import { defaultLocale, isLocale } from "@/lib/i18n/config";
 import styles from "./projects.module.scss";
+import type { HomeSectionsCopy } from "@/lib/i18n/sections-content";
 
 type ProjectItem = {
   id: number | string;
@@ -19,11 +22,19 @@ type ProjectItem = {
 
 interface ProjectsProps {
   projects: ProjectItem[];
+  copy: HomeSectionsCopy["projects"];
 }
 
-const Projects = ({ projects }: ProjectsProps) => {
+const Projects = ({ projects, copy }: ProjectsProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const params = useParams();
+  const rawLocale = params?.locale;
+  const locale =
+    typeof rawLocale === "string" && isLocale(rawLocale)
+      ? rawLocale
+      : defaultLocale;
+  const careerBase = `/${locale}/career`;
 
   const featuredProjects = projects.filter((project) =>
     [12, 3, 2, 1].includes(project.id as number)
@@ -51,13 +62,12 @@ const Projects = ({ projects }: ProjectsProps) => {
               <circle cx="12" cy="12" r="10" />
               <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16l-5.74-9.94M14.31 16H2.83M16.62 12l-5.74 9.94" />
             </svg>
-            Portfolio Showcase
+            {copy.badge}
           </span>
-          <h2 className={styles.section_title}>Featured Projects</h2>
+          <h2 className={styles.section_title}>{copy.sectionTitle}</h2>
           <div className={styles.title_line}></div>
           <p className={styles.section_description}>
-            Discover my latest work in web development, AI integration, and
-            digital innovation
+            {copy.sectionDescription}
           </p>
         </motion.div>
 
@@ -106,7 +116,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                   {project.isLive !== false && (
                     <span className={styles.tag_live}>
                       <span className={styles.live_dot}></span>
-                      Live
+                      {copy.live}
                     </span>
                   )}
                 </div>
@@ -115,7 +125,8 @@ const Projects = ({ projects }: ProjectsProps) => {
                 <div>
                   <h3 className={styles.project_title}>{project.title}</h3>
                   <span className={styles.project_company}>
-                    Client: {project.company}
+                    {copy.clientPrefix}
+                    {project.company}
                   </span>
                   {/* Description */}
                   <p className={styles.project_description}>
@@ -142,7 +153,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                       >
                         <path d="M7 17L17 7M17 7H7M17 7v10" />
                       </svg>
-                      Visit website
+                      {copy.visitWebsite}
                     </a>
                   )}
                 </div>
@@ -158,8 +169,8 @@ const Projects = ({ projects }: ProjectsProps) => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <a href="/career" className={styles.btn_primary}>
-            View all projects
+          <a href={careerBase} className={styles.btn_primary}>
+            {copy.cta}
             <svg
               width="16"
               height="16"

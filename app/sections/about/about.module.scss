@@ -291,6 +291,16 @@
   gap: $space-2;
 }
 
+.tech_tag_with_logo {
+  align-items: center;
+  gap: $space-2;
+}
+
+.tech_tag_logo {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 .tech_tag {
   display: inline-flex;
   padding: $space-2 $space-4;
@@ -446,6 +456,13 @@
   border: 1px solid rgba(56, 189, 248, 0.4);
   color: #7dd3fc;
   box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+.badge_purple {
+  background: rgba(167, 139, 250, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  color: #c4b5fd;
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.15);
 }
 
 // Right Column Cards - Each with unique color accent

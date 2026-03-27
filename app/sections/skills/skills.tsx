@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./skills.module.scss";
 import NodeJS from "@/public/icons/node.svg";
@@ -22,10 +22,12 @@ import SCSS from "@/public/icons/scss.png";
 import Tailwind from "@/public/icons/tailwind.png";
 import Framer from "@/public/icons/framer.webp";
 import NextJS from "@/public/icons/next_js.svg";
+import type { HomeSectionsCopy } from "@/lib/i18n/sections-content";
+import { isExpertSkillLevel } from "@/lib/i18n/sections-content";
 
 type Skill = {
   name: string;
-  level: "Expert" | "Intermediate";
+  level: string;
   years: string;
   icon: React.ReactNode;
 };
@@ -35,173 +37,69 @@ type SkillCategory = {
   skills: Skill[];
 };
 
-// Technology Icons as SVG components
-const icons = {
-  react: <Image src={ReactJS} width={48} height={48} alt="React" />,
-  nextjs: <Image src={NextJS} width={48} height={48} alt="NextJS" />,
-  typescript: (
-    <Image src={Typescript} width={48} height={48} alt="Typescript" />
-  ),
-  nestjs: <Image src={NestJS} width={48} height={48} alt="NestJS" />,
-  postgresql: (
-    <Image src={PostgreSQL} width={48} height={48} alt="PostgreSQL" />
-  ),
-  mongodb: <Image src={MongoDB} width={48} height={48} alt="MongoDB" />,
-  docker: <Image src={Docker} width={48} height={48} alt="Docker" />,
-  git: <Image src={Git} width={48} height={48} alt="Git" />,
-  vercel: <Image src={Vercel} width={48} height={48} alt="Vercel" />,
-  aws: <Image src={AWS} width={48} height={48} alt="AWS" />,
-  scss: <Image src={SCSS} width={48} height={48} alt="SCSS" />,
-  tailwind: <Image src={Tailwind} width={48} height={48} alt="Tailwind" />,
-  framer: <Image src={Framer} width={48} height={48} alt="Framer" />,
-  express: <Image src={Express} width={48} height={48} alt="Express" />,
-  graphql: <Image src={GraphQL} width={48} height={48} alt="GraphQL" />,
-  redis: <Image src={Redis} width={48} height={48} alt="Redis" />,
-  prisma: <Image src={Prisma} width={48} height={48} alt="Prisma" />,
-  nodejs: <Image src={NodeJS} width={48} height={48} alt="Node.js" />,
+type SkillsProps = {
+  copy: HomeSectionsCopy["skills"];
 };
 
-const skillCategories: SkillCategory[] = [
-  {
-    name: "Backend",
-    skills: [
-      {
-        name: "Node.js",
-        level: "Expert",
-        years: "5 years exp",
-        icon: icons.nodejs,
-      },
-      {
-        name: "NestJS",
-        level: "Expert",
-        years: "3 years exp",
-        icon: icons.nestjs,
-      },
-      {
-        name: "Express",
-        level: "Expert",
-        years: "4 years exp",
-        icon: icons.express,
-      },
-      {
-        name: "GraphQL",
-        level: "Intermediate",
-        years: "2 years exp",
-        icon: icons.graphql,
-      },
-      {
-        name: "REST APIs",
-        level: "Expert",
-        years: "5 years exp",
-        icon: icons.nodejs,
-      },
-    ],
-  },
-  {
-    name: "Frontend",
-    skills: [
-      {
-        name: "React",
-        level: "Expert",
-        years: "5 years exp",
-        icon: icons.react,
-      },
-      {
-        name: "Next.js",
-        level: "Expert",
-        years: "4 years exp",
-        icon: icons.nextjs,
-      },
-      {
-        name: "TypeScript",
-        level: "Expert",
-        years: "4 years exp",
-        icon: icons.typescript,
-      },
-      {
-        name: "SCSS/CSS",
-        level: "Expert",
-        years: "5 years exp",
-        icon: icons.scss,
-      },
-      {
-        name: "Tailwind CSS",
-        level: "Expert",
-        years: "3 years exp",
-        icon: icons.tailwind,
-      },
-      {
-        name: "Framer Motion",
-        level: "Expert",
-        years: "2 years exp",
-        icon: icons.framer,
-      },
-    ],
-  },
-  {
-    name: "Database",
-    skills: [
-      {
-        name: "PostgreSQL",
-        level: "Expert",
-        years: "4 years exp",
-        icon: icons.postgresql,
-      },
-      {
-        name: "MongoDB",
-        level: "Expert",
-        years: "3 years exp",
-        icon: icons.mongodb,
-      },
-      {
-        name: "Redis",
-        level: "Intermediate",
-        years: "2 years exp",
-        icon: icons.redis,
-      },
-      {
-        name: "Prisma",
-        level: "Expert",
-        years: "2 years exp",
-        icon: icons.prisma,
-      },
-    ],
-  },
-  {
-    name: "Cloud & DevOps",
-    skills: [
-      { name: "Git", level: "Expert", years: "5 years exp", icon: icons.git },
-      {
-        name: "Docker",
-        level: "Intermediate",
-        years: "2 years exp",
-        icon: icons.docker,
-      },
-      {
-        name: "Vercel",
-        level: "Expert",
-        years: "3 years exp",
-        icon: icons.vercel,
-      },
-      {
-        name: "AWS",
-        level: "Intermediate",
-        years: "2 years exp",
-        icon: icons.aws,
-      },
-    ],
-  },
-];
+const iconByName: Record<string, React.ReactNode> = {
+  "Node.js": <Image src={NodeJS} width={48} height={48} alt="Node.js" />,
+  NestJS: <Image src={NestJS} width={48} height={48} alt="NestJS" />,
+  Express: <Image src={Express} width={48} height={48} alt="Express" />,
+  GraphQL: <Image src={GraphQL} width={48} height={48} alt="GraphQL" />,
+  "REST APIs": <Image src={NodeJS} width={48} height={48} alt="REST" />,
+  React: <Image src={ReactJS} width={48} height={48} alt="React" />,
+  "Next.js": <Image src={NextJS} width={48} height={48} alt="Next.js" />,
+  TypeScript: (
+    <Image src={Typescript} width={48} height={48} alt="TypeScript" />
+  ),
+  "SCSS/CSS": <Image src={SCSS} width={48} height={48} alt="SCSS" />,
+  "Tailwind CSS": (
+    <Image src={Tailwind} width={48} height={48} alt="Tailwind" />
+  ),
+  "Framer Motion": (
+    <Image src={Framer} width={48} height={48} alt="Framer Motion" />
+  ),
+  PostgreSQL: (
+    <Image src={PostgreSQL} width={48} height={48} alt="PostgreSQL" />
+  ),
+  MongoDB: <Image src={MongoDB} width={48} height={48} alt="MongoDB" />,
+  Redis: <Image src={Redis} width={48} height={48} alt="Redis" />,
+  Prisma: <Image src={Prisma} width={48} height={48} alt="Prisma" />,
+  Git: <Image src={Git} width={48} height={48} alt="Git" />,
+  Docker: <Image src={Docker} width={48} height={48} alt="Docker" />,
+  Vercel: <Image src={Vercel} width={48} height={48} alt="Vercel" />,
+  AWS: <Image src={AWS} width={48} height={48} alt="AWS" />,
+};
 
-const categories = ["All", ...skillCategories.map((cat) => cat.name)];
-
-const Skills = () => {
+const Skills = ({ copy }: SkillsProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState(copy.tabAll);
+
+  const skillCategories: SkillCategory[] = useMemo(
+    () =>
+      copy.categories.map((cat) => ({
+        name: cat.name,
+        skills: cat.skills.map((s) => ({
+          name: s.name,
+          level: s.level,
+          years: s.years,
+          icon:
+            iconByName[s.name] ?? (
+              <Image src={NodeJS} width={48} height={48} alt="" />
+            ),
+        })),
+      })),
+    [copy.categories]
+  );
+
+  const categories = useMemo(
+    () => [copy.tabAll, ...skillCategories.map((cat) => cat.name)],
+    [copy.tabAll, skillCategories]
+  );
 
   const filteredCategories =
-    activeCategory === "All"
+    activeCategory === copy.tabAll
       ? skillCategories
       : skillCategories.filter((cat) => cat.name === activeCategory);
 
@@ -214,9 +112,9 @@ const Skills = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.section_title}>Technology Stack</h2>
+          <h2 className={styles.section_title}>{copy.sectionTitle}</h2>
           <p className={styles.section_description}>
-            Technologies I use to bring ideas to life
+            {copy.sectionDescription}
           </p>
         </motion.div>
 
@@ -229,6 +127,7 @@ const Skills = () => {
           {categories.map((category) => (
             <button
               key={category}
+              type="button"
               className={`${styles.tab} ${
                 activeCategory === category ? styles.active : ""
               }`}
@@ -266,7 +165,7 @@ const Skills = () => {
                     <span className={styles.skill_name}>{skill.name}</span>
                     <span
                       className={`${styles.skill_level} ${
-                        skill.level === "Expert"
+                        isExpertSkillLevel(skill.level)
                           ? styles.level_expert
                           : styles.level_intermediate
                       }`}
@@ -275,7 +174,7 @@ const Skills = () => {
                     </span>
                     <span
                       className={`${styles.skill_years} ${
-                        skill.level === "Expert"
+                        isExpertSkillLevel(skill.level)
                           ? styles.years_expert
                           : styles.years_intermediate
                       }`}

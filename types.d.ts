@@ -98,6 +98,99 @@ type NotionMissionItem = {
         }
       ]
     },
+    /** Localized JSON string; fallback to legacy `content` if empty */
+    content_FR?: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
+    content_EN?: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
+    detailText_FR?: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
+    detailText_EN?: {
+      id: string,
+      type: string,
+      rich_text: [
+        {
+          type: string,
+          text: {
+            content: string,
+            link: string
+          },
+          annotations: {
+            bold: boolean,
+            italic: boolean,
+            strikethrough: boolean,
+            underline: boolean,
+            code: boolean,
+            color: string
+          },
+          plain_text: string,
+          href: string
+        }
+      ]
+    },
     content: {
       id: string,
       type: string,
