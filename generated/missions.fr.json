@@ -4,7 +4,12 @@
     "year": "2026-01-27",
     "title": "Full Stack Developer",
     "detailText": "Évolution du système de recommandation groupe (stream Recommend & Push) : APIs NestJS, BFF, front, MongoDB et Kafka, avec un focus sur les tests, le CI/CD et l'observabilité.",
-    "content": {},
+    "content": {
+      "Contexte": "<p>ADEO Services fait partie du Groupe ADEO, acteur mondial majeur de la distribution de bricolage. Le groupe fédère des entités autonomes et interconnectées dans de nombreux pays. Au sein du domaine <strong>search &amp; publication (CCDP)</strong>, la mission est de construire et exploiter des outils pour publier et rechercher des produits pour les business units Leroy Merlin dans le monde entier.</p><p><br></p><p>J'ai rejoint le stream <strong>Recommend &amp; Push</strong>, qui pilote le <strong>système de recommandation</strong> du groupe : il combine données et algorithmes (dont le ML), connaissance métier (dont le graphe de connaissance) et outillage de publication afin que les produits pertinents atteignent les clients au bon moment. Le stream fonctionne de bout en bout avec des développeurs, data scientists, data engineers, analystes, un product owner et des designers UX, dans une organisation agile axée sur une livraison propre, stable et scalable.</p><p><br></p><p>En binôme et en mob programming avec l'équipe, mon travail s'articule autour de quatre axes principaux :</p><p><br></p><p><strong>Comprendre le produit et ses contraintes</strong></p><p>Cartographier les flux de recommandation, les responsabilités API et BFF, et la manière dont les événements et données transitent via Kafka et MongoDB. S'aligner avec la data et le produit sur les cas d'usage, les exigences non-fonctionnelles et les contraintes de déploiement pour plusieurs BUs.</p><p><br></p><p><strong>Livrer des fonctionnalités sur la stack</strong></p><p>Implémenter et faire évoluer le produit de recommandation sur les couches <strong>API, BFF et front</strong> en <strong>Node.js, NestJS et TypeScript</strong>, supportées par <strong>MongoDB</strong> et <strong>Kafka</strong>. Contribuer aux intégrations qui maintiennent la cohérence et la fiabilité de la publication et de la consommation des recommandations.</p><p><br></p><p><strong>Élever le niveau de qualité</strong></p><p>Renforcer le <strong>TDD</strong> et les tests automatisés, améliorer le <strong>CI/CD</strong> (dont GitHub Actions), et clarifier les alertes et la supervision afin que régressions et incidents soient détectés tôt. Viser un code maintenable et des releases prévisibles.</p><p><br></p><p><strong>Fonctionner comme une seule équipe</strong></p><p>Participer activement aux cérémonies et discussions techniques, partager la propriété du produit, et contribuer à diffuser les bonnes pratiques (software craftsmanship, revue de code, documentation) pour que la plateforme reste évolutive à mesure que le trafic et les fonctionnalités augmentent.</p>",
+      "Tableau de bord": "<p>Au-delà de la livraison de fonctionnalités sur les surfaces de recommandation, je contribue à la façon dont nous <strong>observons et opérons</strong> le système en production.</p><p><br></p><p>Côté engineering, cela signifie resserrer les pipelines et les vérifications en CI/CD, standardiser la façon dont nous exécutons et supervisons les services, et utiliser des outils comme <strong>Datadog</strong> (ou équivalent) pour suivre la santé, la latence et les erreurs. L'objectif est de rendre la stack de recommandation plus facile à appréhender pour l'astreinte et le développement au quotidien.</p><p><br></p><p>Côté produit et data, je collabore avec les analystes et l'organisation data pour que les <strong>performances et l'usage des recommandations</strong> puissent être mesurés et améliorés dans le temps—dans un esprit similaire à la fourniture d'indicateurs clairs aux pays sur l'app Decathlon, mais ici centré sur la qualité, la couverture et les résultats business des recommandations par BU.</p><p><br></p><p>Le cas échéant, j'aide aussi à améliorer les <strong>expériences internes ou back-office</strong> (configuration, flux de publication, vues opérationnelles) pour que les équipes puissent ajuster et valider le comportement des recommandations sans friction inutile.</p>",
+      "Soft skills": "Français (courant, langue de travail)<br><br>Anglais (professionnel)<br><br>Méthodes agiles (Scrum / Kanban)<br><br>Collaboration avec les profils produit, UX et data<br><br>Pair programming et mob programming<br><br>Partage de connaissances et communication technique",
+      "Tech": "Plateforme de recommandation (API / BFF / front) :<br><br>Backend : Node.js - NestJS - TypeScript - MongoDB - Kafka<br><br>Frontend : (stack utilisée dans le stream—ex. SPA ou framework SSR JavaScript/TypeScript moderne)<br><br>Delivery &amp; opérations : GitHub Actions (CI/CD) - tests (TDD) - monitoring / alerting (ex. Datadog) - Kubernetes (selon l'environnement)"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -42,7 +47,10 @@
     "year": "2024-03-18",
     "title": "Lead Developer",
     "detailText": "Le co-pilote intelligent pour les restaurants. Porté par l'IA, Pivot simplifie radicalement la gestion des plannings, de la paie, des coûts salariaux... et bien plus encore.",
-    "content": {},
+    "content": {
+      "Mission": "Concevoir, développer et maintenir des fonctionnalités front-end avec React et React Native.<br><br>Travailler étroitement avec les fondateurs et l'équipe design pour transformer des concepts en fonctionnalités performantes.<br><br>Contribuer à l'optimisation de l'expérience utilisateur en assurant la réactivité et l'ergonomie de l'application.<br><br>Collaborer en équipe pour résoudre des problèmes techniques complexes et implémenter des solutions innovantes.<br><br>Participer activement aux revues de code pour garantir la qualité et la cohérence du code source.<br><br>Rester à jour sur les dernières technologies et les meilleures pratiques de développement.<br><br>",
+      "Tech": "Pour le site web :<br><br>React - Firebase (Auth, Database, Cloud functions, PubSub)<br><br>Pour l'application mobile : React Native"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -79,7 +87,12 @@
     "year": "2023-05-25",
     "title": "Backend & Roll-out Engineer",
     "detailText": "Déploiement réussi de l'application shopping dans 25 pays à travers le monde",
-    "content": {},
+    "content": {
+      "Contexte": "<p>Decathlon est une entreprise française mondialement connue. Ces dernières années, Decathlon a entamé une nouvelle transition numérique. En tant que consultant externe, ma mission était de préparer cette transition en faisant évoluer l'application Shopping Decathlon pour répondre aux défis de demain. Dans une équipe de 2 personnes, notre objectif était de contacter chaque pays souhaitant utiliser l'application. En fonction de leurs besoins, nous planifions une feuille de route de 3 mois pour déployer l'application. Cette feuille de route se découpait en 4 points :</p><p><br></p><p><strong>Présentation de l'application</strong></p><p>Nous avons mis en place un fichier pour centraliser toutes les informations relatives au pays (contraintes légales, programme de fidélité, disponibilités des stocks, intégration du tunnel d'achat, ...)</p><p><br></p><p><br></p><p><strong>Réalisation de la partie technique</strong></p><p>Une fois toutes les informations renseignées, j'effectuais les développements nécessaires pour ajouter le pays à notre backend (connexion login &amp; stocks, instanciation du homefeed, ...). Je devais ensuite paramétrer la partie front de l'application. Je réalisais donc un développement à la fois pour iOS (Swift) et Android (Kotlin) pour connecter le front au backend. Enfin, je réalisais une phase de test interne avec mon équipe.</p><p><br></p><p><br></p><p><strong>Suivi de la phase de test</strong></p><p>Une fois l'application testée de notre côté, nous lançions la phase de test bêta avec le pays. Le groupe était composé d'environ 10 personnes. Pendant 2 semaines, nous les accompagnions pour tester le parcours client et l'ensemble des fonctionnalités de l'application.</p><p><br></p><p><br></p><p><strong>Déploiement final</strong></p><p>Au terme de ce processus, lorsque l'application était prête à être lancée, nous organisions un événement avec le responsable pays et son équipe marketing et nous lancions l'application.</p>",
+      "Tableau de bord": "En parallèle de mon objectif principal, je travaillais sur un dashboard dédié à la configuration de l'application et à l'analyse des données.<br><br>De notre côté et pour gagner en efficacité, j'ai amélioré la standardisation de la configuration de chaque pays. Nous utilisons désormais de nombreux paramètres pour configurer l'application directement depuis le dashboard, comme le format des prix (la Croatie a adopté l'euro en 2023).<br><br>Du côté des pays, j'ai développé un espace dédié pour gérer le homefeed et le catalogue de l'application. Cet outil est utilisé par l'équipe marketing pour personnaliser l'application en fonction de la période (Noël, Saint-Patrick, Coupe du Monde de football, ...).<br><br>L'analytique étant primordiale pour améliorer l'application, je travaillais avec l'équipe data pour fournir à chaque pays de nombreux indicateurs de performance de l'application (nombre de clients, répartition iOS / Android, avis, ...)",
+      "Soft skills": "Anglais<br><br>Méthode Agile<br><br>Gestion de projet<br><br>Support<br><br>Suivi pays",
+      "Tech": "Pour l'application Shopping :<br><br>Backend : NodeJS - Express - AWS<br><br>Frontend : Swift - Kotlin<br><br>Pour le Dashboard : VueJS - NestJS - AWS"
+    },
     "mentions": [
       {
         "image_url": "https://res.cloudinary.com/diishdpbt/image/upload/v1700080990/2022_highlights.svg",
@@ -136,7 +149,11 @@
     "year": "2023-05-01",
     "title": "Fullstack Developer",
     "detailText": "Développement d'un site web interactif propulsé par Framer Motion et l'API Notion pour une société de production française",
-    "content": {},
+    "content": {
+      "Contexte": "<p>Talion Films est spécialisée dans la production de films institutionnels et publicitaires. Après quelques années de travail intense, la société a connu une croissance rapide. Pour accroître sa visibilité et montrer ses créations au monde entier, elle a décidé de développer un tout nouveau site web.</p><br><br><p> </p><br><br><p><strong>Besoins du client</strong></p><br><br><p>Développer un nouveau site web pour présenter ses projets.</p><br><br><p>Personnaliser chaque page, car les clients doivent ressentir l'émotion et le message derrière chaque projet.</p><br><br><p>Entièrement dynamique et animé.</p><br><br>",
+      "Soft skills": "<p>Roadmap projet</p><br><br><p>Design projet</p><br><br><p>Présentation de l'API Notion</p><br><br><p> </p>",
+      "Tech": "<p>Backend : API Notion, authentification JWT<br><br><br>Frontend : Next JS, Framer Motion<br><br><br>Livraison de contenu : Cloudinary<br><br></p>"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -171,7 +188,12 @@
     "year": "2023-02-01",
     "title": "Fullstack Developer",
     "detailText": "Développement d'un système de support multi-services avec pour objectifs la digitalisation des demandes de consommables des techniciens",
-    "content": {},
+    "content": {
+      "Contexte": "<p>Développement d'un système de support multi-services avec pour objectifs la digitalisation des demandes de consommables des techniciens, la mise en place et le maintien d'un inventaire pour réduire les coûts de renouvellement des équipements, et la mise en œuvre d'un planning de maintenance et de suivi des machines et véhicules.</p>",
+      "Fonctionnel": "<p>Mise en place de rituels pour comprendre les besoins clients</p><p>Rédaction du cahier des charges</p><p>Création autonome de maquettes</p><p>Formation des utilisateurs au fonctionnement de la plateforme</p><p>Accompagnement lors du lancement de la plateforme</p>",
+      "Technique": "<p>Développement des fonctionnalités nécessaires à la plateforme en React / NestJS.<br><br>Mise en place d'une base de données Postgres gérée via Prisma.<br><br>Intégration de diverses bibliothèques : Smartlook, Google Analytics, PrimeReact, Nodemailer, react-toastify, ...</p>",
+      "Résultats": "<p>Réduction par un facteur 3 du coût par technicien lié aux équipements. Augmentation de l'efficacité logistique. Respect des échéances et dates de maintenance des véhicules et équipements.</p>"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -241,7 +263,11 @@
     "year": "2022-04-21",
     "title": "Consulting",
     "detailText": "Consulting",
-    "content": {},
+    "content": {
+      "Contexte": "<p>J'ai été consultant chez Listen-Too pour des clients tels que Decathlon et Wayconnect pendant plus d'un an.</p>",
+      "Clients": "<p>Decathlon, WayKonect</p>",
+      "Tech": "<p>Frontend : VueJS, React</p><br><br><p>Backend : AWS, NodeJS, Clean Architecture</p>"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -275,7 +301,12 @@
     "year": "2021-09-01",
     "title": "Fullstack Developer",
     "detailText": "Pour ma dernière année d'études, j'ai rejoint une entreprise familiale opérant dans le domaine ésotérique. Ma mission était de lancer la marque sur internet.\nPendant 8 mois, j'ai développé un site e-commerce en Angular / NestJS avec un parcours client entièrement automatisé et un back-office.\n\n\n\n<strong>La plateforme est en phase finale avant le lancement officiel.</strong>",
-    "content": {},
+    "content": {
+      "Contexte": "<p>Développement indépendant d'une plateforme e-commerce et de son back-office dédié pour une société opérant dans le domaine de l'ésotérisme, incluant l'intégration d'un outil CRM et d'un moyen de paiement sécurisé.</p>",
+      "Fonctionnel": "<p>Analyse des besoins clients, création des spécifications et collaboration avec une équipe de designers pour développer des prototypes assurant une compréhension claire des besoins.</p><br><br><p>Mise en place d'une culture agile au sein de l'équipe. Gestion du projet via shortcut.io.</p><br><br><p>Création et accompagnement des équipes de test.</p><br><br><p>Implémentation de la gestion de stock en temps réel entre les magasins physiques et la plateforme.</p><p><br></p>",
+      "Technique": "<p>Développement des fonctionnalités nécessaires à la plateforme en Angular/NestJS. Implémentation d'une base de données Postgres gérée via TypeORM.</p><br><br><p>Intégration de diverses bibliothèques telles que Stripe, Smartlook, Axceptio, Google Analytics et Google Tag Manager. Gestion de la communauté via un CRM Sendinblue.</p><br><br><p>Automatisation des tâches internes incluant la génération et l'impression de bons de livraison via connexion aux APIs transporteurs. Implémentation du suivi automatique des commandes dans l'espace client.</p>",
+      "Résultats": "<p>Augmentation du trafic sur la plateforme. Acteur majeur de l'ésotérisme en Belgique en 2022. Réduction des tâches chronophages liées à la gestion de la plateforme e-commerce. Plus de temps pour développer d'autres aspects du business en ligne. Expansion internationale.</p>"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -348,7 +379,11 @@
     "year": "2021-02-01",
     "title": "Fullstack developer",
     "detailText": "En troisième année d'études, j'ai rejoint Capgemini, une entreprise technologique mondiale.\n\n\n\nDurant cette année, j'ai travaillé dans l'équipe ORP-AGENT. En tant que seul développeur front-end, mon objectif était de développer le logiciel chargé de gérer les plannings des agents de maintenance ferroviaire.",
-    "content": {},
+    "content": {
+      "Contexte": "<p>En troisième année d'études, j'ai rejoint Capgemini, une entreprise technologique mondiale.<br><br>En 2020, le gouvernement français a voté une nouvelle loi autorisant la concurrence sur les voies ferrées françaises. Jusqu'alors, seule la SNCF détenait le monopole, mais après cette évolution, l'entreprise a dû se réinventer pour continuer à exister. La SNCF a donc lancé un nouveau programme appelé ORP, dédié à découper le monolithe en place en plusieurs applications plus performantes.<br><br><br>Au sein d'une équipe de 15 personnes, ma mission était de développer une plateforme de gestion des employés appelée ORP AGENT.</p>",
+      "Compétences": "<p>Je suis arrivé tout au début du projet en tant que seul développeur Angular. J'étais donc chargé de développer les premières écrans de l'application. Lorsque le POC a été validé par la SNCF, l'équipe a grandi et j'ai continué à développer la plateforme en tant que développeur fullstack.<br><br>En parallèle de ma mission de développeur, j'ai participé aux rituels agiles, aux brainstormings UI-UX pour étudier la faisabilité des demandes, à la préparation des spécifications avec le client, ...<br><br></p>",
+      "Tech": "<p>JAVA 8<br><br>Angular 8<br><br>TypeScript<br><br>Oracle Database<br><br>Liquibase<br><br>SCSS</p>"
+    },
     "mentions": [
       {
         "image_url": "",
@@ -419,7 +454,11 @@
     "year": "2019-09-01",
     "title": "System & network engineer",
     "detailText": "Pour ma deuxième année d'études, j'ai travaillé dans une entreprise de mode française.\n\n\nMon objectif était de migrer toute la société vers le cloud Office 365 et de participer à la gestion du parc informatique de 50 magasins et plus de 100 employés au siège.",
-    "content": {},
+    "content": {
+      "Contexte": "<p>Des Marques &amp; Vous (anciennement Devianne) est une entreprise française de mode créée il y a plus de 40 ans. Dans un monde où le e-commerce est très important pour une entreprise, DMEV a décidé d'entamer une transition cloud afin d'être plus efficace.</p>",
+      "Tâches": "<p>Mes missions étaient multiples. La première consistait à gérer le parc informatique de 50 magasins et plus de 400 employés, incluant les pare-feux, la téléphonie, les postes de travail, les accès distants, ...<br>Ensuite, avec l'administrateur réseau, nous avons mis à niveau le système réseau de la société en introduisant un MPLS. Après cela, j'ai migré la société vers le cloud Office 365.<br><br></p>",
+      "Tech": "<p>Stormshield, Cisco, Nginx, Office 365, Aruba, ESXi, Windows Server, Linux, NAS<br><br>Organisation de réunions avec les responsables de magasin pour préparer les migrations<br>Gestion du parc informatique<br>Gestion d'un budget<br>Mise en relation des différents prestataires</p>"
+    },
     "mentions": [
       {
         "image_url": "",

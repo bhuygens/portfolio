@@ -26,14 +26,55 @@ function getRichText(properties, key) {
   return parts.map((t) => t.plain_text).join("");
 }
 
+/**
+ * Notion text fields often contain raw line breaks inside JSON string values,
+ * which JSON.parse rejects. Turn them into <br> (content is rendered as HTML)
+ * and escape any other control characters found inside strings.
+ */
+function sanitizeJsonControlChars(raw) {
+  let out = "";
+  let inString = false;
+  let escaped = false;
+  for (let i = 0; i < raw.length; i++) {
+    const ch = raw[i];
+    if (!inString) {
+      if (ch === '"') inString = true;
+      out += ch;
+      continue;
+    }
+    if (escaped) {
+      escaped = false;
+      out += ch;
+    } else if (ch === "\\") {
+      escaped = true;
+      out += ch;
+    } else if (ch === '"') {
+      inString = false;
+      out += ch;
+    } else if (ch === "\r") {
+      if (raw[i + 1] !== "\n") out += "<br>";
+    } else if (ch === "\n") {
+      out += "<br>";
+    } else if (ch.charCodeAt(0) < 0x20) {
+      out += "\\u" + ch.charCodeAt(0).toString(16).padStart(4, "0");
+    } else {
+      out += ch;
+    }
+  }
+  return out;
+}
+
 function parseJsonRichText(properties, key, fallbackKey) {
   const raw =
     getRichText(properties, key) ||
     (fallbackKey ? getRichText(properties, fallbackKey) : "");
   if (!raw || !raw.trim()) return {};
   try {
-    return JSON.parse(raw);
-  } catch {
+    return JSON.parse(sanitizeJsonControlChars(raw));
+  } catch (err) {
+    console.warn(
+      `[sync-notion-missions] Invalid JSON in "${key}" (${properties.title?.title?.[0]?.plain_text ?? "?"}): ${err.message}`,
+    );
     return {};
   }
 }
